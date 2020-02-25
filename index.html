@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <title>外幣兌換</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.bootcss.com/qs/6.5.1/qs.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158633874-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-158633874-3');
+    </script>
+
+</head>
+
+<body>
+    <div id='app'>
+        <div class='title'>外幣兌換</div>
+        <div class='content'>
+            <div class='box'>
+                <label class='s_title'>{{title}}</label>
+                <select @change="countMoney()" v-model='country'>
+                    <option v-for="(list, index) in coinData" :key="index" :value="{name:list.name,money:list.money}">
+                        {{list.name}}
+                    </option>
+                </select>
+            </div>
+            <div class='box'>
+                <label class='s_title'>{{boxtitle}}</label>
+                <input @keyup="countMoney()" class='coin' type='number' v-model='ntd'>
+            </div>
+            <div class='box' v-if='show && lock == 0'>
+                <div class='total'>您將以台幣{{ntd}}元</div>
+                <div class='total'>換取{{country.name}}{{totalMoney}}元</div>
+            </div>
+            <div class='box' v-if='show && lock == 1'>
+                <div class='total'>您將以{{country.name}}{{ntd}}元</div>
+                <div class='total'>換取台幣{{totalMoney}}元</div>
+            </div>
+            <button @click="switchChange()" type='button' class='btns'>{{switchTitle}}</button>
+        </div>
+
+        <div class='footer'>
+            <a href='https://tw.rter.info/howto_currencyapi.php' target='_blank'>匯率資料來源:全球即時匯率API</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script/app.js"></script>
+</body>
+
+
+
+
+</html>

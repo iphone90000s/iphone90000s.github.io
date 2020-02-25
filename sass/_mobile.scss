@@ -1,0 +1,437 @@
+@media screen and (max-width: 1360px) and (min-width: 1200px) {
+   .menu .menu_in {
+      width: 1190px;
+
+      ul {
+         margin: 0 15px;
+
+         li {
+            a {
+               padding: 5px 15px;
+            }
+         }
+      }
+
+      .icons {
+         margin-left: 10px;
+      }
+   }
+
+   .material .meterial_in .material_list .material_list_in {
+      width: 1130px;
+   }
+}
+
+@media screen and (max-width: 1199px) {
+   .mb_menu .mb_menu_in ul li a {
+      &.hidden {
+         visibility: hidden;
+      }
+   }
+
+   .in_page .banners .mask .about_title {
+      font-size: 28px;
+   }
+
+   .in_page .banners .mask .about_title2 {
+      font-size: 16px;
+   }
+
+   .menu .menu_in .mb_menu_in ul li a:hover,
+   .menu .menu_in .mb_menu_in ul li a.active {
+      color: #fff;
+      background-color: transparent;
+   }
+
+   .menu .menu_in ul li a {
+      font-size: 17px;
+      font-family: font-Thin;
+
+      img {
+         width: 40px;
+      }
+   }
+
+   .mb_menu_in {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      width: 100%;
+   }
+
+   .searchico .search_bar input[type="text"] {
+      margin-top: 5px;
+   }
+
+   .pc_menu {
+      display: none !important;
+   }
+
+   .mb_menu {
+      display: block;
+      visibility: hidden;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: 0.5s ease all;
+      top: 0;
+      left: 0;
+
+      &.active {
+         visibility: initial;
+         opacity: 1;
+         z-index: 1000;
+      }
+
+      .mb_menu_in {
+         ul {
+            margin: 100px 0 0;
+            width: 100%;
+
+            li {
+               display: table;
+               width: 100%;
+               margin: 0;
+               padding: 10px 0;
+               text-align: center;
+
+               a {
+                  color: #fff;
+                  background-color: transparent;
+                  font-size: 24px;
+               }
+            }
+         }
+      }
+   }
+
+   .menu .menu_in {
+      width: 100%;
+      position: relative;
+
+      .logo {
+         display: table;
+         margin: 0 auto;
+      }
+
+      .hambuger {
+         display: block;
+         position: absolute;
+         right: 30px;
+         top: 50%;
+         transform: translateY(-50%);
+         cursor: pointer;
+         z-index: 1001;
+
+         span {
+            background-color: #fff;
+            width: 30px;
+            height: 2px;
+            display: block;
+            margin: 10px 0;
+            border-radius: 10px;
+            transition: 0.5s ease all;
+         }
+
+         &.active {
+            span {
+               background-color: #fff;
+
+               &:nth-child(3) {
+                  display: none;
+
+               }
+            }
+         }
+      }
+   }
+
+   .menu .menu_in .hambuger {
+      top: 40%;
+
+      span {
+         width: 30px;
+         height: 1.9px;
+         display: block;
+         margin: 8px 0;
+      }
+   }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1150px) {
+   .material .meterial_in .material_list .material_list_in {
+      .materials .imgs img {
+         width: 250px;
+         height: 250px;
+      }
+
+   }
+
+   .material .meterial_in .material_list .material_list_in .materials .imgs .hoverFrame {
+      width: 250px;
+      height: 250px;
+   }
+}
+
+@media screen and (max-width: 1149px) and (min-width: 1000px) {
+
+   .basic_box,
+   .in_page .is_block,
+   .product_inner .left .imgFrame,
+   .product_inner .right {
+      width: 990px;
+   }
+}
+
+@media screen and (max-width:999px) and (min-width: 768px) {
+   .in_page .product_box .products.material .imgs img {
+      width: 170px;
+      height: 170px;
+   }
+
+   .product_inner .left .imgFrame,
+   .basic_box,
+   .in_page .is_block,
+   .product_inner .right {
+      width: 750px;
+   }
+
+   .material .meterial_in .material_list .material_list_in {
+      width: 750px;
+
+      .materials .imgs img {
+         width: 200px;
+         height: 200px;
+      }
+   }
+
+   .material .meterial_in .material_list .material_list_in .materials .imgs .hoverFrame {
+      width: 200px;
+      height: 200px;
+   }
+
+   .in_page .is_block {
+      display: block;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .show .show_in .show_list .show_list_in .shows.slick-current.slick-active .imgs {
+      opacity: 1;
+
+      &:after {
+         display: none;
+      }
+
+   }
+}
+
+@media screen and (max-width: 767px) {
+
+
+   .news_in .news_list .news_content .close_btn {
+      right: 10px;
+   }
+
+   .material .meterial_in .material_list .material_list_in {
+      text-align: center;
+
+   }
+
+   .menu {
+      height: 55px;
+   }
+
+   .slick-dots {
+      display: none;
+      opacity: 0;
+   }
+
+   .in_page .banners .mask .about_title {
+      font-size: 22px;
+   }
+
+   .in_page .product_box {
+      padding: 0 10px;
+   }
+
+   .in_page .banners .mask .about_title2 {
+      font-size: 15px;
+      margin-top: -5px;
+   }
+
+   .menu .menu_in .logo {
+      img {
+         width: 100px;
+      }
+   }
+
+   .select_menu .selects {
+      font-size: 17px;
+   }
+
+   .banner,
+   .in_page .banners {
+      margin-top: 55px;
+   }
+
+   .block .title {
+      font-size: 20px;
+   }
+
+   .block .s_title {
+      font-size: 15px;
+   }
+
+   .product .product_in .product_list,
+   .material .meterial_in .material_list {
+      padding: 0 10px;
+   }
+
+   .product .product_in .product_list .products .name,
+   .material .meterial_in .material_list .material_list_in .materials .name {
+      font-size: 16px;
+      text-align: center;
+   }
+
+   .product .product_in .product_list .products .number,
+   .material .meterial_in .material_list .material_list_in .materials .number {
+      font-size: 12px;
+      text-align: center;
+      margin-top: -3px;
+   }
+
+   .menu .menu_in .hambuger {
+      top: 40%;
+
+      span {
+         width: 27px;
+         height: 1.9px;
+         display: block;
+         margin: 4px 0;
+      }
+   }
+
+   .pics.block {
+      margin: 85px 0 20px;
+   }
+
+   .in_page .banners {
+      height: auto;
+   }
+
+   .in_page .product_box .products {
+      margin: 10px 0;
+   }
+
+   .basic_box {
+      width: 98%;
+   }
+
+   .product_inner .right .imgFrame .img_list img {
+      width: 100%;
+      height: auto;
+   }
+
+   .product_inner .right .imgFrame .img_list {
+      width: auto;
+      margin: 10px auto;
+      padding: 0 10px;
+   }
+
+   .product_inner .left .imgFrame,
+   .product_inner .right {
+      width: 300px;
+      display: block;
+      margin: 0 auto;
+   }
+
+   .in_page .is_block {
+      padding: 0 10px;
+      display: block;
+      width: 100%;
+
+   }
+
+   .in_page .product_box .products {
+      width: 100%;
+   }
+
+   .banner {
+      height: auto;
+   }
+
+   .product .product_in .product_list .products {
+      width: calc(100% - 20px);
+      margin: 10px;
+
+      &:nth-child(2) {
+         border: none;
+      }
+   }
+
+   .material .meterial_in .material_list .material_list_in {
+      width: 100%;
+
+      .materials {
+         width: calc(100% / 3 - 30px);
+         padding: 0 0px;
+         margin: 10px;
+
+         .imgs {
+            img {
+               width: 100%;
+               height: auto;
+            }
+         }
+      }
+   }
+
+   .material .meterial_in .material_list .material_list_in .materials .imgs .hoverFrame {
+      display: none;
+   }
+
+   .menu .menu_in ul li a {
+      font-size: 17px;
+      font-family: font-Thin;
+
+      img {
+         width: 40px;
+      }
+   }
+
+   .mb_menu_in {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+      width: 100%;
+   }
+
+   .mb_menu .mb_menu_in ul {
+      margin: 0;
+   }
+
+   .menu .menu_in ul li a:hover {
+      background: transparent;
+   }
+
+   .product_inner .contents .tags {
+      font-size: 14px;
+   }
+
+   .in_page .product_box .products.material .name {
+      font-size: 18px;
+   }
+
+   .in_page .is_block .title {
+      font-size: 20px;
+   }
+
+   .in_page .is_block .title:before {
+      top: 5px;
+   }
+}
