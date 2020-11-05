@@ -36,12 +36,12 @@ body {
 }
 
 @font-face {
-  font-family: TradeGothicLTStd;
+  font-family: BoldExtended;
   src: url("../fonts/Trade_Gothic_Font/TradeGothicLTBoldExtended.ttf");
 }
 
 @font-face {
-  font-family: TradeGothicLTBoldOblique;
+  font-family: TradeTradeBoldExtended;
   src: url("../fonts/Trade_Gothic_Font/TradeGothicLTBoldExtended.ttf");
 }
 
@@ -86,10 +86,10 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#005ca4cd', endColorstr='#468ed7', GradientType=0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 67.5px;
+  font-size: 80px;
   text-align: center;
   margin: 0 auto;
-  font-family: "TradeGothicLTStd";
+  font-family: "BoldExtended";
   font-weight: bold;
   font-style: italic;
 }
@@ -652,7 +652,7 @@ body {
 
   .performance-text {
     >* {
-      font-family: "TradeGothicLTStd";
+      font-family: "BoldExtended";
     }
 
     width: 80%;
@@ -761,7 +761,7 @@ body {
         margin: 15px 0;
         font-size: 18px;
         cursor: pointer;
-        font-family: "TradeGothicLTBoldOblique";
+        font-family: "TradeTradeBoldExtended";
         position: relative;
 
         &:hover {
@@ -877,7 +877,7 @@ body {
     z-index: 2;
     font-size: 41px;
     color: #fff;
-    font-family: "TradeGothicLTBoldOblique";
+    font-family: "TradeTradeBoldExtended";
     -moz-transform: matrix(3.15451912041566, 0, 0, 3.15451912041566, 0, 0);
     -webkit-transform: matrix(3.15451912041566, 0, 0, 3.15451912041566, 0, 0);
     -ms-transform: matrix(3.15451912041566, 0, 0, 3.15451912041566, 0, 0);
@@ -1275,20 +1275,28 @@ body {
     width: 836px;
   }
 
+  .gradient-text font {
+    font-size: 34px;
+  }
+
+  .gradient-title {
+    font-size: 50px;
+  }
+
   .hl-style {
-    width: calc(581px * .75);
-    height: calc(189px * .75);
+    width: calc(581px * .6);
+    height: calc(189px * .6);
 
     .title {
-      font-size: 18px;
+      font-size: 15px;
     }
 
     .text {
-      font-size: 18px;
+      font-size: 15px;
     }
 
     .main-text {
-      font-size: 33px;
+      font-size: 28px;
     }
   }
 
@@ -1304,12 +1312,38 @@ body {
     font-size: 16px;
   }
 
+  .content-text {
+    font-size: 15px;
+  }
+
 }
 
 
 * {
   &:focus {
     outline: none;
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  .learn-btn {
+    font-size: 22px;
+    width: calc(295px * 1);
+    height: calc(88px * 1);
+  }
+}
+
+@media only screen and (min-width: 3000px) {
+  .scar-container .rog-scar {
+    left: 37%;
+    top: 37%;
+  }
+
+  .cooling-position {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
   }
 }
 
