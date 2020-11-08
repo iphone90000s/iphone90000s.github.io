@@ -3,9 +3,9 @@ $(function () {
     /**
      * @summary 當畫面重整時，強制回到網頁最上方
      */
-    // $(window).on('beforeunload', function () {
-    //     $(window).scrollTop(0);
-    // });
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
+    });
 
     /**
      * @summary design區塊的輪播
@@ -145,9 +145,22 @@ $(function () {
             $(".performance-notebook").css({
                 "transform": `translateY(${float2}px)`
             });
+
+            $(".cpu").css({
+                "transform": `translateY(-${float2/2}px)`
+            });
+            $(".gpu").css({
+                "transform": `translateY(-${float2/2}px)`
+            });
         } else {
             float2 = 0;
             $(".performance-notebook").css({
+                "transform": `translateY(${float2}px)`
+            });
+            $(".cpu").css({
+                "transform": `translateY(${float2}px)`
+            });
+            $(".gpu").css({
                 "transform": `translateY(${float2}px)`
             });
         }
@@ -163,6 +176,8 @@ $(function () {
          */
 
         if ($(window).scrollTop() > $(".fullhd-notebook").offset().top - 100) {
+            
+            $(".dispaly-mp4").get(0).play();
             if (direction == "down") {
                 float3 += 2.5;
             } else if (direction == "up") {
