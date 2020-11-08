@@ -1,6 +1,5 @@
 $(function () {
 
-    $(".upper-bar .bar").addClass("active");
     /**
      * @summary 當畫面重整時，強制回到網頁最上方
      */
@@ -17,32 +16,7 @@ $(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 5,
-        slidesToScroll: 1,
-        //   responsive: [
-        //     {
-        //       breakpoint: 1024,
-        //       settings: {
-        //         slidesToShow: 3,
-        //         slidesToScroll: 3,
-        //         infinite: true,
-        //         dots: true
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 600,
-        //       settings: {
-        //         slidesToShow: 2,
-        //         slidesToScroll: 2
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 480,
-        //       settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1
-        //       }
-        //     }
-        //   ]
+        slidesToScroll: 1
     });
 
     $('.nvidia-slick-content').slick({
@@ -71,8 +45,6 @@ $(function () {
         slidesToScroll: 1,
     });
 
-
-
     $(".run-index font").animateNumbers(39, true, 1000);
 
     $(".prev-arrow").click(function () {
@@ -92,24 +64,9 @@ $(function () {
         $(".menu-hambuger").removeClass("hide")
     });
 
-    // $(".intel-bar .bar").animate({
-    //     width: ["100%",'easeOutBounce']
-    // }, 2500);
-
-    // $(".ac-bar .bar").animate({
-    //     width: ["100%",'easeOutBounce']
-    // }, 2500);
-
-    $(".run-bar-inner .intel-bar .mbps font").animateNumbers(2400, true, 1000);
-    $(".run-bar-inner .ac-bar .mbps font").animateNumbers(867, true, 1000);
-
     $(".competition-btn").click(function () {
         $(".competition-mp4").get(0).play();
         $(this).fadeOut()
-    });
-
-    $(".competition-mp4").on('ended', function () {
-        $(".competition-btn").fadeIn()
     });
 
     $(".cooling-btn").click(function () {
@@ -117,88 +74,204 @@ $(function () {
         $(this).fadeOut()
     });
 
-    $(".cooling-mp4").on('ended', function () {
-        $(".cooling-btn").fadeIn()
-    });
-
     $(".keyboard-btn").click(function () {
         $(".keyboard-mp4").get(0).play();
         $(this).fadeOut()
     });
-
-
-    $(".keyboard-mp4").on('ended', function () {
-        $(".keyboard-btn").fadeIn()
+    $(".visual-btn").click(function () {
+        $(".visual-mp4").get(0).play();
+        $(this).fadeOut()
     });
 
-    // $(".rog-scar").paroller({
-    //     factor: 0.1,
-    //     factorXs: 0.2,
-    //     type: 'foreground',
-    //     direction: 'vertical'
-    // });
-    // let float = 0;
-    // let float2 = 0;
-    // let float3 = 0;
-    // let float4 = 0;
-    // let float5 = 0;
-    // $(window).scroll(function (e) {
-    //     var _container = $(".scar-container");
-    //     if ($(window).scrollTop() > $(".rog-scar").offset().top) {
-    //         if (direction == "down") {
-    //             float += 5;
-    //         } else if (direction == "up") {
-    //             float -= 5;
-    //         }
-    //         $(".rog-scar").css({
-    //             "transform": `translateY(${float}px)`
-    //         });
-    //     }
+    let float = 0;
+    let float2 = 0;
+    let float3 = 0;
+    let float4 = 0;
+    let float5 = 0;
+    let audio_video = false;
+    let height = document.body.clientHeight;
 
-    //     if ($(window).scrollTop() > $(".performance-notebook img").offset().top) {
-    //         if (direction == "down") {
-    //             float2 += 5;
-    //         } else if (direction == "up") {
-    //             float2 -= 5;
-    //         }
-    //         $(".performance-cpu img").css({
-    //             "transform": `translateY(${float2}px)`
-    //         });
-    //     }
+    let visual = $(".visual-section").height();
+    let design = $(".design-section").height();    
+    let performance = $(".performance-section").height();    
+    let display = $(".display-section").height();    
+    let cooling = $(".cooling-section").height();
+    let keyboard = $(".keyboard-section").height();
+    let audio = $(".audio-section").height();
+    let battery = $(".battery-section").height();
+    let aura = $(".aura-section").height();
+    let keystone = $(".keystone-section").height();
+    let connectivity = $(".connectivity-section").height();
+    let io = $(".io-section").height();
+    let exclusive = $(".exclusive-section").height();
+    let slider = $(".slider-section").height();
+    let peripherals = $(".peripherals-section").height();
 
-    //     if ($(window).scrollTop() > $(".display-fullhd img").offset().top) {
-    //         if (direction == "down") {
-    //             float3 -= 5;
-    //         } else if (direction == "up") {
-    //             float3 += 5;
-    //         }
-    //         $(".display-fullhd img").css({
-    //             "transform": `translateY(${float3}px)`
-    //         });
-    //     }
 
-    //     if ($(window).scrollTop() > $(".display-qhd img").offset().top) {
-    //         if (direction == "down") {
-    //             float4 -= 5;
-    //         } else if (direction == "up") {
-    //             float4 += 5;
-    //         }
-    //         $(".display-qhd img").css({
-    //             "transform": `translateY(${float4}px)`
-    //         });
-    //     }
+    $(window).scroll(function (e) {
 
-    //     if ($(window).scrollTop() > $(".cooling-cpu img").offset().top) {
-    //         if (direction == "down") {
-    //             float5 -= 5;
-    //         } else if (direction == "up") {
-    //             float5 += 5;
-    //         }
-    //         $(".cooling-cpu img").css({
-    //             "transform": `translateY(${float5}px)`
-    //         });
-    //     }
-    // });
+        /**
+         * rog-scar 滾動視差
+         */
+        if ($(window).scrollTop() > $(".rog-scar").offset().top - 200) {
+            if (direction == "down") {
+                float -= 3;
+            } else if (direction == "up") {
+                float += 3;
+            }
+            $(".rog-scar").css({
+                "transform": `translateY(${float}px)`
+            });
+        } else {float = 0;
+             $(".rog-scar").css({
+                "transform": `translateY(${float}px)`
+            });
+        }
+        if ($(window).scrollTop() > $(".rog-scar").offset().top + $(".rog-scar").height()) {
+            float = 0;
+            $(".rog-scar").css({
+                "transform": `translateY(${float}px)`
+            });
+        }
+        /**
+         * performance 滾動視差
+         */
+        if ($(window).scrollTop() > $(".performance-notebook").offset().top - 200) {
+            if (direction == "down") {
+                float2 -= 2.5;
+            } else if (direction == "up") {
+                float2 += 2.5;
+            }
+            $(".performance-notebook").css({
+                "transform": `translateY(${float2}px)`
+            });
+        } else {
+            float2 = 0;
+            $(".performance-notebook").css({
+                "transform": `translateY(${float2}px)`
+            });
+        }
+        
+        if ($(window).scrollTop() > $(".performance-notebook").offset().top + $(".performance-notebook").height()) {
+            float2 = 0;
+            $(".performance-notebook").css({
+                "transform": `translateY(${float2}px)`
+            });
+        }
+        /**
+         * fullhd 滾動視差
+         */
+
+        if ($(window).scrollTop() > $(".fullhd-notebook").offset().top - 100) {
+            if (direction == "down") {
+                float3 += 2.5;
+            } else if (direction == "up") {
+                float3 -= 2.5;
+            }
+            $(".fullhd-notebook").css({
+                "transform": `translateY(${float3}px)`
+            });
+        }
+
+        /**
+         * qhd 滾動視差
+         */
+        if ($(window).scrollTop() > $(".qhd-notebook").offset().top - 300) {
+            if (direction == "down") {
+                float4 += 2.5;
+            } else if (direction == "up") {
+                float4 -= 2.5;
+            }
+            $(".inner-sky img").css({
+                "left": `${float4}px`,
+            });
+        } else {
+            float4 = 0;
+            $(".inner-sky img").css({
+                "left": `${float4}px`,
+            });
+        }
+         if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
+            float4 = 0;
+            $(".inner-sky img").css({
+                "left": `${float4}px`,
+            });
+        }
+        /**
+         * 
+         */
+
+        if ($(window).scrollTop() > $(".cooling-cpu").offset().top - 300) {
+            if (direction == "down") {                
+                $(".cooling-winds").removeClass("active");
+            } else if (direction == "up") {                
+                $(".cooling-winds").addClass("active");
+            }
+            
+        }
+
+
+        if ($(window).scrollTop() > $(".keyboard-section").offset().top + 200) {
+            if (direction == "down") {
+                $(".keyboard-line").removeClass("active");
+            } else if (direction == "up") {
+                $(".keyboard-line").addClass("active");
+            }
+        }
+
+         $(".audio-mp4").on('ended', function () {
+            $(".audio-final").addClass("active")
+        });
+
+        if ($(window).scrollTop() > $(".audio-section").offset().top) {
+            if (!audio_video) {
+                $(".audio-mp4").get(0).play();
+                audio_video = true;
+            }                 
+        }
+
+        if ($(window).scrollTop() > $(".audio-section").offset().top) { 
+            if (direction == "down") {
+                float5 -= 7.5;
+            } else if (direction == "up") {
+                float5 += 7.5;
+            }
+            console.log(float5)
+            if (float5 >= 100) {
+                float5 = 100
+            }
+            if (float5 <= 0) {
+                float5 = 0;
+            }
+            $(".audio .black-frame").css({
+                "transform": `translateX(-${float5}%)`
+            });
+        } else {
+            $(".audio .black-frame").css({
+                "transform": `translateX(0%)`
+            });
+        }
+
+        if ($(window).scrollTop() > $(".battery").offset().top) {
+            $(".battery").addClass("active");
+        }
+        
+        if ($(window).scrollTop() > $(".keystone-notebook").offset().top - 200) {
+            $(".keystone-in").addClass("active");
+        }
+
+
+        if ($(window).scrollTop() > $(".connectivity-section").offset().top + 150) {
+
+            $(".upper-bar .bar").addClass("active");
+            $(".run-bar-inner .intel-bar .mbps font").animateNumbers(2400, true, 1000);
+            $(".run-bar-inner .ac-bar .mbps font").animateNumbers(867, true, 1000);
+        }
+
+         if ($(window).scrollTop() > $(".io-section").offset().top + 150) {
+             $(".io .usb").addClass("active");
+        }
+    });
 });
 
 var direction;
