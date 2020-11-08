@@ -191,7 +191,7 @@ $(function () {
         /**
          * qhd 滾動視差
          */
-        if ($(window).scrollTop() > $(".qhd-notebook").offset().top - 300) {
+        if ($(window).scrollTop() > $(".qhd-notebook").offset().top - ($(".qhd-notebook").offset().top * 0.1)) {
             if (direction == "down") {
                 float4 += 2.5;
             } else if (direction == "up") {
@@ -216,7 +216,7 @@ $(function () {
          * 
          */
 
-        if ($(window).scrollTop() > $(".cooling-cpu").offset().top - 300) {
+        if ($(window).scrollTop() > $(".cooling-cpu").offset().top - ($(".cooling-cpu").offset().top * 0.1)) {
             if (direction == "down") {                
                 $(".cooling-winds").removeClass("active");
             } else if (direction == "up") {                
@@ -226,7 +226,7 @@ $(function () {
         }
 
 
-        if ($(window).scrollTop() > $(".keyboard-section").offset().top + 200) {
+        if ($(window).scrollTop() > $(".keyboard-section").offset().top - ($(".keyboard-section").offset().top * 0.1)) {
             if (direction == "down") {
                 $(".keyboard-line").removeClass("active");
             } else if (direction == "up") {
@@ -238,7 +238,7 @@ $(function () {
             $(".audio-final").addClass("active")
         });
 
-        if ($(window).scrollTop() > $(".audio-section").offset().top) {
+        if ($(window).scrollTop() > $(".audio-section").offset().top - ($(".audio-section").offset().top * 0.1)) {
             if (!audio_video) {
                 $(".audio-mp4").get(0).play();
                 audio_video = true;
