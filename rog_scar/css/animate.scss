@@ -323,21 +323,51 @@
     }
 }
 
-@keyframes battery-bg {
-    0% {
-        background-image: url("../img/battery-bg-step1.jpg");
+@keyframes cooling-bg {
+    10% {
+        background-image: url("../img/cooling-1.png");
     }
 
-    50% {
-        background-image: url("../img/battery-bg-step2.jpg");
+    25% {
+        background-image: url("../img/cooling-2.png");
     }
 
-    75% {
-        background-image: url("../img/battery-bg-step3.jpg");
+    40% {
+        background-image: url("../img/cooling-3.png");
+    }
+
+    55% {
+        background-image: url("../img/cooling-4.png");
+    }
+
+    70% {
+        background-image: url("../img/cooling-5.png");
+    }
+
+    90% {
+        background-image: url("../img/cooling-6.png");
     }
 
     100% {
-        background-image: url("../img/battery-bg-step3.jpg");
+        background-image: none;
+    }
+}
+
+@keyframes battery-bg {
+    0% {
+        background-image: url("../img/battery-bg-step1.png");
+    }
+
+    50% {
+        background-image: url("../img/battery-bg-step2.png");
+    }
+
+    75% {
+        background-image: url("../img/battery-bg-step3.png");
+    }
+
+    100% {
+        background-image: url("../img/battery-bg-step3.png");
     }
 }
 
