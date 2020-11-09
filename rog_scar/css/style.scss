@@ -46,6 +46,7 @@ body {
 }
 
 .peripherals {
+  margin-top: -250px;
   position: relative;
 
   .peripherals-notebook {
@@ -84,8 +85,8 @@ body {
       width: 100%;
       display: inline-block;
       mix-blend-mode: screen;
-      text-shadow: 1px 0 red;
-      color: #66bef1;
+      text-shadow: 1px 0 #e400ff;
+      color: #00ffff;
       animation-duration: 2s;
       animation-timing-function: ease-in;
       animation-iteration-count: infinite;
@@ -100,10 +101,10 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      color: #f07898;
+      color: #e40000;
       mix-blend-mode: screen;
       display: inline-block;
-      text-shadow: 1px 0 blue;
+      text-shadow: 1px 0 #1d51d8;
       animation-duration: 2s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
@@ -124,13 +125,35 @@ body {
     font-size: 90px;
     font-family: "TGLTExt";
     position: absolute;
-    top: 5px;
+    top: 20px;
     left: 20px;
   }
 
   img {
     width: 50%;
   }
+}
+
+.visual-text {
+  margin: 30px auto;
+  display: table;
+
+  .gradient {
+    background: rgb(117, 211, 253);
+    background: -moz-linear-gradient(top, rgba(117, 211, 253, 1) 0%, rgba(70, 143, 215, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(117, 211, 253, 1) 0%, rgba(70, 143, 215, 1) 100%);
+    background: linear-gradient(to bottom, rgba(117, 211, 253, 1) 0%, rgba(70, 143, 215, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#75d3fd', endColorstr='#468fd7', GradientType=0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    text-align: center;
+    font-family: "TGLTExt";
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
 }
 
 .introduction-btn-box {
@@ -163,6 +186,7 @@ body {
 
 .io {
   position: relative;
+  margin-top: -150px;
   padding-bottom: 100px;
 
   .io-notebook {
@@ -295,6 +319,7 @@ body {
 
 .armoury {
   position: relative;
+  margin-top: -250px;
 
   .armoury-notebook {
     width: 1440px;
@@ -311,6 +336,7 @@ body {
 }
 
 .connectivity {
+  margin-top: -300px;
   position: relative;
 
   .connectivity-notebook {
@@ -393,6 +419,7 @@ body {
 
 .audio {
   position: relative;
+  margin-top: -80px;
 
   .black-frame {
     position: absolute;
@@ -815,6 +842,7 @@ body {
   }
 }
 
+
 .keyboard {
   position: relative;
   margin-top: -150px;
@@ -825,6 +853,7 @@ body {
 
   .blur-bg {
     top: 0;
+    margin-top: -200px;
   }
 
   .performance-notebook {
@@ -1031,8 +1060,14 @@ body {
     font-size: 15px;
     color: #fff;
     font-family: "Roboto";
-    margin-bottom: 5px;
+    margin-top: 5px;
     text-transform: uppercase;
+  }
+
+  .main-text-outside {
+    display: flex;
+    align-items: center;
+    height: 60px;
   }
 
   .main-text {
@@ -1045,12 +1080,12 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#75d2fd', endColorstr='#3870a5', GradientType=0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 100% 30px;
     text-transform: uppercase;
     text-align: center;
     align-items: center;
 
     &.two-layer {
-      // height: 60px;
       display: flex;
     }
   }
@@ -1165,7 +1200,7 @@ body {
   position: absolute;
   z-index: 10;
   left: 15%;
-  top: 24%;
+  top: 28%;
   display: flex;
   align-items: center;
 
@@ -1467,6 +1502,17 @@ body {
   justify-content: center;
 }
 
+.cooling-learnmore {
+  width: 1140px;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
 
 .video-play-btn {
   position: absolute;
@@ -1520,7 +1566,7 @@ body {
 
 .slick-frame {
   display: flex;
-  margin: -200px auto 300px;
+  margin: -200px auto 50px;
   align-items: center;
 
   .slick-inner {
@@ -1713,6 +1759,11 @@ body {
 }
 
 @media only screen and (max-width: 1920px) and (min-width: 1440px) {
+  .design-section .rog-scar {
+    left: 1%;
+    top: -1.5%;
+  }
+
   .scar-container .rog-scar {
     width: 836px;
   }
@@ -1769,11 +1820,14 @@ body {
 
 .visual-section {
   .text-frame {
+    position: relative;
+    z-index: 2;
     margin-top: -240px;
   }
 
   .blur-bg {
     top: 0;
+    margin-top: -250px;
   }
 }
 
@@ -1926,6 +1980,13 @@ body {
       width: calc(750px * 1.5);
     }
   }
+
+  .design-section .rog-scar {
+    left: 1% !important;
+    top: -8% !important;
+    width: calc(1393.75px);
+    height: calc(1166.25px);
+  }
 }
 
 @media only screen and (min-width: 3000px) {
@@ -1971,6 +2032,21 @@ body {
 }
 
 .display-section {
+
+  .inner-video video {
+    position: relative;
+    left: -10%;
+  }
+
+  .blur-bg {
+    &.fullhd-bg {}
+
+    &.qhd-bg {
+      margin-top: -200px;
+    }
+  }
+
+
   .fullhd-set {
     width: 100%;
     height: 100%;
@@ -2007,12 +2083,17 @@ body {
 }
 
 .cooling-section {
+  .run-container {
+    position: absolute;
+    right: 0;
+  }
+
   .cooling-set {
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    top: -15%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -2024,6 +2105,43 @@ body {
 }
 
 .design-section {
+  .rog-bg {
+    opacity: 0;
+
+  }
+
+  .rotate-bg {
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: 0.5s ease all;
+    background-image: url(../img/anima-3.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+
+    &.left {
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-name: rotate-bg1;
+      animation-direction: alternate
+    }
+
+    &.right {
+      animation-duration: 1.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-name: rotate-bg2;
+      animation-direction: alternate
+    }
+
+  }
+
   .design-set {
     width: 100%;
     height: 100%;
@@ -2039,9 +2157,11 @@ body {
     position: relative;
     left: auto;
     top: auto;
-    top: -4%;
-    left: 1%;
+    top: -1%;
+    left: 1.5%;
   }
+
+
 
 }
 

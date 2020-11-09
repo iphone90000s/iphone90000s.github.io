@@ -340,3 +340,43 @@
         background-image: url("../img/battery-bg-step3.jpg");
     }
 }
+
+@keyframes rotate-bg1 {
+    0% {
+        background-image: url("../img/anima-5.png");
+    }
+
+    50% {
+        background-image: url("../img/anima-3.png");
+    }
+
+    75% {
+        background-image: url("../img/anima-2.png");
+    }
+
+    90% {
+        background-image: url("../img/anima-1.png");
+    }
+
+    100% {
+        background-image: url("../img/anima-1.png");
+    }
+}
+
+@keyframes rotate-bg2 {
+    0% {
+        background-image: url("../img/anima-3.png");
+    }
+
+    50% {
+        background-image: url("../img/anima-4.png");
+    }
+
+    75% {
+        background-image: url("../img/anima-5.png");
+    }
+
+    100% {
+        background-image: url("../img/anima-5.png");
+    }
+}

@@ -127,11 +127,15 @@ $(function () {
         //         "transform": `translateY(${float}px)`
         //     });
         // }
-        if ($(window).scrollTop() > $(".rog-scar").offset().top + $(".rog-scar").height()) {
-            float = 0;
-            $(".rog-scar").css({
-                "transform": `translateY(${float}px)`
-            });
+        if ($(window).scrollTop() > $(".rotate-bg").offset().top + ($(".rotate-bg").offset().top * 0.1)) {
+            if (direction == "down") {
+                $(".rotate-bg").addClass("left");
+                $(".rotate-bg").removeClass("right");
+            } else if (direction == "up") {
+                $(".rotate-bg").addClass("right");
+                $(".rotate-bg").removeClass("left");
+            }
+
         }
         /**
          * performance 滾動視差
@@ -142,29 +146,23 @@ $(function () {
             } else if (direction == "up") {
                 float2 += 2.5;
             }
+            if (float2 > 30) {
+                float2 = 30
+            }
+            if (float2 < -30) {
+                float2 = -30
+            }
             $(".performance-notebook").css({
                 "transform": `translateY(${float2}px)`
             });
 
             $(".cpu").addClass("active");
             $(".gpu").addClass("active");
-            // $(".cpu").css({
-            //     "transform": `translateY(-${float2/2}px)`
-            // });
-            // $(".gpu").css({
-            //     "transform": `translateY(-${float2/2}px)`
-            // });
         } else {
             float2 = 0;
             $(".performance-notebook").css({
                 "transform": `translateY(${float2}px)`
             });
-            // $(".cpu").css({
-            //     "transform": `translateY(${float2}px)`
-            // });
-            // $(".gpu").css({
-            //     "transform": `translateY(${float2}px)`
-            // });
         }
 
         if ($(window).scrollTop() > $(".performance-notebook").offset().top + $(".performance-notebook").height()) {
