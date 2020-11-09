@@ -7,6 +7,17 @@ $(function () {
         $(window).scrollTop(0);
     });
 
+    $(".keystone-glitch img").mgGlitch({
+        destroy: !1,
+        glitch: !0,
+        scale: !0,
+        blend: !0,
+        blendModeType: "hue",
+        glitch1TimeMin: 100,
+        glitch1TimeMax: 300,
+        glitch2TimeMin: 200,
+        glitch2TimeMax: 400
+    });
     /**
      * @summary design區塊的輪播
      */
@@ -137,6 +148,8 @@ $(function () {
             }
 
         }
+
+
         /**
          * performance 滾動視差
          */

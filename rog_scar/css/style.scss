@@ -26,7 +26,7 @@ body {
   left: 0px;
   z-index: 1;
   padding: 10px;
-  filter: blur(10px);
+  filter: blur(12px);
   border-radius: 70px;
 
 }
@@ -64,40 +64,27 @@ body {
   }
 }
 
+.keystone-section {
+  .bg-set {
+    &.front-1 {
+      position: absolute;
+
+    }
+
+    &.front-2 {
+      position: absolute;
+
+    }
+
+    &.front-3 {
+      position: absolute;
+
+    }
+  }
+}
+
 .keystone-glitch {
   position: relative;
-
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-image: url("../img/keystone-background-glitch.png");
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    animation-name: glitch-anim-1;
-    animation-direction: alternate;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    background-image: url("../img/keystone-background-glitch.png");
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-iteration-count: infinite;
-    animation-name: glitch-anim-1;
-    animation-direction: alternate;
-  }
 }
 
 .visual-title {
@@ -1274,7 +1261,7 @@ body {
 .menu {
   position: absolute;
   z-index: 10;
-  left: 15%;
+  left: 28%;
   top: 28%;
   display: flex;
   align-items: center;
