@@ -3,9 +3,9 @@ $(function () {
     /**
      * @summary 當畫面重整時，強制回到網頁最上方
      */
-    $(window).on('beforeunload', function () {
-        $(window).scrollTop(0);
-    });
+    // $(window).on('beforeunload', function () {
+    //     $(window).scrollTop(0);
+    // });
 
     /**
      * @summary design區塊的輪播
@@ -45,7 +45,6 @@ $(function () {
         slidesToScroll: 1,
     });
 
-    $(".run-index font").animateNumbers(39, true, 1000);
 
     $(".prev-arrow").click(function () {
         $(".slick-inner").slick("slickPrev");
@@ -92,9 +91,9 @@ $(function () {
     let height = document.body.clientHeight;
 
     let visual = $(".visual-section").height();
-    let design = $(".design-section").height();    
-    let performance = $(".performance-section").height();    
-    let display = $(".display-section").height();    
+    let design = $(".design-section").height();
+    let performance = $(".performance-section").height();
+    let display = $(".display-section").height();
     let cooling = $(".cooling-section").height();
     let keyboard = $(".keyboard-section").height();
     let audio = $(".audio-section").height();
@@ -113,20 +112,21 @@ $(function () {
         /**
          * rog-scar 滾動視差
          */
-        if ($(window).scrollTop() > $(".rog-scar").offset().top - 200) {
-            if (direction == "down") {
-                float -= 3;
-            } else if (direction == "up") {
-                float += 3;
-            }
-            $(".rog-scar").css({
-                "transform": `translateY(${float}px)`
-            });
-        } else {float = 0;
-             $(".rog-scar").css({
-                "transform": `translateY(${float}px)`
-            });
-        }
+        // if ($(window).scrollTop() > $(".rog-scar").offset().top - 200) {
+        //     if (direction == "down") {
+        //         float -= 3;
+        //     } else if (direction == "up") {
+        //         float += 3;
+        //     }
+        //     $(".rog-scar").css({
+        //         "transform": `translateY(${float}px)`
+        //     });
+        // } else {
+        //     float = 0;
+        //     $(".rog-scar").css({
+        //         "transform": `translateY(${float}px)`
+        //     });
+        // }
         if ($(window).scrollTop() > $(".rog-scar").offset().top + $(".rog-scar").height()) {
             float = 0;
             $(".rog-scar").css({
@@ -146,25 +146,27 @@ $(function () {
                 "transform": `translateY(${float2}px)`
             });
 
-            $(".cpu").css({
-                "transform": `translateY(-${float2/2}px)`
-            });
-            $(".gpu").css({
-                "transform": `translateY(-${float2/2}px)`
-            });
+            $(".cpu").addClass("active");
+            $(".gpu").addClass("active");
+            // $(".cpu").css({
+            //     "transform": `translateY(-${float2/2}px)`
+            // });
+            // $(".gpu").css({
+            //     "transform": `translateY(-${float2/2}px)`
+            // });
         } else {
             float2 = 0;
             $(".performance-notebook").css({
                 "transform": `translateY(${float2}px)`
             });
-            $(".cpu").css({
-                "transform": `translateY(${float2}px)`
-            });
-            $(".gpu").css({
-                "transform": `translateY(${float2}px)`
-            });
+            // $(".cpu").css({
+            //     "transform": `translateY(${float2}px)`
+            // });
+            // $(".gpu").css({
+            //     "transform": `translateY(${float2}px)`
+            // });
         }
-        
+
         if ($(window).scrollTop() > $(".performance-notebook").offset().top + $(".performance-notebook").height()) {
             float2 = 0;
             $(".performance-notebook").css({
@@ -176,22 +178,22 @@ $(function () {
          */
 
         if ($(window).scrollTop() > $(".fullhd-notebook").offset().top - 100) {
-            
+
             $(".dispaly-mp4").get(0).play();
             if (direction == "down") {
                 float3 += 2.5;
             } else if (direction == "up") {
                 float3 -= 2.5;
             }
-            $(".fullhd-notebook").css({
-                "transform": `translateY(${float3}px)`
-            });
+            // $(".fullhd-notebook").css({
+            //     "transform": `translateY(${float3}px)`
+            // });
         }
 
         /**
          * qhd 滾動視差
          */
-        if ($(window).scrollTop() > $(".qhd-notebook").offset().top - ($(".qhd-notebook").offset().top * 0.1)) {
+        if ($(window).scrollTop() > $(".qhd-notebook").offset().top - 300) {
             if (direction == "down") {
                 float4 += 2.5;
             } else if (direction == "up") {
@@ -199,34 +201,41 @@ $(function () {
             }
             $(".inner-sky img").css({
                 "left": `${float4}px`,
+                "top": `${float4/2}px`,
             });
         } else {
             float4 = 0;
             $(".inner-sky img").css({
                 "left": `${float4}px`,
+                "top": `${float4}px`,
             });
         }
-         if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
+        if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
             float4 = 0;
             $(".inner-sky img").css({
                 "left": `${float4}px`,
+                "top": `${float4}px`,
             });
         }
         /**
          * 
          */
 
-        if ($(window).scrollTop() > $(".cooling-cpu").offset().top - ($(".cooling-cpu").offset().top * 0.1)) {
-            if (direction == "down") {                
+        if ($(window).scrollTop() > $(".cooling-cpu").offset().top - 300) {
+            if (direction == "down") {
                 $(".cooling-winds").removeClass("active");
-            } else if (direction == "up") {                
+            } else if (direction == "up") {
                 $(".cooling-winds").addClass("active");
             }
-            
+        }
+
+        if ($(window).scrollTop() > $(".cooling-section").offset().top + ($(".cooling-section").height() * 0.1)) {
+            $(".run-index font").animateNumbers(39, true, 1000);
         }
 
 
-        if ($(window).scrollTop() > $(".keyboard-section").offset().top - ($(".keyboard-section").offset().top * 0.1)) {
+
+        if ($(window).scrollTop() > $(".keyboard-section").offset().top + 200) {
             if (direction == "down") {
                 $(".keyboard-line").removeClass("active");
             } else if (direction == "up") {
@@ -234,24 +243,25 @@ $(function () {
             }
         }
 
-         $(".audio-mp4").on('ended', function () {
-            $(".audio-final").addClass("active")
+        $(".audio-mp4").on('ended', function () {
+            $(".audio-final").addClass("active");
+            audio_video = false;
         });
 
-        if ($(window).scrollTop() > $(".audio-section").offset().top - ($(".audio-section").offset().top * 0.1)) {
+        if ($(window).scrollTop() > $(".audio-section").offset().top) {
             if (!audio_video) {
+                $(".audio-final").removeClass("active");
                 $(".audio-mp4").get(0).play();
                 audio_video = true;
-            }                 
+            }
         }
 
-        if ($(window).scrollTop() > $(".audio-section").offset().top) { 
+        if ($(window).scrollTop() > $(".audio-section").offset().top) {
             if (direction == "down") {
                 float5 -= 7.5;
             } else if (direction == "up") {
                 float5 += 7.5;
             }
-            console.log(float5)
             if (float5 >= 100) {
                 float5 = 100
             }
@@ -270,7 +280,7 @@ $(function () {
         if ($(window).scrollTop() > $(".battery").offset().top) {
             $(".battery").addClass("active");
         }
-        
+
         if ($(window).scrollTop() > $(".keystone-notebook").offset().top - 200) {
             $(".keystone-in").addClass("active");
         }
@@ -283,8 +293,8 @@ $(function () {
             $(".run-bar-inner .ac-bar .mbps font").animateNumbers(867, true, 1000);
         }
 
-         if ($(window).scrollTop() > $(".io-section").offset().top + 150) {
-             $(".io .usb").addClass("active");
+        if ($(window).scrollTop() > $(".io-section").offset().top + 150) {
+            $(".io .usb").addClass("active");
         }
     });
 });

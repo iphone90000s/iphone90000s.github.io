@@ -83,7 +83,9 @@ body {
       left: 0;
       width: 100%;
       display: inline-block;
+      mix-blend-mode: screen;
       text-shadow: 1px 0 red;
+      color: #66bef1;
       animation-duration: 2s;
       animation-timing-function: ease-in;
       animation-iteration-count: infinite;
@@ -93,11 +95,13 @@ body {
 
     &:after {
       content: attr(data-text);
-      clip: rect(0, 900px, 0, 0);
+      // clip: rect(0, 900px, 0, 0);
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
+      color: #f07898;
+      mix-blend-mode: screen;
       display: inline-block;
       text-shadow: 1px 0 blue;
       animation-duration: 2s;
@@ -259,13 +263,25 @@ body {
     height: 100%;
     transition: 0.5s ease all;
     background-image: url("../img/keyboard-line.png");
-    opacity: 0;
-    background-size: 100% auto;
     background-repeat: no-repeat;
-    opacity: 0;
+    mix-blend-mode: screen;
+    background-size: 100% auto;
+
+    .line-shadow {
+      width: 100%;
+      height: 100%;
+      background: #000;
+      transition: 0.5s ease all;
+      left: 0%;
+      position: relative;
+    }
 
     &.active {
-      opacity: 1;
+
+      .line-shadow {
+        filter: blur(50px);
+        left: 100%;
+      }
     }
 
     img {
@@ -382,13 +398,14 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
-    transform: translateX(100%);
     filter: blur(100px);
     transition: 0.3s ease all;
+    width: 100%;
+    height: 100%;
+    // background: #000;
+    transition: 0.5s ease all;
   }
 
   .audio-notebook {
@@ -496,9 +513,9 @@ body {
     height: 450px;
 
     img {
-      width: 1500px;
+      width: 1700px;
       position: relative;
-      transform: translate(-30%, 10px);
+      transform: translate(-30%, -15%);
       transition: 0.3s ease all;
     }
   }
@@ -829,6 +846,14 @@ body {
       top: 50.5%;
       width: calc(953px * .45);
       mix-blend-mode: screen;
+      transition: 0.9s ease all;
+      opacity: 0;
+      transform: translateY(50px);
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
       img {
         width: 100%;
@@ -842,6 +867,15 @@ body {
       z-index: 2;
       width: calc(953px * .3);
       mix-blend-mode: screen;
+
+      transition: 0.5s ease all;
+      opacity: 0;
+      transform: translateY(50px);
+
+      &.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
       img {
         width: 100%;
@@ -876,8 +910,8 @@ body {
   color: #fff;
   background-image: url("../img/btn-border.png");
   background-size: 100% auto;
-  width: calc(295px * 0.75);
-  height: calc(88px * 0.75);
+  width: calc(295px * 0.65);
+  height: calc(88px * 0.65);
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -905,11 +939,12 @@ body {
   &:hover {
     .border-full {
       background-size: 100% auto;
-      width: calc(295px * 0.75);
-      filter: drop-shadow(0px 0px 6px #76d4fe);
+      // filter: drop-shadow(0px 0px 6px #76d4fe);
       background-image: url("../img/border-full.png");
       width: 100%;
       height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
   }
@@ -921,12 +956,10 @@ body {
     background-image: url("../img/border-light-left.png");
     position: absolute;
     background-repeat: no-repeat;
-    filter: drop-shadow(0px 0px 6px #76d4fe);
+    // filter: drop-shadow(0px 0px 6px #76d4fe);
     left: -10px;
     top: 0;
     background-position: left top;
-    left: -6px;
-    top: 1px;
     background-size: 100% auto;
   }
 
@@ -938,9 +971,9 @@ body {
     background-repeat: no-repeat;
     background-image: url("../img/border-light-bottom.png");
     position: absolute;
-    filter: drop-shadow(0px 0px 6px #76d4fe);
-    left: -10px;
-    top: 0;
+    // filter: drop-shadow(0px 0px 6px #76d4fe);
+    left: -5px;
+    top: 1px;
     background-position: left top;
   }
 }
@@ -999,6 +1032,7 @@ body {
     color: #fff;
     font-family: "Roboto";
     margin-bottom: 5px;
+    text-transform: uppercase;
   }
 
   .main-text {
@@ -1016,7 +1050,7 @@ body {
     align-items: center;
 
     &.two-layer {
-      height: 60px;
+      // height: 60px;
       display: flex;
     }
   }
@@ -1025,6 +1059,7 @@ body {
     font-size: 24px;
     color: #fff;
     font-family: "Roboto";
+    text-transform: uppercase;
   }
 }
 
@@ -1691,8 +1726,8 @@ body {
   }
 
   .hl-style {
-    width: calc(581px * .6);
-    height: calc(189px * .6);
+    width: calc(581px * .7);
+    height: calc(189px * .7);
 
     .title {
       font-size: 15px;
@@ -1703,7 +1738,7 @@ body {
     }
 
     .main-text {
-      font-size: 28px;
+      font-size: 26px;
     }
   }
 
