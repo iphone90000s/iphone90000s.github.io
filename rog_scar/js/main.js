@@ -3,9 +3,9 @@ $(function () {
     /**
      * @summary 當畫面重整時，強制回到網頁最上方
      */
-    // $(window).on('beforeunload', function () {
-    //     $(window).scrollTop(0);
-    // });
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
+    });
 
     /**
      * @summary design區塊的輪播
