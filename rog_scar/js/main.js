@@ -99,45 +99,58 @@ $(function () {
     let float4 = 0;
     let float5 = 0;
     let audio_video = false;
-    let height = document.body.clientHeight;
-
-    let visual = $(".visual-section").height();
-    let design = $(".design-section").height();
-    let performance = $(".performance-section").height();
-    let display = $(".display-section").height();
-    let cooling = $(".cooling-section").height();
-    let keyboard = $(".keyboard-section").height();
-    let audio = $(".audio-section").height();
-    let battery = $(".battery-section").height();
-    let aura = $(".aura-section").height();
-    let keystone = $(".keystone-section").height();
-    let connectivity = $(".connectivity-section").height();
-    let io = $(".io-section").height();
-    let exclusive = $(".exclusive-section").height();
-    let slider = $(".slider-section").height();
-    let peripherals = $(".peripherals-section").height();
-
-
+    let height = document.body.clientHeight - 200;
     $(window).scroll(function (e) {
 
+        if ($(window).scrollTop() > $(".design-section").offset().top -height) {
+            $(".design-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".performance-section").offset().top -height) {
+            $(".performance-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".display-section").offset().top -height) {
+            $(".display-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".cooling-section").offset().top -height) {
+            $(".cooling-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".video-section").offset().top -height) {
+            $(".video-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".keyboard-section").offset().top -height) {
+            $(".keyboard-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".audio-section").offset().top -height) {
+            $(".audio-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".battery-section").offset().top -height) {
+            $(".battery-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".aura-section").offset().top -height) {
+            $(".aura-section .section-inner").addClass("active");
+        }
+         if ($(window).scrollTop() > $(".keystone-section").offset().top -height) {
+            $(".keystone-section .section-inner").addClass("active");
+        }
+           if ($(window).scrollTop() > $(".connectivity-section").offset().top -height) {
+            $(".connectivity-section .section-inner").addClass("active");
+        }
+           if ($(window).scrollTop() > $(".io-section").offset().top -height) {
+            $(".io-section .section-inner").addClass("active");
+        }
+           if ($(window).scrollTop() > $(".exclusive-section").offset().top -height) {
+            $(".exclusive-section .section-inner").addClass("active");
+        }
+           if ($(window).scrollTop() > $(".slider-section").offset().top -height) {
+            $(".slider-section .section-inner").addClass("active");
+        }
+           if ($(window).scrollTop() > $(".peripherals-section").offset().top -height) {
+            $(".peripherals-section .section-inner").addClass("active");
+        }
+        /////////
         /**
          * rog-scar 滾動視差
          */
-        // if ($(window).scrollTop() > $(".rog-scar").offset().top - 200) {
-        //     if (direction == "down") {
-        //         float -= 3;
-        //     } else if (direction == "up") {
-        //         float += 3;
-        //     }
-        //     $(".rog-scar").css({
-        //         "transform": `translateY(${float}px)`
-        //     });
-        // } else {
-        //     float = 0;
-        //     $(".rog-scar").css({
-        //         "transform": `translateY(${float}px)`
-        //     });
-        // }
         if ($(window).scrollTop() > $(".rotate-bg").offset().top + ($(".rotate-bg").offset().top * 0.1)) {
             if (direction == "down") {
                 $(".rotate-bg").addClass("left");
@@ -146,10 +159,7 @@ $(function () {
                 $(".rotate-bg").addClass("right");
                 $(".rotate-bg").removeClass("left");
             }
-
         }
-
-
         /**
          * performance 滾動視差
          */
@@ -267,7 +277,7 @@ $(function () {
             }
         }
 
-        if ($(window).scrollTop() > $(".audio-section").offset().top) {
+        if ($(window).scrollTop() > $(".audio-section").offset().top + ($(".audio-section").offset().top * 0.1)) {
             if (direction == "down") {
                 float5 -= 7.5;
             } else if (direction == "up") {
