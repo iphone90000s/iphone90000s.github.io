@@ -102,49 +102,49 @@ $(function () {
     let height = document.body.clientHeight - 200;
     $(window).scroll(function (e) {
 
-        if ($(window).scrollTop() > $(".design-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".design-section").offset().top - height) {
             $(".design-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".performance-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".performance-section").offset().top - height) {
             $(".performance-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".display-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".display-section").offset().top - height) {
             $(".display-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".cooling-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".cooling-section").offset().top - height) {
             $(".cooling-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".video-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".video-section").offset().top - height) {
             $(".video-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".keyboard-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".keyboard-section").offset().top - height) {
             $(".keyboard-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".audio-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".audio-section").offset().top - height) {
             $(".audio-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".battery-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".battery-section").offset().top - height) {
             $(".battery-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".aura-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".aura-section").offset().top - height) {
             $(".aura-section .section-inner").addClass("active");
         }
-         if ($(window).scrollTop() > $(".keystone-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".keystone-section").offset().top - height) {
             $(".keystone-section .section-inner").addClass("active");
         }
-           if ($(window).scrollTop() > $(".connectivity-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".connectivity-section").offset().top - height) {
             $(".connectivity-section .section-inner").addClass("active");
         }
-           if ($(window).scrollTop() > $(".io-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".io-section").offset().top - height) {
             $(".io-section .section-inner").addClass("active");
         }
-           if ($(window).scrollTop() > $(".exclusive-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".exclusive-section").offset().top - height) {
             $(".exclusive-section .section-inner").addClass("active");
         }
-           if ($(window).scrollTop() > $(".slider-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".slider-section").offset().top - height) {
             $(".slider-section .section-inner").addClass("active");
         }
-           if ($(window).scrollTop() > $(".peripherals-section").offset().top -height) {
+        if ($(window).scrollTop() > $(".peripherals-section").offset().top - height) {
             $(".peripherals-section .section-inner").addClass("active");
         }
         /////////
@@ -277,7 +277,7 @@ $(function () {
             }
         }
 
-        if ($(window).scrollTop() > $(".audio-section").offset().top + ($(".audio-section").offset().top * 0.1)) {
+        if ($(window).scrollTop() > $(".audio-section").offset().top + ($(".audio-section").height() * 0.1)) {
             if (direction == "down") {
                 float5 -= 7.5;
             } else if (direction == "up") {
@@ -294,6 +294,7 @@ $(function () {
             });
         } else {
             $(".audio .black-frame").css({
+
                 "transform": `translateX(0%)`
             });
         }
