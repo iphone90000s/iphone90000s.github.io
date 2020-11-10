@@ -93,6 +93,8 @@ body {
   font-style: italic;
   text-align: center;
   position: relative;
+  margin-top: -30px;
+  transform: skew(-8deg, 0deg);
 
   * {
     font-family: "RogFont";
@@ -100,6 +102,8 @@ body {
 
   .glitch-text {
     position: relative;
+    margin-top: -20px;
+    letter-spacing: 2px;
 
     &:before {
       content: attr(data-text);
@@ -159,8 +163,9 @@ body {
 }
 
 .visual-text {
-  margin: 30px auto;
+  margin: 20px auto;
   display: table;
+  letter-spacing: 2px;
 
   .gradient {
     background: rgb(117, 211, 253);
@@ -193,6 +198,7 @@ body {
 
 .gradient-title {
   width: 1160px;
+  letter-spacing: 2px;
   background: rgb(117, 211, 253);
   background: -moz-linear-gradient(top, rgba(117, 211, 253, 1) 0%, rgba(70, 143, 215, 1) 100%);
   background: -webkit-linear-gradient(top, rgba(117, 211, 253, 1) 0%, rgba(70, 143, 215, 1) 100%);
@@ -202,7 +208,7 @@ body {
   -webkit-text-fill-color: transparent;
   font-size: 80px;
   text-align: center;
-  margin: 30px auto;
+  margin: 20px auto 10px;
   font-family: "TGLTExt";
   font-weight: bold;
   font-style: italic;
@@ -619,7 +625,7 @@ body {
   margin: 20px;
 
   img {
-    width: 90px;
+    width: 98px;
   }
 }
 
@@ -627,7 +633,7 @@ body {
   margin: 20px;
 
   img {
-    width: 90px;
+    width: 98px;
   }
 }
 
@@ -1093,14 +1099,14 @@ body {
 }
 
 .hl-style {
-  width: calc(352px);
-  height: calc(112px);
+  width: calc(379px);
+  height: calc(120px);
   background-size: 100% auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 10px 12.5px;
+  margin: 0 16px 0px;
   position: relative;
 
   &.blue {
@@ -1272,13 +1278,14 @@ body {
   justify-content: center;
   position: relative;
   z-index: 100;
+  transform: scale(0.75);
 }
 
 .menu {
   position: absolute;
   z-index: 10;
-  left: 28%;
-  top: 28%;
+  left: 30%;
+  top: 25%;
   display: flex;
   align-items: center;
 
@@ -1407,7 +1414,7 @@ body {
     width: 80%;
     max-width: 800px;
     line-height: 1.867;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
     text-align: center;
     font-family: "Roboto";
   }
@@ -1729,9 +1736,10 @@ body {
 .higher-wifi {
   font-family: 'TGLTExt';
   font-size: 36px;
+  display: inline;
+  text-align: left;
   color: rgb(252, 38, 120);
   text-transform: uppercase;
-  text-align: center;
   -moz-transform: matrix(1.26642835361677, 0, 0, 1.26637769533182, 0, 0);
   -webkit-transform: matrix(1.26642835361677, 0, 0, 1.26637769533182, 0, 0);
   -ms-transform: matrix(1.26642835361677, 0, 0, 1.26637769533182, 0, 0);
@@ -1739,26 +1747,26 @@ body {
   background: -moz-linear-gradient(top, rgba(249, 38, 121, 1) 0%, rgba(139, 52, 145, 1) 100%);
   background: -webkit-linear-gradient(top, rgba(249, 38, 121, 1) 0%, rgba(139, 52, 145, 1) 100%);
   background: linear-gradient(to bottom, rgba(249, 38, 121, 1) 0%, rgba(139, 52, 145, 1) 100%);
-  margin-top: 170px;
+  margin-top: 20px;
+  letter-spacing: 3px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f92679', endColorstr='#8b3491', GradientType=0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .run-bar-box {
-  width: 1040px;
-  margin: 0 auto;
+  margin: 30px 0 10px 245px;
   position: relative;
   z-index: 99;
 
   .run-bar-inner {
-    margin-top: 50px;
+    margin: 30px 0 40px;
 
     span {
       font-size: 24px;
       display: table;
       color: #fff;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       font-family: 'TGLTExt';
     }
 
@@ -1768,7 +1776,7 @@ body {
       .mbps {
         display: flex;
         color: #fff;
-        font-size: 30px;
+        font-size: 22.5px;
         margin-left: 45px;
         font-family: 'TGLTExt';
 
@@ -1785,8 +1793,8 @@ body {
 
       .bar {
         transition: all 2.5s ease-out;
-        max-width: 775px;
-        height: 38px;
+        max-width: 580px;
+        height: 27px;
         position: relative;
         background-image: url("../img/wifi-bar.png");
         background-size: 100% 100%;
@@ -1804,8 +1812,8 @@ body {
       .bar {
         width: 0%;
         transition: all 2.5s ease-out;
-        max-width: 273px;
-        height: 38px;
+        max-width: 203px;
+        height: 27px;
         position: relative;
         background-size: 100% 100%;
         background-image: url("../img/802bar.png");
@@ -1820,11 +1828,11 @@ body {
 }
 
 .speed-text {
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.341);
   line-height: 0.999;
   text-align: left;
-  font-family: "TGLTExt";
+  font-family: "Roboto";
 }
 
 
@@ -1843,7 +1851,7 @@ body {
   }
 
   .gradient-text font {
-    font-size: 38px;
+    font-size: 35px;
   }
 
   .gradient-title {
@@ -1870,11 +1878,7 @@ body {
   }
 
   .run-bar-box .run-bar-inner span {
-    font-size: 20px;
-  }
-
-  .run-bar-box .run-bar-inner span {
-    font-size: 16px;
+    font-size: 22.5px;
   }
 
   .content-text {
