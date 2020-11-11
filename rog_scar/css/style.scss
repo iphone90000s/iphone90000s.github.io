@@ -1774,9 +1774,10 @@ body {
 }
 
 .run-bar-box {
-  margin: 30px 0 10px 245px;
+  margin: 20px auto 0;
   position: relative;
   z-index: 99;
+  display: table;
 
   .run-bar-inner {
     margin: 30px 0 40px;
