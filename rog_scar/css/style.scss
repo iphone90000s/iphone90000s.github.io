@@ -1117,7 +1117,7 @@ body {
   position: relative;
 
   &.blue {
-    background-image: url("../img/hl-style.png");
+    // background-image: url("../img/hl-style.png");
   }
 
   &:after {
@@ -1134,7 +1134,7 @@ body {
   &:hover {
     &.blue {
       &:after {
-        background-image: url("../img/hl-style-hover.png");
+        // background-image: url("../img/hl-style-hover.png");
       }
     }
 

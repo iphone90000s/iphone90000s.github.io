@@ -27,9 +27,52 @@ $(function () {
         infinite: true,
         speed: 300,
         slidesToShow: 5,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 731,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+            }
+        }]
+    });
+    if (window.innerWidth < 1280) {
+        $(".slider-menu").slick({
+            dots: false,
+            arrows: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+        });
+    }
+
+    $(".gameFirst").click(function () {
+        $(".slider-slick-content").slick("slickGoTo", 0)
     });
 
+     $(".gameVisual1").click(function () {
+        $(".slider-slick-content").slick("slickGoTo", 1)
+     });
+    
+     $(".GameVisual2").click(function () {
+        $(".slider-slick-content").slick("slickGoTo", 2)
+     });
+    
+     $(".sonicStudio").click(function () {
+        $(".slider-slick-content").slick("slickGoTo", 3)
+     });
+    
+     $(".xsplit").click(function () {
+        $(".slider-slick-content").slick("slickGoTo", 4)
+     });
+    
+     $(".androidApp").click(function () {
+        $(".slider-slick-content").slick("slickGoTo", 5)
+    });
+
+   
     $('.nvidia-slick-content').slick({
         dots: true,
         arrows: false,

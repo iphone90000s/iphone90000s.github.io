@@ -1,2 +1,508 @@
 @media only screen and (max-width: 731px) {
+   .view-container {
+      width: 320px;
+   }
+
+   .performance .blur-bg {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .performance .performance-btn {
+      width: 100%;
+   }
+
+   .visual-section .imgSize {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .visual-title {
+      font-size: 40px;
+   }
+
+   .visual-title .glitch-text {
+      margin-top: 0;
+   }
+
+   .visual-section .text-frame {
+      margin-top: -80px;
+   }
+
+   .visual-text .gradient {
+      font-size: 24px;
+   }
+
+   .video.view-container {
+      width: 80%;
+   }
+
+   .gradient-text font {
+      font-size: 28px;
+   }
+
+   .visual-section .blur-bg {
+      margin-top: 0;
+   }
+
+   .video .border-vertical {
+      top: 44px;
+   }
+
+   .video .border-horizontal img {
+      width: 50px;
+      height: 2px;
+   }
+
+   .video .border-vertical img {
+      width: 2px;
+      height: 50px;
+   }
+
+   .video .border-horizontal {
+      left: 230px;
+   }
+
+   .video-play-btn {
+      width: 50px;
+      height: 72px;
+   }
+
+   .video .video-border {
+      width: 20px;
+      height: 20px;
+   }
+
+   .video-play-btn .play-btn-glitch,
+   .video-play-btn .play-btn-blend,
+   .video-play-btn .play-btn-layer {
+      width: 50px;
+      height: 72px;
+   }
+
+   .design-section {
+      margin-top: 0;
+   }
+
+   .gradient-title {
+      width: 100%;
+      font-size: 24px;
+   }
+
+   .hl-btn-frame {
+      display: table;
+      transform: scale(1);
+   }
+
+   .design-section .blur-bg {
+      top: 0;
+   }
+
+   .slick-frame {
+      margin: 0px auto 50px;
+   }
+
+   .design-section .rog-bg {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .design-section .rotate-bg {
+      width: 731px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .performance-section {
+      margin-top: 0;
+   }
+
+   .performance .performance-notebook {
+      width: calc(953px * 0.3);
+      height: calc(913px * 0.3);
+   }
+
+   .performance .blur-bg {
+      margin-top: 0;
+   }
+
+   .performance .performance-notebook .cpu {
+      width: calc(953px * .45 * 0.3);
+   }
+
+   .performance .performance-notebook .gpu {
+      width: calc(953px * .3 * 0.3);
+   }
+
+   .slick-slide img {
+      max-width: 100%;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content {
+      width: calc(100% - 130px);
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list {
+      display: table;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .txt {
+      font-size: 16px;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content ul {
+      padding: 0;
+   }
+
+   .display-section {
+      margin-top: -100px;
+   }
+
+   .hl-style {
+      width: calc(379px * 0.8);
+      height: calc(120px * 0.8);
+   }
+
+   .display .display-qhd,
+   .display .display-fullhd {
+      width: calc(953px * 0.4);
+      height: calc(612px * 0.4);
+   }
+
+   .display .fullhd-bg.blur-bg {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .inner-video {
+      left: 40px;
+      top: 4px;
+      width: calc(750px * 0.4);
+   }
+
+   .display .inner-sky {
+      left: 44px;
+      top: 4px;
+      width: calc(750px * 0.4);
+      height: calc(450px * 0.4);
+   }
+
+   .display-section .blur-bg.qhd-bg {
+      margin-top: -20px;
+   }
+
+   .display-section .qhd-notebook {
+      top: 0;
+   }
+
+
+   .display .display-notebook img {
+      width: 372px;
+   }
+
+   .display .display-notebook .inner-sky img {
+      width: calc(1700px * 0.4);
+   }
+
+   .cooling-section {
+      margin-top: 30px;
+   }
+
+   .cooling-section .cooling-bg .bg-set {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0;
+      margin: 0;
+   }
+
+   .cooling-section .cooling-bg .cooling-animate {
+      top: 0%;
+      width: 731px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0;
+      margin: 0;
+   }
+
+   .cooling-section .cooling-bg .cooling-set {
+      width: 731px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0;
+      margin: 0;
+      top: 0;
+   }
+
+   .cooling-learnmore {
+      bottom: 70px;
+   }
+
+   .video-section {
+      margin-top: 50px;
+   }
+
+   .cooling-video {
+      margin-bottom: 50px;
+   }
+
+   .keyboard-section .bg-set {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .keyboard .keyboard-video {
+      margin-top: 50px;
+   }
+
+   .keyboard .keyboard-line {
+      width: 731px;
+      top: 10%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .audio-section {
+      margin-top: 70px;
+   }
+
+   .keyboard-btn {
+      bottom: 0;
+   }
+
+   .atmos-frame {
+      display: flex;
+   }
+
+   .hi-res img,
+   .atmos img {
+      width: 80px;
+   }
+
+   .audio-section .bg-set {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .audio .audio-notebook .notebook {
+      width: calc(952px * 0.3);
+      height: calc(942px * 0.3);
+   }
+
+   .audio .audio-notebook .inner-video {
+      left: calc(130px * 0.3);
+      top: calc(14px * 0.3);
+      width: calc(690px * 0.3);
+   }
+
+   .audio .audio-notebook .audio-final {
+      top: calc(-20px* 0.3);
+      width: calc(759px* 0.3);
+   }
+
+   .battery .battery-animate.animate1 {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .battery .battery-animate.animate2 {
+      width: 731px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .battery .battery-animate.animate3 {
+      width: 731px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .battery .battery-bg {
+      margin-top: -60px;
+   }
+
+   .keystone .keystone-notebook {
+      width: calc(952px * 0.3);
+      height: calc(661px * 0.3);
+   }
+
+   .keystone .keystone-in {
+      width: calc(50px * 0.3);
+      height: calc(34px * 0.3);
+   }
+
+   .keystone .keystone-glitch .bg-set {
+      width: 731px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .keystone {
+      margin-top: -100px;
+   }
+
+   .connectivity .bg-set {
+      width: 731px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .higher-wifi {
+      font-size: 26px;
+   }
+
+   .run-bar-box .run-bar-inner .upper-bar .mbps {
+      font-size: 14px;
+   }
+
+   .run-bar-box .run-bar-inner .upper-bar .mbps {
+      margin-left: 15px;
+   }
+
+   .speed-text {
+      font-size: 12px;
+   }
+
+   .run-bar-box .run-bar-inner {
+      margin: 20px 0;
+   }
+
+   .run-bar-box .run-bar-inner span {
+      font-size: 14px;
+   }
+
+   .run-bar-box .run-bar-inner .ac-bar .bar {
+      height: calc(27px * 0.5);
+      max-width: calc(203px * 0.5);
+
+   }
+
+   .run-bar-box .run-bar-inner .intel-bar .bar {
+      height: calc(27px * 0.5);
+      max-width: calc(580px * 0.5);
+   }
+
+   .connectivity {
+      margin-top: -150px;
+   }
+
+   .io .io-notebook .notebook {
+      width: calc(952px * 0.35);
+      height: calc(546px * 0.35);
+   }
+
+   .io .io-notebook img {
+      width: 53px;
+   }
+
+   .io .io-notebook .usb.io-left1 {
+      left: calc(110px * 0.35);
+      top: calc(515px * 0.35);
+   }
+
+   .io .io-notebook .usb.io-left2 {
+      left: calc(170px * 0.35);
+      top: calc(510px * 0.35);
+   }
+
+   .io .io-notebook .usb.io-left3 {
+      left: calc(210px * 0.35);
+      top: calc(505px * 0.35);
+   }
+
+   .io .io-notebook .usb.io-right1 {
+      left: calc(600px * 0.35);
+      top: calc(390px * 0.35);
+   }
+
+   .io .io-notebook .usb.io-right2 {
+      left: calc(670px * 0.35);
+      top: calc(360px * 0.35);
+   }
+
+   .io {
+      margin-top: 0;
+   }
+
+   .armoury .armoury-notebook {
+      max-width: 320px;
+   }
+
+   .armoury {
+      margin-top: 0;
+   }
+
+   .slider .slider-slick-content .slider-slick-list {
+      display: table;
+   }
+
+   .slider .slider-slick-content .img {
+      width: 100%;
+      margin: 0 0 10px;
+   }
+
+   .slider .slider-slick-content .text .txt {
+      width: 100%;
+   }
+
+   .slider .slider-slick-content .text .title {
+      margin-bottom: 10px;
+      font-size: 24px;
+   }
+
+   .slider .slider-slick-content .text .txt {
+      font-size: 12px;
+   }
+
+   .peripherals {
+      margin-top: 0;
+   }
+
+   .peripherals .bg-set {
+      width: 731px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .peripherals .peripherals-notebook {
+      max-width: 100%;
+   }
+
+   .slider-menu {
+      width: 320px;
+   }
+
+   .slider .slider-menu span {
+      font-size: 16px;
+   }
+
+   .slider .slider-menu .pipe {
+      top: -5px;
+   }
 }

@@ -4,3 +4,478 @@
       height: calc(913px * .75);
    }
 }
+
+@media only screen and (max-width: 1400px) and (min-width: 1280px) {
+   .gradient-title {
+      font-size: 50px;
+   }
+
+   .visual-section .blur-bg {
+      margin-top: -75px;
+   }
+
+   .visual-title {
+      font-size: 80px;
+   }
+
+   .gradient-text font {
+      font-size: 36px;
+   }
+
+   .menu .menu-hambuger {
+      transform: scale(0.75);
+   }
+
+   .performance .blur-bg {
+      margin-top: 0;
+   }
+
+   .display-section .fullhd-notebook {
+      top: -30px;
+   }
+
+   .display-section .qhd-notebook {
+      top: 120px;
+   }
+
+   .cooling-section {
+      margin-top: 80px;
+   }
+
+   .cooling {
+      margin-top: 0px;
+   }
+
+   .run-index {
+      left: 810px;
+      top: 20px;
+   }
+
+   .keyboard {
+      margin-top: -70px;
+   }
+
+   .keyboard-btn {
+      margin-bottom: 40px;
+   }
+
+   .audio-section {
+      margin-top: 50px;
+   }
+
+   .audio {
+      margin-top: 70px;
+   }
+
+   .keystone {
+      margin-top: 0;
+   }
+
+   .connectivity-section {
+      margin-top: 50px;
+   }
+
+   .connectivity {
+      margin-top: -250px;
+   }
+
+   .io {
+      margin-top: -50px;
+   }
+
+   .peripherals .peripherals-notebook {
+      width: 1080px;
+      top: 60.5%;
+   }
+}
+
+@media only screen and (max-width: 1279px) and (min-width: 732px) {
+   .slider-menu {
+      width: 632px;
+   }
+
+   .view-container {
+      width: 652px;
+   }
+
+   .visual-title {
+      font-size: 60px;
+   }
+
+   .gradient-title {
+      font-size: 32px;
+   }
+
+   .visual-text .gradient {
+      font-size: 32px;
+   }
+
+   .visual-section .text-frame {
+      margin-top: -110px;
+   }
+
+   .visual-section .blur-bg {
+      margin-top: 0;
+   }
+
+   .video .border-vertical img {
+      width: 2px;
+      height: 130px;
+   }
+
+   .view-container .content-text {
+      max-width: 650px;
+   }
+
+   .gradient-title {
+      width: 650px;
+   }
+
+   .video .border-horizontal {
+      left: 400px;
+   }
+
+   .video .border-horizontal img {
+      width: 60%;
+      height: 2px;
+   }
+
+   .hl-style {
+      width: calc(379px * 0.5);
+      height: calc(120px * 0.5);
+   }
+
+   .hl-style .main-text {
+      font-size: 18px;
+      background-size: 100% 25px;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .title {
+      max-width: 80%;
+      margin: 20px auto;
+   }
+
+   .hl-btn-frame {
+      transform: scale(1);
+      margin-bottom: 30px;
+   }
+
+   .design-section .blur-bg {
+      top: -100px;
+   }
+
+   .slick-frame {
+      margin: -100px auto 50px;
+   }
+
+   .view-container .content-text {
+      font-size: 14px;
+   }
+
+   .performance .performance-notebook {
+      width: calc(953px * 0.5);
+      height: calc(913px * 0.5);
+   }
+
+   .performance .performance-notebook .cpu {
+      width: calc(953px * .45 * 0.5);
+   }
+
+   .performance .performance-notebook .gpu {
+      width: calc(953px * .3 * 0.5);
+   }
+
+   .performance .blur-bg {
+      margin-top: 0;
+   }
+
+   .performance .performance-btn {
+      width: 652px;
+      margin: 100px auto 0;
+   }
+
+   .nvidia .nvidia-slick-container {
+      justify-content: center;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list {
+      display: table;
+   }
+
+   .slick-slide img {
+      margin: auto;
+   }
+
+   .design-section {
+      margin-top: 0;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .txt {
+      margin: auto;
+      max-width: 80%;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list .text {
+      text-align: left;
+   }
+
+   .display-section {
+      margin-top: -50px;
+   }
+
+   .display .display-qhd {
+      width: calc(953px * 0.5);
+      height: calc(612px * 0.5);
+   }
+
+   .display .display-fullhd {
+      width: calc(953px * 0.5);
+      height: calc(612px * 0.5);
+   }
+
+   .display .inner-video {
+      left: 50px;
+      width: calc(750px * 0.5);
+   }
+
+   .display-section .fullhd-notebook {
+      top: -30px;
+   }
+
+   .display-section .blur-bg.qhd-bg {
+      margin-top: 0;
+   }
+
+   .display .inner-sky {
+      left: 55px;
+      width: calc(750px * 0.5);
+      height: calc(450px * 0.5);
+   }
+
+   .display .display-notebook img.shadow {
+      width: calc(953px * 0.5);
+   }
+
+   .cooling-section {
+      margin-top: 30px;
+   }
+
+   .cooling-section .bg-set {
+      margin-top: 60px;
+   }
+
+   .cooling {
+      margin-top: 0;
+   }
+
+   .run-index {
+      left: 450px;
+      top: 20px;
+      transform: scale(0.5);
+   }
+
+   .cooling-video {
+      margin-bottom: 100px;
+   }
+
+   .cooling-learnmore {
+      bottom: 70px;
+   }
+
+   .video-section {
+      margin-top: 50px;
+   }
+
+   .keyboard-section {
+      margin-top: -30px;
+   }
+
+   .keyboard {
+      margin-top: 0;
+   }
+
+   .video.view-container {
+      width: 552px;
+   }
+
+   .keyboard-btn {
+      bottom: 0;
+   }
+
+   .audio-section {
+      margin-top: 100px;
+   }
+
+   .atmos img,
+   .hi-res img {
+      width: 70px;
+   }
+
+   .audio .audio-notebook .notebook {
+      width: calc(952px * 0.5);
+      height: calc(942px * 0.5);
+   }
+
+   .audio .audio-notebook .inner-video {
+      left: calc(130px * 0.5);
+      width: calc(690px * 0.5);
+   }
+
+   .audio .audio-notebook .audio-final {
+      top: -10px;
+      width: calc(759px * 0.5);
+   }
+
+   .audio {
+      margin-top: 20px;
+   }
+
+   .atmos {
+      margin: 35px;
+   }
+
+   .battery .battery-bg {
+      margin-top: -120px;
+   }
+
+   .keystone .keystone-notebook {
+      width: calc(952px * 0.5);
+      height: calc(661px * 0.5);
+   }
+
+   .keystone .keystone-in {
+      width: calc(50px * 0.5);
+      height: calc(34px * 0.5);
+   }
+
+   .keystone {
+      margin-top: -50px;
+   }
+
+   .hl-style .title {
+      font-size: 13px;
+   }
+
+   .hl-style .text {
+      text-align: center;
+      font-size: 13px;
+   }
+
+   .run-bar-box {
+      margin: 50px auto 0;
+   }
+
+   .higher-wifi {
+      font-size: 20px;
+   }
+
+   .connectivity {
+      margin-top: -120px;
+   }
+
+   .run-bar-box .run-bar-inner .intel-bar .bar {
+      max-width: calc(580px * 0.5);
+   }
+
+   .run-bar-box .run-bar-inner span {
+      font-size: 18px;
+   }
+
+   .run-bar-box .run-bar-inner .upper-bar .mbps {
+      font-size: 18.5px;
+      margin-left: 25px;
+   }
+
+   .run-bar-box .run-bar-inner .ac-bar .bar {
+      max-width: calc(203px * 0.5);
+   }
+
+   .cooling-section .cooling-bg .bg-set {
+      padding-bottom: 0;
+      margin-top: 0;
+   }
+
+   .cooling-section .cooling-bg .cooling-set {
+      top: 0;
+   }
+
+   .cooling-section .cooling-bg .cooling-animate {
+      top: 0;
+   }
+
+   .speed-text {
+      font-size: 14px;
+   }
+
+   .io {
+      margin-top: 0;
+   }
+
+   .io .io-notebook .notebook {
+      width: calc(952px * 0.5);
+      height: calc(546px * 0.5);
+   }
+
+   .io .io-notebook img {
+      width: calc(75% * 0.5);
+   }
+
+   .io .io-notebook .usb.io-left1 {
+      left: calc(110px * 0.5);
+      top: calc(515px * 0.5);
+   }
+
+   .io .io-notebook .usb.io-left2 {
+      left: calc(170px * 0.5);
+      top: calc(510px * 0.5);
+   }
+
+   .io .io-notebook .usb.io-left3 {
+      left: calc(210px * 0.5);
+      top: calc(505px * 0.5);
+   }
+
+   .io .io-notebook .usb.io-right1 {
+      left: calc(600px * 0.5);
+      top: calc(390px * 0.5);
+   }
+
+   .io .io-notebook .usb.io-right2 {
+      left: calc(670px * 0.5);
+      top: calc(360px * 0.5);
+   }
+
+   .connectivity-section {
+      margin-top: 50px;
+   }
+
+   .armoury {
+      margin-top: -50px;
+   }
+
+   .armoury .armoury-notebook {
+      width: 652px;
+   }
+
+   .slider .slider-slick-content .slider-slick-list {
+      display: table;
+   }
+
+   .slider .slider-slick-content .img {
+      width: 100%;
+      margin-right: 0;
+   }
+
+   .slider .slider-slick-content .text {
+      max-width: 80%;
+      margin: auto;
+   }
+
+   .peripherals .peripherals-notebook {
+      width: 652px;
+   }
+
+   .peripherals {
+      margin-top: -100px;
+   }
+}
