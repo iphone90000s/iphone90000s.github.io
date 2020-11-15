@@ -2336,6 +2336,121 @@ body {
 }
 
 
+@media only screen and (min-width: 2000px) {
+  .visual-title {
+    font-size: calc(90px * 1.25);
+  }
+
+  .visual-text .gradient {
+    font-size: calc(50px * 1.25);
+  }
+
+  .view-container .content-text {
+    font-size: calc(15px * 1.25);
+    max-width: calc(800px * 1.25);
+  }
+
+  .view-container {
+    width: calc(1060px * 1.25);
+  }
+
+  .gradient-text font {
+    font-size: calc(41px * 1.25);
+  }
+
+  .gradient-title {
+    width: calc(1160px * 1.25);
+    font-size: calc(80px * 1.25);
+  }
+
+  .hl-btn-frame {
+    transform: scale(1.25);
+  }
+
+  .display .display-fullhd {
+    width: calc(953px * 1.25);
+    height: calc(612px * 1.25);
+  }
+
+  .display-section .fullhd-notebook {
+    top: 0;
+  }
+
+  .display .inner-video {
+    left: calc(100px * 1.25);
+    top: calc(10px * 1.25);
+    width: calc(750px * 1.25);
+  }
+
+  .display .display-qhd {
+    width: calc(953px * 1.25);
+    height: calc(612px * 1.25);
+  }
+
+  .shadow {
+    max-width: calc(953px * 1.25);
+  }
+
+  .display .inner-sky {
+    left: calc(100px * 1.25);
+    top: calc(10px * 1.25);
+    width: calc(750px * 1.25);
+    height: calc(450px * 1.25);
+  }
+
+  .display .inner-sky img {
+    width: calc(1700px * 1.25);
+  }
+
+  .run-index font {
+    font-size: calc(70px * 1.25);
+    left: calc(-37px * 1.25);
+  }
+
+  .run-index {
+    left: calc(860px * 1.25);
+    top: calc(130px * 1.25);
+  }
+
+  .run-index img {
+    width: calc(130px * 1.25);
+  }
+
+  .run-bar-box {
+    margin: 50px auto 0;
+  }
+
+  .hi-res img,
+  .atmos img {
+    width: calc(130px * 0.75);
+  }
+
+  .armoury .armoury-notebook {
+    width: 1880px;
+  }
+
+  .run-bar-box .run-bar-inner .ac-bar .bar {
+    max-width: calc(203px * 1.25);
+    height: calc(27px * 1.25);
+  }
+
+  .run-bar-box .run-bar-inner .intel-bar .bar {
+    max-width: calc(580px * 1.25);
+    height: calc(27px * 1.25);
+  }
+
+  .higher-wifi {
+    font-size: calc(36px * 1.25);
+  }
+
+  .run-bar-box .run-bar-inner .upper-bar .mbps {
+    font-size: calc(22.5px * 1.25);
+  }
+
+  .run-bar-box .run-bar-inner span {
+    font-size: calc(24px * 1.25);
+  }
+}
 
 @import "tablet.scss";
 @import "mobile.scss";
