@@ -758,6 +758,11 @@ body {
   }
 }
 
+.nvidia-slick-container .slick-slide,
+.slick-container .slick-slide {
+  height: auto;
+}
+
 .cooling {
   position: relative;
   margin-top: -40px;
@@ -1155,7 +1160,7 @@ body {
   }
 
   .main-text-outside {
-    display: flex;
+    display: grid;
     align-items: center;
     height: 60px;
   }
@@ -1176,7 +1181,7 @@ body {
     align-items: center;
 
     &.two-layer {
-      display: flex;
+      // display: flex;
     }
   }
 
@@ -1304,15 +1309,16 @@ body {
   position: absolute;
   z-index: 10;
   left: 25%;
-  top: 20%;
+  top: 15%;
   display: flex;
   align-items: center;
 
   .menu-list {
-    opacity: 0;
-    visibility: hidden;
+    // opacity: 0;
+    // visibility: hidden;
     transition: 0.2s ease all;
-    display: none;
+    // display: none;
+    display: block;
     width: 249px;
     height: 144px;
     background-size: 100% auto;
@@ -1320,9 +1326,9 @@ body {
     position: relative;
 
     &.active {
-      display: block;
-      visibility: initial;
-      opacity: 1;
+      // display: block;
+      // visibility: initial;
+      // opacity: 1;
     }
 
     .choose-color {
@@ -1381,6 +1387,7 @@ body {
   .menu-hambuger {
     cursor: pointer;
     position: relative;
+    display: none;
 
     &:hover {
       .border-menu {

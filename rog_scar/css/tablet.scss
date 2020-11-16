@@ -6,6 +6,11 @@
 }
 
 @media only screen and (max-width: 1400px) and (min-width: 1280px) {
+   .menu {
+      left: 15%;
+      top: 20%;
+   }
+
    .gradient-title {
       font-size: 50px;
    }
@@ -477,5 +482,25 @@
 
    .peripherals {
       margin-top: -100px;
+   }
+
+   .hl-style .main-text.two-layer {
+      // display: block;
+   }
+
+
+   .nvidia-slick-container .slick-slide,
+   .slick-container .slick-slide {
+      height: auto;
+   }
+
+   .slick-frame .slick-img:hover {
+      transform: scale(1);
+   }
+
+   .menu {
+      left: 6%;
+      top: 17%;
+      transform: scale(0.75);
    }
 }

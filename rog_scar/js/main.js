@@ -52,27 +52,27 @@ $(function () {
         $(".slider-slick-content").slick("slickGoTo", 0)
     });
 
-     $(".gameVisual1").click(function () {
+    $(".gameVisual1").click(function () {
         $(".slider-slick-content").slick("slickGoTo", 1)
-     });
-    
-     $(".GameVisual2").click(function () {
+    });
+
+    $(".GameVisual2").click(function () {
         $(".slider-slick-content").slick("slickGoTo", 2)
-     });
-    
-     $(".sonicStudio").click(function () {
+    });
+
+    $(".sonicStudio").click(function () {
         $(".slider-slick-content").slick("slickGoTo", 3)
-     });
-    
-     $(".xsplit").click(function () {
+    });
+
+    $(".xsplit").click(function () {
         $(".slider-slick-content").slick("slickGoTo", 4)
-     });
-    
-     $(".androidApp").click(function () {
+    });
+
+    $(".androidApp").click(function () {
         $(".slider-slick-content").slick("slickGoTo", 5)
     });
 
-   
+
     $('.nvidia-slick-content').slick({
         dots: true,
         arrows: false,
@@ -107,15 +107,15 @@ $(function () {
         $(".slick-inner").slick("slickNext");
     });
 
-    $(".menu-hambuger").click(function () {
-        $(".menu-list").toggleClass("active")
-        $(".menu-hambuger").addClass("hide")
-    });
+    // $(".menu-hambuger").click(function () {
+    //     $(".menu-list").toggleClass("active")
+    //     $(".menu-hambuger").addClass("hide")
+    // });
 
-    $(".menu-list .cross-btn").click(function () {
-        $(".menu-list").toggleClass("active")
-        $(".menu-hambuger").removeClass("hide")
-    });
+    // $(".menu-list .cross-btn").click(function () {
+    //     $(".menu-list").toggleClass("active")
+    //     $(".menu-hambuger").removeClass("hide")
+    // });
 
     $(".competition-btn").click(function () {
         $(".competition-mp4").get(0).play();
