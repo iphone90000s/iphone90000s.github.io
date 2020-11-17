@@ -88,7 +88,7 @@
       margin-top: -50px;
    }
 
-   .peripherals .peripherals-notebook {
+   .peripherals .peripherals-product {
       width: 1080px;
       top: 60.5%;
    }
@@ -137,7 +137,8 @@
    }
 
    .video .border-horizontal {
-      left: 400px;
+      left: 350px;
+      width: 110px;
    }
 
    .video .border-horizontal img {
@@ -157,6 +158,7 @@
 
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .title {
       max-width: 80%;
+      font-size: 24px;
       margin: 20px auto;
    }
 
@@ -178,16 +180,16 @@
    }
 
    .performance .performance-notebook {
-      width: calc(953px * 0.5);
-      height: calc(913px * 0.5);
+      width: calc(953px * 0.6);
+      height: calc(913px * 0.6);
    }
 
    .performance .performance-notebook .cpu {
-      width: calc(953px * .45 * 0.5);
+      width: calc(953px * .45 * 0.6);
    }
 
    .performance .performance-notebook .gpu {
-      width: calc(953px * .3 * 0.5);
+      width: calc(953px * .3 * 0.6);
    }
 
    .performance .blur-bg {
@@ -196,7 +198,7 @@
 
    .performance .performance-btn {
       width: 652px;
-      margin: 100px auto 0;
+      margin: 0px auto;
    }
 
    .nvidia .nvidia-slick-container {
@@ -218,6 +220,7 @@
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .txt {
       margin: auto;
       max-width: 80%;
+      font-size: 16px;
    }
 
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .text {
@@ -229,18 +232,18 @@
    }
 
    .display .display-qhd {
-      width: calc(953px * 0.5);
-      height: calc(612px * 0.5);
+      width: calc(953px * 0.65);
+      height: calc(612px * 0.65);
    }
 
    .display .display-fullhd {
-      width: calc(953px * 0.5);
-      height: calc(612px * 0.5);
+      width: calc(953px * 0.65);
+      height: calc(612px * 0.65);
    }
 
    .display .inner-video {
-      left: 50px;
-      width: calc(750px * 0.5);
+      left: 65px;
+      width: calc(750px * 0.65);
    }
 
    .display-section .fullhd-notebook {
@@ -252,17 +255,18 @@
    }
 
    .display .inner-sky {
-      left: 55px;
-      width: calc(750px * 0.5);
-      height: calc(450px * 0.5);
+      left: 65px;
+      width: calc(750px * 0.65);
+      height: calc(450px * 0.65);
    }
 
    .display .display-notebook img.shadow {
-      width: calc(953px * 0.5);
+      width: calc(1048px * 0.65);
+      max-width: 612px;
    }
 
    .cooling-section {
-      margin-top: 30px;
+      margin-top: 0;
    }
 
    .cooling-section .bg-set {
@@ -276,7 +280,6 @@
    .run-index {
       left: 450px;
       top: 20px;
-      transform: scale(0.5);
    }
 
    .cooling-video {
@@ -344,13 +347,13 @@
    }
 
    .keystone .keystone-notebook {
-      width: calc(952px * 0.5);
-      height: calc(661px * 0.5);
+      width: calc(952px * 0.6);
+      height: calc(661px * 0.6);
    }
 
    .keystone .keystone-in {
-      width: calc(50px * 0.5);
-      height: calc(34px * 0.5);
+      width: calc(50px * 0.6);
+      height: calc(34px * 0.6);
    }
 
    .keystone {
@@ -417,37 +420,37 @@
    }
 
    .io .io-notebook .notebook {
-      width: calc(952px * 0.5);
-      height: calc(546px * 0.5);
+      width: calc(952px * 0.65);
+      height: calc(546px * 0.65);
    }
 
    .io .io-notebook img {
-      width: calc(75% * 0.5);
+      width: calc(75% * 0.65);
    }
 
    .io .io-notebook .usb.io-left1 {
-      left: calc(110px * 0.5);
-      top: calc(515px * 0.5);
+      left: calc(110px * 0.65);
+      top: calc(515px * 0.65);
    }
 
    .io .io-notebook .usb.io-left2 {
-      left: calc(170px * 0.5);
-      top: calc(510px * 0.5);
+      left: calc(170px * 0.65);
+      top: calc(510px * 0.65);
    }
 
    .io .io-notebook .usb.io-left3 {
-      left: calc(210px * 0.5);
-      top: calc(505px * 0.5);
+      left: calc(210px * 0.65);
+      top: calc(505px * 0.65);
    }
 
    .io .io-notebook .usb.io-right1 {
-      left: calc(600px * 0.5);
-      top: calc(390px * 0.5);
+      left: calc(600px * 0.65);
+      top: calc(390px * 0.65);
    }
 
    .io .io-notebook .usb.io-right2 {
-      left: calc(670px * 0.5);
-      top: calc(360px * 0.5);
+      left: calc(670px * 0.65);
+      top: calc(360px * 0.65);
    }
 
    .connectivity-section {
@@ -458,7 +461,7 @@
       margin-top: -50px;
    }
 
-   .armoury .armoury-notebook {
+   .armoury .armoury-info {
       width: 652px;
    }
 
@@ -476,7 +479,7 @@
       margin: auto;
    }
 
-   .peripherals .peripherals-notebook {
+   .peripherals .peripherals-product {
       width: 652px;
    }
 
@@ -502,5 +505,103 @@
       left: 6%;
       top: 17%;
       transform: scale(0.75);
+   }
+
+   .video .video-border {
+      width: 23px;
+      height: 23px;
+   }
+
+   .video .border-vertical {
+      height: 110px;
+      top: 54px;
+   }
+
+   .video-play-btn .play-btn-layer,
+   .video-play-btn .play-btn-blend,
+   .video-play-btn .play-btn-glitch {
+      width: calc(53px * 0.6);
+      height: calc(72px * 0.6);
+   }
+
+   .performance-section .main-bg {
+      width: 1280px;
+      height: 800px;
+   }
+
+   .display-section .blur-bg.qhd-bg .main-bg,
+   .display-section .blur-bg.fullhd-bg .main-bg {
+      width: 1280px;
+      height: 800px;
+   }
+
+   .design-section .main-bg,
+   .design-section .rotate-bg {
+      width: 1280px;
+      height: 985px;
+   }
+
+   .nvidia {
+      margin: 50px 0 90px;
+   }
+
+   .display-section .qhd-notebook {
+      top: 10px;
+   }
+
+   .cooling-section .cooling-bg .main-bg,
+   .cooling-section .cooling-bg .cooling-set,
+   .cooling-section .cooling-bg .cooling-animate {
+      width: 1280px;
+      height: 1086px;
+   }
+
+   .keyboard .main-bg,
+   .keyboard .keyboard-line {
+      width: 1920px;
+      height: 800px;
+   }
+
+   .battery .battery-bg .main-bg,
+   .battery .battery-bg .animate-bg-nd,
+   .battery .battery-bg .animate-bg-rd {
+      width: 1280px;
+      height: 881px;
+   }
+
+   .keystone .main-bg {
+      width: 1280px;
+      height: 800px;
+   }
+
+   .connectivity .main-bg {
+      width: 1280px;
+      height: 884px;
+      background-size: 90% auto;
+   }
+
+   .io-section .main-bg {
+      width: 1280px;
+      height: 606px;
+   }
+
+   .armoury .main-bg {
+      width: 1920px;
+      height: 938px;
+   }
+
+   .armoury .armoury-info {
+      width: 700px;
+      height: 480px;
+   }
+
+   .peripherals .main-bg {
+      width: 1280px;
+      height: 938px;
+   }
+
+   .visual-section .main-bg {
+      width: 1280px;
+      height: 878px;
    }
 }

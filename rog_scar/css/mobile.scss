@@ -72,8 +72,8 @@
    }
 
    .video-play-btn {
-      width: 50px;
-      height: 72px;
+      width: calc(53px * 0.375);
+      height: calc(72px * 0.375);
    }
 
    .video .video-border {
@@ -84,8 +84,8 @@
    .video-play-btn .play-btn-glitch,
    .video-play-btn .play-btn-blend,
    .video-play-btn .play-btn-layer {
-      width: 50px;
-      height: 72px;
+      width: calc(53px * 0.375);
+      height: calc(72px * 0.375);
    }
 
    .design-section {
@@ -119,13 +119,6 @@
    .design-section .rog-bg {
       width: 731px;
       position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-   }
-
-   .design-section .rotate-bg {
-      width: 731px;
-      position: absolute;
       left: 50%;
       transform: translateX(-50%);
    }
@@ -245,31 +238,9 @@
       margin: 0;
    }
 
-   .cooling-section .cooling-bg .cooling-animate {
-      top: 0%;
-      width: 731px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 0;
-      margin: 0;
-   }
-
-   .cooling-section .cooling-bg .cooling-set {
-      width: 731px;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 0;
-      margin: 0;
-      top: 0;
-   }
 
    .cooling-learnmore {
-      bottom: 70px;
-   }
-
-   .video-section {
-      margin-top: 50px;
+      bottom: 110px;
    }
 
    .cooling-video {
@@ -292,11 +263,12 @@
    }
 
    .keyboard .keyboard-line {
-      width: 731px;
       top: 10%;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
    }
 
    .audio-section {
@@ -339,21 +311,21 @@
       width: calc(759px* 0.3);
    }
 
-   .battery .battery-animate.animate1 {
+   .battery .battery-animate.animate-step1 {
       width: calc(731px * 0.75);
       position: relative;
       left: 50%;
       transform: translateX(-50%);
    }
 
-   .battery .battery-animate.animate2 {
+   .battery .battery-animate.animate-step2 {
       width: calc(731px * 0.75);
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
    }
 
-   .battery .battery-animate.animate3 {
+   .battery .battery-animate.animate-step3 {
       width: calc(731px * 0.75);
       position: absolute;
       left: 50%;
@@ -394,6 +366,7 @@
       display: block;
       font-size: 18px;
       text-align: center;
+      background-size: 100% 21px;
    }
 
    .run-bar-box .run-bar-inner .upper-bar .mbps {
@@ -401,7 +374,8 @@
    }
 
    .run-bar-box .run-bar-inner .upper-bar .mbps {
-      margin-left: 15px;
+      margin-left: 0;
+      margin-top: 10px;
    }
 
    .speed-text {
@@ -417,14 +391,12 @@
    }
 
    .run-bar-box .run-bar-inner .ac-bar .bar {
-      height: calc(27px * 0.3);
-      max-width: calc(203px * 0.3);
+      height: calc(27px * 0.7);
 
    }
 
    .run-bar-box .run-bar-inner .intel-bar .bar {
-      height: calc(27px * 0.3);
-      max-width: calc(580px * 0.3);
+      height: calc(27px * 0.7);
    }
 
    .connectivity {
@@ -432,8 +404,8 @@
    }
 
    .io .io-notebook .notebook {
-      width: calc(952px * 0.25);
-      height: calc(546px * 0.25);
+      width: calc(952px * 0.35);
+      height: calc(546px * 0.35);
    }
 
    .io .io-notebook img {
@@ -441,40 +413,45 @@
    }
 
    .io .io-notebook .usb.io-left1 {
-      left: calc(110px * 0.25);
-      top: calc(515px * 0.25);
+      left: calc(110px * 0.35);
+      top: calc(515px * 0.35);
    }
 
    .io .io-notebook .usb.io-left2 {
-      left: calc(170px * 0.25);
-      top: calc(510px * 0.25);
+      left: calc(170px * 0.35);
+      top: calc(510px * 0.35);
    }
 
    .io .io-notebook .usb.io-left3 {
-      left: calc(210px * 0.25);
-      top: calc(505px * 0.25);
+      left: calc(210px * 0.35);
+      top: calc(505px * 0.35);
    }
 
    .io .io-notebook .usb.io-right1 {
-      left: calc(600px * 0.25);
-      top: calc(390px * 0.25);
+      left: calc(600px * 0.35);
+      top: calc(390px * 0.35);
    }
 
    .io .io-notebook .usb.io-right2 {
-      left: calc(670px * 0.25);
-      top: calc(360px * 0.25);
+      left: calc(670px * 0.35);
+      top: calc(360px * 0.35);
    }
 
    .io {
       margin-top: 0;
    }
 
-   .armoury .armoury-notebook {
-      max-width: 320px;
+   .slider {
+      margin: 0;
+   }
+
+   .armoury .armoury-info {
+      width: calc(1440px * 0.25);
+      height: calc(911px * 0.25);
    }
 
    .armoury {
-      margin-top: 0;
+      margin-top: -120px;
    }
 
    .slider .slider-slick-content .slider-slick-list {
@@ -510,7 +487,7 @@
       transform: translateX(-50%);
    }
 
-   .peripherals .peripherals-notebook {
+   .peripherals .peripherals-product {
       max-width: 100%;
    }
 
@@ -554,64 +531,15 @@
       transform: scale(0.75);
    }
 
-   .slider .slider-slick .slider-prev-btn {
-      width: 20px;
-      margin-right: 20px;
-   }
-
-   .slider .slider-slick .slider-prev-btn img {
-      width: 20px;
-   }
-
-   .slider .slider-slick .slider-next-btn {
-      width: 20px;
-      margin-left: 20px;
-   }
-
-   .slider .slider-slick .slider-next-btn img {
-      width: 20px;
-   }
-
-   .slick-frame .prev-arrow {
-      width: 20px;
-      margin-right: 20px;
-   }
 
    .slider .slider-slick {
       justify-content: center;
-   }
-
-   .slick-frame .next-arrow img,
-   .slick-frame .prev-arrow img {
-      width: 20px;
-   }
-
-   .slick-frame .next-arrow {
-      width: 20px;
-      margin-left: 20px;
    }
 
    .slick-frame {
       justify-content: center;
    }
 
-   .nvidia .nvidia-slick-container .nvidia-prev-arrow {
-      width: 20px;
-      margin-right: 20px;
-   }
-
-   .nvidia .nvidia-slick-container .nvidia-prev-arrow img {
-      width: 20px;
-   }
-
-   .nvidia .nvidia-slick-container .nvidia-next-arrow {
-      width: 20px;
-      margin-left: 20px;
-   }
-
-   .nvidia .nvidia-slick-container .nvidia-next-arrow img {
-      width: 20px;
-   }
 
    .nvidia .nvidia-slick-container {
       justify-content: center;
@@ -619,5 +547,147 @@
 
    .gradient-text font {
       white-space: nowrap;
+   }
+
+   .visual-section .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1310px * 0.375);
+   }
+
+   .visual-section .blur-bg .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
+   }
+
+   .video .border-vertical {
+      width: 2px;
+      height: 30%;
+   }
+
+   .video .border-horizontal {
+      width: 30%;
+      left: 50%;
+      height: 2px;
+   }
+
+   .design-section .main-bg,
+   .design-section .rotate-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1470px * 0.375);
+   }
+
+   .prev-arrow {
+      width: calc(25px * 0.5);
+      height: calc(45px * 0.5);
+   }
+
+   .next-arrow {
+      width: calc(25px * 0.5);
+      height: calc(45px * 0.5);
+   }
+
+   .slider .slider-slick {
+      margin-top: 0;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content,
+   .slider .slider-slick-content,
+   .slick-frame .slick-container {
+      width: calc(100% - 110px);
+   }
+
+   .performance-section .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
+   }
+
+   .slick-container .slick-slide.slick-current {
+      transform: scale(1.2);
+      z-index: 99;
+   }
+
+   .slick-frame .slick-img:hover:after {
+      display: none;
+   }
+
+   .slick-frame .slick-img:hover img {
+      box-shadow: none;
+   }
+
+   .nvidia {
+      margin: 50px 0;
+   }
+
+   .nvidia .nvidia-slick-container {
+      margin: 20px auto;
+   }
+
+   .display-section {
+      margin-top: -10px;
+   }
+
+   .display-section .blur-bg.qhd-bg .main-bg,
+   .display-section .blur-bg.fullhd-bg .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
+   }
+
+   .cooling-section .cooling-bg .main-bg,
+   .cooling-section .cooling-bg .cooling-set,
+   .cooling-section .cooling-bg .cooling-animate {
+      width: calc(1920px * 0.3);
+      height: calc(1620px * 0.3);
+   }
+
+   .keyboard .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
+   }
+
+   .battery .battery-bg .main-bg,
+   .battery .battery-bg .animate-bg-nd,
+   .battery .battery-bg .animate-bg-rd {
+      width: calc(1920px * 0.3);
+      height: calc(1315px * 0.3);
+   }
+
+   .keystone .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
+   }
+
+   .connectivity .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1320px * 0.375);
+      background-size: 80% auto;
+   }
+
+   .run-bar-box .run-bar-inner .ac-bar,
+   .run-bar-box .run-bar-inner .intel-bar {
+      display: block;
+   }
+
+   .run-bar-box .run-bar-inner .intel-bar .bar.active {
+      max-width: 100%;
+   }
+
+   .run-bar-box .run-bar-inner .ac-bar .bar.active {
+      width: 40%;
+      max-width: 40%;
+   }
+
+   .io-section .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(905px * 0.375);
+   }
+
+   .armoury .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1400px * 0.375);
+   }
+
+   .peripherals .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1400px * 0.375);
    }
 }
