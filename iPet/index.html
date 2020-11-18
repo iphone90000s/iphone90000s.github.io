@@ -1,0 +1,620 @@
+<html lang="zh-tw">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
+  <link href="./css/style.css" rel="stylesheet" /><!-- 總樣式 css -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="app">
+    <div v-show="open.import" class="import" @click="goLogin()">
+      <div class="logo"><img src="img/logo.png"></div>
+      <div class="import-animate"></div>
+    </div>
+    <div v-show="open.login" class="login">
+      <img src="img/login.png">
+      <div @click="goCreate()" class="click-btn"></div>
+    </div>
+    <div v-show="open.create" class="create">
+      <img src="img/create-pet.png">
+      <div @click="goMypet()" class="click-btn"></div>
+      <div class="footer">
+        <img style='opacity: 0;' src="img/bottom0.jpg">
+        <div @click="gostep6" class='btn4'></div>
+      </div>
+    </div>
+    <div v-show="open.mypet" class="mypet">
+      <img class="mypet1" src="img/create1.png">
+      <div class="order-frame">
+        <div class="animal">
+          <div class="kind" :class="{'active': iskind ==1}" @click="isKind(1)">
+            <div class="an">              
+              <img src="img/create-dog.png">
+            </div>
+            <font>狗</font>
+          </div>
+          <div class="kind" :class="{'active': iskind == 2}" @click="isKind(2)">
+            <div class="an">       
+              <img src="img/create-cat.png">
+            </div>
+            <font>貓</font>
+          </div>
+          <div class="kind" :class="{'active': iskind == 3}" @click="isKind(3)"> 
+            <div class="an">       
+              <img src="img/create-rabbit.png">
+            </div>
+            <font>兔</font>
+          </div>
+          <div class="kind" :class="{'active': iskind == 4}" @click="isKind(4)">
+            <div class="an">       
+              <img src="img/create-rat.png">
+            </div>
+            <font>鼠</font>
+          </div> 
+          <div class="kind">
+            <img src="img/dot.png">
+          </div>
+        </div>
+        <div class='order-box'>
+          <div class="box">            
+            <span>寵物名</span>
+            <input type='text' value="Pocky">
+          </div>
+          <div class="box">            
+            <span>品種</span>
+            <select>
+              <option>請選擇</option>
+            </select>
+          </div>
+          <div class="box">            
+            <span>性別</span>
+            <div class="sex">
+              <div class="choose-sex" :class="{'active': issex == 1}" @click="chooseSex(1)">
+                <img src="img/boy.png">
+              </div>
+              <div class="choose-sex" :class="{'active': issex == 2}" @click="chooseSex(2)">
+                  <img src="img/girl.png">
+              </div>
+            </div>
+          </div>
+          <div class="box">            
+            <span>出生日期</span>
+            <select>
+              <option>2020-09-05</option>
+            </select>
+            <div class='txt'>
+              如寵物有施打晶片，可向動物醫院查詢，或可請獸
+              醫師協助判斷年紀。如不清楚日期，請填寫出生年
+              之12月31日即可。
+            </div>
+          </div>
+          <div class="box">            
+            <span>領養日期</span>
+            <select>
+              <option>2020-12-18</option>
+            </select>
+          </div>
+          <div class="box">            
+            <span>體重(KG)</span>
+            <input type='text' value="4">
+          </div>
+          <div class="box">            
+            <span>晶片號碼</span>
+            <input type='text' value="2538458954">            
+            <div class="txt">晶片號碼長度需大於10碼</div>
+          </div>
+          <div class="box" @click="go03()">            
+            <img src="img/save-btn.png">
+          </div>
+        </div>
+      </div>
+      <div class='footer'>
+        <img src='img/bottom0.jpg'>
+      </div>
+    </div>
+    <div v-show="open.is03" class="is03">
+      <img class="is03a" src="img/03A.png">
+      <img class="is03b" :class="{'active':is03active }" src="img/03B.png">
+      <div @click="goVaccine" class='click-btn' :class="{'active':is03active }"></div>
+    </div>
+    <div v-show="open.vaccine" class="vaccine">
+      <img src="img/03_1.png">
+      <div @click="goVaccine2" class='click-btn'></div>
+      <div class='footer'>
+        <img src="img/bottom1.jpg">
+      </div>
+    </div>
+    <div v-show="open.vaccine2" class="vaccine2">
+      <img src="img/03_2.png">
+      <div @click="goDoc" class='click-btn'></div>
+    </div>
+    <div v-show="open.doc" class="doc">
+      <img src="img/doc.png">
+      <div @click="goDocask" class='click-btn2'></div>
+      <div @click="goDoc2" class='click-btn'></div>
+    </div>
+    <div v-show="open.ask" class="ask">
+      <img src="img/ask.png">
+      <div class="chat-box">
+        <div class="chatmsg right chat1" :class="{'active': open.ask2}">
+          <img src='img/chat1.png'>
+        </div>
+        <div class="chatmsg chat2" :class="{'active': open.ask2}">
+          <img src='img/chat2.png'>
+        </div>
+        <div class="chatmsg right chat3" :class="{'active': open.ask2}">
+          <img src='img/chat3.png'>
+        </div>
+        <div class="chatmsg chat4" :class="{'active': open.ask2}">
+          <img src='img/chat4.png'>
+        </div>
+        <div class="chatmsg right chat5" :class="{'active': open.ask2}">
+          <img src='img/chat5.png'>
+        </div>
+        <div class="chatmsg chat6" :class="{'active': open.ask2}">
+          <img src='img/chat6.png'>
+        </div>
+      </div>
+      <div class='chat'>
+        <img src='img/chat.png'>
+      </div>
+      <div class='footer'>
+        <img src='img/bottom2.jpg'>
+        <div @click="goCal" class='btn3'></div>
+      </div>
+    </div>
+    <div v-show="open.docfinal">
+      <img @click="backtoCalender" src="img/04-final.png">
+      <div class='footer'>
+        <img src='img/bottom2.jpg'>
+        <div @click="goCal" class='btn3'></div>
+      </div>
+    </div>
+    <div v-show="open.doc2" class="doc2">
+      <img  src="img/doc02.png">
+      <div :class="{'active': docs.sort}" @click="openSort" class='sort-btn'>排序</div>
+      <div :class="{'active': docs.select}" @click="openSelect" class='select-btn'>篩選</div>
+      <div :class="{'active': docs.sort}"  class="sort"><img src="img/doc_sort.png"></div>
+      <div :class="{'active': docs.select}" class="select"><img src="img/doc_select.png"></div>
+      <div class="back-btn" @click="docBack"></div>
+      <div class="close-btn" @click="docClose"></div>
+      <div class="map-btn" @click="docMap"></div>
+      <div v-show="ismap" class="ismap">
+        <div @click="goDocInfo" class='goDocInfo'></div>
+        <div class="map" :class="{'active': ismap}">
+          <img  src="img/map.png">
+        </div>        
+        <img class='map-bottom' src="img/map-bottom.png">
+      </div>
+      <div class='footer'><img src="img/bottom2.jpg"></div>
+    </div>
+    <div v-show="open.docinfo" class="docinfo">
+      <img class='info1' src="img/info1.png">
+      <img src="img/info2.png">
+      <img src="img/info3.png">
+      <img class='info4' src="img/info4.png">
+      <div @click="goOnline" class='reservation'><img src="img/reservation.png"></div>
+      <div class='footer'><img src="img/bottom2.jpg"></div>
+    </div>
+    <div v-show="open.online" class="online">
+      <img src="img/online.png">
+      <div class='order-box' style='margin:0 auto 90px;'>
+        <div class='box'>
+          <span>動物醫院</span>
+          <input type='text' value='中研動物醫院'>
+        </div>
+        <div class='box'>
+          <span>預約時間</span>
+          <select>
+            <option>2020-12-21  20:30</option>
+          </select>
+        </div>
+        <div class='box'>
+          <span>看診動物</span>
+          <select>
+            <option>Pocky, 狗</option>
+          </select>
+        </div>
+        <div class='box'>
+          <span>備註</span>
+          <input type='text' value='接種疫苗'>
+        </div>
+        <div @click="onlineSuccess" class='box'>
+          <img src="img/online-success.png">
+        </div>
+        <div v-show='ischeck' class="check">
+          <img src="img/online-check.png">
+          <div @click="goCalendar" class='calendar-btn'></div>
+        </div>
+      </div>
+      <div class='footer'><img src="img/bottom2.jpg"></div>
+    </div>
+    <div v-show="open.calendar" class="calendar">
+      <div class='all'>        
+        <img src="img/all.png">        
+        <div @click="go04Final" class='record'></div>
+        <div @click="callEvent" class='event-btn'></div>
+      </div>
+      <transition name="fade">
+        <div class="animal" v-show="callevent">
+          <div class="kind" :class="{'active': isevent ==1}" @click="isEvent(1)">
+            <div class="an">              
+              <img src="img/c1.png">
+            </div>
+            <font>支出</font>
+          </div>
+          <div class="kind" :class="{'active': isevent == 2}" @click="isEvent(2)">
+            <div class="an">       
+              <img src="img/c2.png">
+            </div>
+            <font>溜寵</font>
+          </div>
+          <div class="kind" :class="{'active': isevent == 3}" @click="isEvent(3)"> 
+            <div class="an">       
+              <img src="img/c3.png">
+            </div>
+            <font>病例</font>
+          </div>
+          <div class="kind" :class="{'active': isevent == 4}" @click="isEvent(4)">
+            <div class="an">       
+              <img src="img/c4.png">
+            </div>
+            <font>事件</font>
+          </div> 
+          <div class="kind">
+            <img src="img/dot.png">
+          </div>
+        </div>
+      </transition>
+      <div class='ca-date'>          
+        <div class="e4" v-show="event4ok"><img src="img/21.png"></div>
+        <div class="e4" v-show="event3ok"><img src="img/21-2.png"></div>
+        <div class="e2" v-show="event2ok"><img src="img/25.png"></div>
+        <div class="e1" v-show="event1ok"><img src="img/23.png"></div>
+        <img class='date' src="img/calender.png">
+      </div>
+      <div v-show="event4ok" class='box-date'>
+        <span>12月</span>
+        <div  v-show="event2ok" class="boxs">
+          <img src='img/25-box.png'>
+        </div>
+        <div  v-show="event1ok" class="boxs">
+          <img src='img/23-box.png'>
+        </div>
+        <div @click="goPush" v-show="event3ok" class="boxs">
+          <img src='img/21-box2.png'>
+        </div>
+        <div @click="goPush" v-show="event4ok" class="boxs">
+          <img src='img/21-box.png'>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="img/bottom3.jpg">
+        <div class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div class='btn5'></div>
+      </div>
+    </div>
+    <div class="event" v-show="event1">
+      <div style="position: relative;">
+        <img src="img/event1.png">
+        <div @click="callEvent1_1" class='callevent4_1'></div>
+      </div>      
+      <transition name="fade">
+        <div class="event4_1" v-show="event1_1">          
+          <img src="img/event1-1.png">
+        </div>
+      </transition>
+      <div class='order-box' style='margin: 20px auto 90px;'>
+        <div class="box">
+          <span>支出時間</span>
+          <select>
+            <option>2020-12-23 11:30</option>
+          </select>
+        </div>
+         <div class="box">
+          <span>帳單金額</span>
+          <input type="text" value="1000">
+        </div>
+        <div class="box">
+          <span>帳單項目</span>
+          <input type="text" value="Hills 雞肉 鴨肉 10個罐頭">
+        </div>
+        <div class="box">
+          <span>加入照片</span>
+          <img src="img/event1photo.png">
+        </div>
+        <div @click="event1_ok" class="box">
+          <img src="img/event4-btn.png">
+        </div>
+      </div> 
+      <div class="footer">
+        <img src="img/bottom3.jpg">
+      </div>
+    </div>
+    <div class="event" v-show="event2">
+      <img src="img/run1.png">
+      <div @click="gotoRun2" class='callevent2_1'></div>
+    </div>
+    <div class="event" v-show="event3">
+      <img src="img/event3.png">
+      <div class='order-box' style='margin: 20px auto 90px;'>
+        <div class="box">
+          <span>就診時間</span>
+          <select>
+            <option>2020-12-21 20:30</option>
+          </select>
+        </div>
+         <div class="box">
+          <span>就診醫院</span>
+          <input type="text" value="中研動物醫院">
+        </div>
+        <div class="box">
+          <span>病症</span>
+          <input type="text" value="">
+        </div>
+        <div class="box">
+          <span>檢測結果</span>
+          <input type="text" value="耳朵有點髒，滿健康的">
+        </div>
+        <div class="box">
+          <span>治療方案</span>
+          <input type="text" value="一般健檢、耳道檢查、抽血">
+        </div>
+        <div class="box">
+          <span>加入照片</span>
+          <img src="img/event3photo.png">
+        </div>
+        <div class="box">
+          <span>備註</span>
+          <input type="text" value="">
+        </div>
+        <div @click="event3_ok" class="box">
+          <img src="img/event4-btn.png">
+        </div>
+      </div> 
+      <div class="footer">
+        <img src="img/bottom3.jpg">
+      </div>
+    </div>
+    <div class="event" v-show="event4">
+      <img src="img/event4.png">
+      <div @click="callEvent4_1" class='callevent4_1'></div>
+      <transition name="fade">
+        <div class="event4_1" v-show="event4_1">          
+          <img src="img/event4-1.png">
+        </div>
+      </transition>
+      <div class='order-box' style="margin: 20px auto 90px;">
+        <div class="box">
+          <span>開始日期</span>
+          <select>
+            <option>2020-12-21 20:30</option>
+          </select>
+        </div>
+        <div class="box">
+          <span>提醒時間</span>
+          <select>
+            <option>3小時前</option>
+          </select>
+        </div>
+         <div class="box">
+          <span>地點</span>
+          <input type="text" value="中研動物醫院">
+        </div>
+        <div class="box">
+          <span>頻率</span>
+          <select>
+            <option>每年</option>
+          </select>
+        </div>
+        <div class="box">
+          <span>備註</span>
+          <input type="text" value="">
+        </div>
+        <div class="box">
+          <span>加入照片</span>
+          <img src="img/photo.png">
+        </div>
+        <div @click="event4_ok" class="box">
+          <img src="img/event4-btn.png">
+        </div>
+      </div>
+      <div class="footer">
+        <img src="img/bottom3.jpg">
+      </div>
+    </div>
+    <div @click="pushok" class="push" v-show="open.push2">
+      <img src="img/push.png">
+      <div class='msg' :class="{'active': open.push}">
+        <img src="img/msg.png">
+      </div>
+    </div>
+    <div class="run2" v-show="run2">
+      <img src="img/run2-1.png">
+      <div class='count'>
+        <div class='count1'>
+          <input class="runtext" type="text" id="runtext" readonly>
+        </div>
+        <input class="timetext" type="text" id="timetext" readonly>
+      </div>
+      <img src="img/runmap.png">
+      <div @click='runEnd' class='end-btn'></div>
+      <div class="footer">
+        <img src="img/bottom3.jpg">
+      </div>
+    </div>
+    <div class='runfinal' v-show='runfinal'>
+      <div class='final'>
+        <img src='img/runfinal.png'>
+        <div @click="goIG" class='social'></div>
+        <div @click="goIG" class='social2'></div>
+        <div class='kms' v-text='kms'></div>
+        <div class='times' v-text='times'></div>
+        <div class='kms2'>8.38km</div>
+        <div class='times2'>00:22:58</div>
+      </div>
+    </div>
+    <div class='ig' v-show='ig'>
+      <img @click="event2_ok" src="img/ig.png">
+    </div>
+    <div class="step6" v-show='open.step6'>
+      <div style="position: relative;">
+        <img src='img/06.png'>
+        <div @click="gostep6_1" class='step06_1'></div>
+        <div @click="gostep6_2"class='step06_2'></div>
+        <div @click="gostep6_3"class='step06_3'></div>
+      </div>
+    </div>
+    <div class="step6" v-show='open.step6_1'>
+      <div style="position: relavice;">
+        <img src='img/06-1.png'>
+        <div class='back' @click="backToStep6"></div>
+      </div>
+    </div>
+    <div class="step6" v-show='open.step6_2'>
+      <div style="position: relavice;">
+        <img src='img/06-2.png'>
+        <div class='ani'>
+          <img class='an imgan1' :class="{'active': step6_an}" src='img/06a.png'>
+          <img class='an imgan2' :class="{'active': step6_an}"src='img/06b.png'>
+          <img class='an imgan3' :class="{'active': step6_an}" src='img/06c.png'>
+          <img class='an imgan4' :class="{'active': step6_an}" src='img/06d.png'>
+          <img class='an imgan5' :class="{'active': step6_an}" src='img/06e.png'>
+          <img class='an imgan6' :class="{'active': step6_an}" src='img/06f.png'>
+          <img class='an imgan7' :class="{'active': step6_an}" src='img/06g.png'>
+        </div>
+        <div class='back' @click="backToStep6"></div>
+      </div>
+    </div>
+    <div class="step6" v-show='open.step6_3'>
+      <div style="position: relative;">
+        <div style="position: relative;">
+          <img src='img/month.png'>
+          <div @click="switchYear()" class="switchYear"></div>
+          <div @click="switchMonth()" class="switchMonth"></div>
+        </div>
+        <div class='mo'>
+          <img class='an imgan1' :class="{'active': monthanimate}" src='img/m1.png'>
+          <img class='an imgan2' :class="{'active': monthanimate}" src='img/m2.png'>
+          <img class='an imgan3' :class="{'active': monthanimate}" src='img/m3.png'>
+          <img class='an imgan4' :class="{'active': monthanimate}" src='img/m4.png'>
+          <img class='an imgan5' :class="{'active': monthanimate}" src='img/m5.png'>
+          <img class='an imgan6' :class="{'active': monthanimate}" src='img/m6.png'>
+          <img class='an imgan7' :class="{'active': monthanimate}" src='img/m7.png'>
+          <img class='an imgan8' :class="{'active': monthanimate}" src='img/m8.png'>
+        </div>
+        <div class='back' @click="backToStep6"></div>
+      </div>
+    </div>
+    <div class="step6" v-show='open.year'>
+      <div style="position: relative;">
+        <div style="position: relative;">
+          <img src='img/year.png'>
+          <div @click="switchYear()" class="switchYear"></div>
+          <div @click="switchMonth()" class="switchMonth"></div>
+        </div>
+        <div class='mo'>
+          <img class='an imgan1' :class="{'active': yearanimate}" src='img/y1.png'>
+          <img class='an imgan2' :class="{'active': yearanimate}" src='img/y2.png'>
+          <img class='an imgan3' :class="{'active': yearanimate}" src='img/y3.png'>
+          <img class='an imgan4' :class="{'active': yearanimate}" src='img/y4.png'>
+          <img class='an imgan5' :class="{'active': yearanimate}" src='img/y5.png'>
+          <img class='an imgan6' :class="{'active': yearanimate}" src='img/y6.png'>
+          <img class='an imgan7' :class="{'active': yearanimate}" src='img/y7.png'>
+          <img class='an imgan8' :class="{'active': yearanimate}" src='img/y8.png'>
+        </div>
+        <div style='margin:5px 0;text-align: center;'>
+          <img src='img/y9.png'>
+        </div>
+        <div @click="goSave()" style='margin:5px 0;text-align: center;'>
+          <img src='img/y10.png'>
+        </div>
+        <div class='back' @click="backToStep6"></div>
+      </div>
+    </div>
+    <div class='save' v-show='open.save'>
+      <img src='img/save.png'>
+      <div @click="goSave1" class='gosave1'></div>
+      <div @click="goSave2" class='gosave2'></div>
+      <div class='footer'>
+        <img src='img/bottom5.jpg'>
+      </div>
+    </div>
+    <div class='save' v-show='open.save1'>
+      
+      <div @click="baaa" class="bq"></div>
+      <img src='img/save_a.png'>
+      <div @click="goSave1a" class='save1'></div>
+      <div @click="gos" class='save1s'></div>
+      <div class='footer'>
+        <img src='img/bottom5.jpg'>
+      </div>
+    </div>
+    <div class='save' v-show='open.saves'>
+      <div @click="backBQ" class="bq"></div>
+      <img src='img/as.png'>
+      <div @click="openlightbox" class='n'></div>
+      <img @click="closelightbox" class='lightbox' v-show='lightbox' src='img/bf.png'>
+    </div>
+    <div class='save' v-show='open.save1a'>
+      <div @click="backBQ" class="bq"></div>
+      <img src='img/save_b.png'>
+      <div @click="goSave1b" class='save1a'></div>
+      <div class='footer'>
+        <img src='img/bottom5.jpg'>
+      </div>
+    </div>
+    <div class='save' v-show='open.save1b'>
+      <div @click="backBQ" class="bq"></div>
+      <img src='img/save_c.png'>
+      <div @click="goSave1c" class='save1b'></div>
+      <div class='footer'>
+        <img src='img/bottom5.jpg'>
+      </div>
+    </div>
+    <div class='save' v-show='open.save1c'>
+      <div @click="backBQ" class="bq"></div>
+      <div style='text-align: center;'>
+        <img  src='img/q.png'>
+        <img class='q1' :class="{'active': qq}" src="img/q1.png">      
+        <img class='q2' :class="{'active': qq}" src="img/q2.png">
+        <img class='q3' src="img/q3.png">
+      </div>
+      
+      <div class='footer'>
+        <img src='img/bottom5.jpg'>
+      </div>
+    </div>
+    <div class='save' v-show='open.save2'>
+      <div style="position: relative;margin:0 auto 90px">
+        <div @click="showNose" class='nose'></div>
+        <div @click="showzz" class='zz'></div>
+        <img src="img/z.png">
+        <div  class="no1" v-show='shownose'>        
+          <div class="closenose" @click="closenose"></div>    
+          <img src="img/no.png">
+          <div @click="takenose" class='takepic'></div>
+          <div class='no2'>
+            <img v-show='shownose2' src='img/no2.png'>
+          </div>
+        </div>
+      </div>
+      <div class='footer'>
+        <img src='img/bottom5.jpg'>
+      </div>
+    </div>
+    <div class='save' v-show='open.total'>
+      <img src="img/total.png">
+      <div class='footer'>
+        <img src='img/bottom5.jpg'>
+      </div>
+    </div>
+  </div>
+</body>
+  <script src="./js/index.js"></script><!-- 主要js -->
+</html>

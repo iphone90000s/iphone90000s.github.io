@@ -1,0 +1,34 @@
+@keyframes imports {
+   0% {
+      background-image: url("../img/cut01.png");
+   }
+
+   25% {
+      background-image: url("../img/cut02.png");
+   }
+
+   50% {
+      background-image: url("../img/cut03.png");
+   }
+
+   75% {
+      background-image: url("../img/cut04.png");
+   }
+
+   100% {
+      background-image: url("../img/cut01.png");
+   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+   transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+   {
+   opacity: 0;
+}
