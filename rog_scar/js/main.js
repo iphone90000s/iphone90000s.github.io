@@ -1,6 +1,5 @@
 let audio_video = false;
 var direction;
-
 $(function () {
 
     $(".audio-mp4").on('ended', function () {
@@ -172,7 +171,21 @@ $(function () {
     let qhd_float = 0;
     // let float5 = 0;
     let height = document.body.clientHeight - 200;
+    var beforeScrollTop = document.body.scrollTop;
     $(window).scroll(function (e) {
+        /**
+         * 判斷滾動向上或向下
+         */
+        var afterScrollTop = $(window).scrollTop();
+        var delta = beforeScrollTop - afterScrollTop;
+        if (delta > 0) {
+            direction = 'down';
+        } else {
+            direction = 'up';
+        }
+        beforeScrollTop = afterScrollTop;
+
+
         /**
          * 滾動到該區域時進行淡入淡出效果
          */
@@ -491,31 +504,6 @@ $(function () {
         }
     });
 });
-
-/**
- * 判斷滾動時是往上滾動或往下滾動
- */
-var scrollFunction = function (e) {
-    e = e || window.event;
-    if (e.wheelDelta) {
-        if (e.wheelDelta > 0) {
-            direction = 'down';
-        }
-        if (e.wheelDelta < 0) {
-            direction = 'up';
-        }
-    } else if (e.detail) {
-        if (e.detail > 0) {
-            direction = 'down';
-        }
-        if (e.detail < 0) {
-            direction = 'up';
-        }
-    }
-};
-
-document.addEventListener("DOMMouseScroll", scrollFunction, false);
-window.onmousewheel = document.onmousewheel = scrollFunction;
 
 /**
  * 數字跳動插件
