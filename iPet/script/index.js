@@ -80,7 +80,9 @@ var app = new Vue({
    },
    methods: {
       scrollToTop() {
-         window.scrollTo(0, 0);
+         setTimeout(function () {
+            window.scrollTo(0, 0);
+         }, 50);
       },
       chooseSex(num) {
          const vm = this;
@@ -115,7 +117,7 @@ var app = new Vue({
          vm.scrollToTop();
          setTimeout(function () {
             vm.is03active = true;
-         }, 0);
+         }, 1500);
       },
       goVaccine() {
          const vm = this;
