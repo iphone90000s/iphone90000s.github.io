@@ -4,7 +4,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1" />
   <link href="./css/style.css" rel="stylesheet" /><!-- 總樣式 css -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -25,61 +26,61 @@
         <div @click="gostep6" class='btn4'></div>
       </div>
     </div>
-    <div style='padding-bottom: 70px;' v-show="open.mypet" class="mypet">
+    <div v-show="open.mypet" class="mypet">
       <img class="mypet1" src="img/create1.png">
       <div class="order-frame">
         <div class="animal">
           <div class="kind" :class="{'active': iskind ==1}" @click="isKind(1)">
-            <div class="an">              
+            <div class="an">
               <img src="img/create-dog.png">
             </div>
             <font>狗</font>
           </div>
           <div class="kind" :class="{'active': iskind == 2}" @click="isKind(2)">
-            <div class="an">       
+            <div class="an">
               <img src="img/create-cat.png">
             </div>
             <font>貓</font>
           </div>
-          <div class="kind" :class="{'active': iskind == 3}" @click="isKind(3)"> 
-            <div class="an">       
+          <div class="kind" :class="{'active': iskind == 3}" @click="isKind(3)">
+            <div class="an">
               <img src="img/create-rabbit.png">
             </div>
             <font>兔</font>
           </div>
           <div class="kind" :class="{'active': iskind == 4}" @click="isKind(4)">
-            <div class="an">       
+            <div class="an">
               <img src="img/create-rat.png">
             </div>
             <font>鼠</font>
-          </div> 
+          </div>
           <div class="kind">
             <img src="img/dot.png">
           </div>
         </div>
         <div class='order-box'>
-          <div class="box">            
+          <div class="box">
             <span>寵物名</span>
             <input type='text' value="Pocky">
           </div>
-          <div class="box">            
+          <div class="box">
             <span>品種</span>
             <select>
               <option>請選擇</option>
             </select>
           </div>
-          <div class="box">            
+          <div class="box">
             <span>性別</span>
             <div class="sex">
               <div class="choose-sex" :class="{'active': issex == 1}" @click="chooseSex(1)">
                 <img src="img/boy.png">
               </div>
               <div class="choose-sex" :class="{'active': issex == 2}" @click="chooseSex(2)">
-                  <img src="img/girl.png">
+                <img src="img/girl.png">
               </div>
             </div>
           </div>
-          <div class="box">            
+          <div class="box">
             <span>出生日期</span>
             <select>
               <option>2020-09-05</option>
@@ -90,22 +91,22 @@
               之12月31日即可。
             </div>
           </div>
-          <div class="box">            
+          <div class="box">
             <span>領養日期</span>
             <select>
               <option>2020-12-18</option>
             </select>
           </div>
-          <div class="box">            
+          <div class="box">
             <span>體重(KG)</span>
             <input type='text' value="4">
           </div>
-          <div class="box">            
+          <div class="box">
             <span>晶片號碼</span>
-            <input type='text' value="2538458954">            
+            <input type='text' value="2538458954">
             <div class="txt">晶片號碼長度需大於10碼</div>
           </div>
-          <div class="box" @click="go03()">            
+          <div class="box" @click="go03()">
             <img src="img/save-btn.png">
           </div>
         </div>
@@ -173,10 +174,10 @@
       </div>
     </div>
     <div v-show="open.doc2" class="doc2">
-      <img  src="img/doc02.png">
+      <img src="img/doc02.png">
       <div :class="{'active': docs.sort}" @click="openSort" class='sort-btn'>排序</div>
       <div :class="{'active': docs.select}" @click="openSelect" class='select-btn'>篩選</div>
-      <div :class="{'active': docs.sort}"  class="sort"><img src="img/doc_sort.png"></div>
+      <div :class="{'active': docs.sort}" class="sort"><img src="img/doc_sort.png"></div>
       <div :class="{'active': docs.select}" class="select"><img src="img/doc_select.png"></div>
       <div class="back-btn" @click="docBack"></div>
       <div class="close-btn" @click="docClose"></div>
@@ -184,13 +185,13 @@
       <div v-show="ismap" class="ismap">
         <div @click="goDocInfo" class='goDocInfo'></div>
         <div class="map" :class="{'active': ismap}">
-          <img  src="img/map.png">
-        </div>        
+          <img src="img/map.png">
+        </div>
         <img class='map-bottom' src="img/map-bottom.png">
       </div>
       <div class='footer'><img src="img/bottom2.jpg"></div>
     </div>
-    <div style='padding-bottom: 70px;' v-show="open.docinfo" class="docinfo">
+    <div v-show="open.docinfo" class="docinfo">
       <img class='info1' src="img/info1.png">
       <img src="img/info2.png">
       <img src="img/info3.png">
@@ -198,7 +199,7 @@
       <div @click="goOnline" class='reservation'><img src="img/reservation.png"></div>
       <div class='footer'><img src="img/bottom2.jpg"></div>
     </div>
-    <div style='padding-bottom: 70px;' v-show="open.online" class="online">
+    <div v-show="open.online" class="online">
       <img src="img/online.png">
       <div class='order-box' style='margin:0 auto 90px;'>
         <div class='box'>
@@ -208,7 +209,7 @@
         <div class='box'>
           <span>預約時間</span>
           <select>
-            <option>2020-12-21  20:30</option>
+            <option>2020-12-21 20:30</option>
           </select>
         </div>
         <div class='box'>
@@ -232,43 +233,43 @@
       <div class='footer'><img src="img/bottom2.jpg"></div>
     </div>
     <div v-show="open.calendar" class="calendar">
-      <div class='all'>        
-        <img src="img/all.png">        
+      <div class='all'>
+        <img src="img/all.png">
         <div @click="go04Final" class='record'></div>
         <div @click="callEvent" class='event-btn'></div>
       </div>
       <transition name="fade">
         <div class="animal" v-show="callevent">
           <div class="kind" :class="{'active': isevent ==1}" @click="isEvent(1)">
-            <div class="an">              
+            <div class="an">
               <img src="img/c1.png">
             </div>
             <font>支出</font>
           </div>
           <div class="kind" :class="{'active': isevent == 2}" @click="isEvent(2)">
-            <div class="an">       
+            <div class="an">
               <img src="img/c2.png">
             </div>
             <font>溜寵</font>
           </div>
-          <div class="kind" :class="{'active': isevent == 3}" @click="isEvent(3)"> 
-            <div class="an">       
+          <div class="kind" :class="{'active': isevent == 3}" @click="isEvent(3)">
+            <div class="an">
               <img src="img/c3.png">
             </div>
             <font>病例</font>
           </div>
           <div class="kind" :class="{'active': isevent == 4}" @click="isEvent(4)">
-            <div class="an">       
+            <div class="an">
               <img src="img/c4.png">
             </div>
             <font>事件</font>
-          </div> 
+          </div>
           <div class="kind">
             <img src="img/dot.png">
           </div>
         </div>
       </transition>
-      <div class='ca-date'>          
+      <div class='ca-date'>
         <div class="e4" v-show="event4ok"><img src="img/21.png"></div>
         <div class="e4" v-show="event3ok"><img src="img/21-2.png"></div>
         <div class="e2" v-show="event2ok"><img src="img/25.png"></div>
@@ -277,10 +278,10 @@
       </div>
       <div v-show="event4ok" class='box-date'>
         <span>12月</span>
-        <div  v-show="event2ok" class="boxs">
+        <div v-show="event2ok" class="boxs">
           <img src='img/25-box.png'>
         </div>
-        <div  v-show="event1ok" class="boxs">
+        <div v-show="event1ok" class="boxs">
           <img src='img/23-box.png'>
         </div>
         <div @click="goPush" v-show="event3ok" class="boxs">
@@ -299,13 +300,13 @@
         <div class='btn5'></div>
       </div>
     </div>
-    <div style='padding-bottom: 70px;' class="event" v-show="event1">
+    <div class="event" v-show="event1">
       <div style="position: relative;">
         <img src="img/event1.png">
         <div @click="callEvent1_1" class='callevent4_1'></div>
-      </div>      
+      </div>
       <transition name="fade">
-        <div class="event4_1" v-show="event1_1">          
+        <div class="event4_1" v-show="event1_1">
           <img src="img/event1-1.png">
         </div>
       </transition>
@@ -316,7 +317,7 @@
             <option>2020-12-23 11:30</option>
           </select>
         </div>
-         <div class="box">
+        <div class="box">
           <span>帳單金額</span>
           <input type="text" value="1000">
         </div>
@@ -331,16 +332,16 @@
         <div @click="event1_ok" class="box">
           <img src="img/event4-btn.png">
         </div>
-      </div> 
+      </div>
       <div class="footer">
         <img src="img/bottom3.jpg">
       </div>
     </div>
-    <div style='padding-bottom: 70px;' class="event" v-show="event2">
+    <div class="event" v-show="event2">
       <img src="img/run1.png">
       <div @click="gotoRun2" class='callevent2_1'></div>
     </div>
-    <div style='padding-bottom: 70px;' class="event" v-show="event3">
+    <div class="event" v-show="event3">
       <img src="img/event3.png">
       <div class='order-box' style='margin: 20px auto 90px;'>
         <div class="box">
@@ -349,7 +350,7 @@
             <option>2020-12-21 20:30</option>
           </select>
         </div>
-         <div class="box">
+        <div class="box">
           <span>就診醫院</span>
           <input type="text" value="中研動物醫院">
         </div>
@@ -376,16 +377,16 @@
         <div @click="event3_ok" class="box">
           <img src="img/event4-btn.png">
         </div>
-      </div> 
+      </div>
       <div class="footer">
         <img src="img/bottom3.jpg">
       </div>
     </div>
-    <div style='padding-bottom: 70px;' class="event" v-show="event4">
+    <div class="event" v-show="event4">
       <img src="img/event4.png">
       <div @click="callEvent4_1" class='callevent4_1'></div>
       <transition name="fade">
-        <div class="event4_1" v-show="event4_1">          
+        <div class="event4_1" v-show="event4_1">
           <img src="img/event4-1.png">
         </div>
       </transition>
@@ -402,7 +403,7 @@
             <option>3小時前</option>
           </select>
         </div>
-         <div class="box">
+        <div class="box">
           <span>地點</span>
           <input type="text" value="中研動物醫院">
         </div>
@@ -466,8 +467,8 @@
       <div style="position: relative;">
         <img src='img/06.png'>
         <div @click="gostep6_1" class='step06_1'></div>
-        <div @click="gostep6_2"class='step06_2'></div>
-        <div @click="gostep6_3"class='step06_3'></div>
+        <div @click="gostep6_2" class='step06_2'></div>
+        <div @click="gostep6_3" class='step06_3'></div>
       </div>
     </div>
     <div class="step6" v-show='open.step6_1'>
@@ -481,7 +482,7 @@
         <img src='img/06-2.png'>
         <div class='ani'>
           <img class='an imgan1' :class="{'active': step6_an}" src='img/06a.png'>
-          <img class='an imgan2' :class="{'active': step6_an}"src='img/06b.png'>
+          <img class='an imgan2' :class="{'active': step6_an}" src='img/06b.png'>
           <img class='an imgan3' :class="{'active': step6_an}" src='img/06c.png'>
           <img class='an imgan4' :class="{'active': step6_an}" src='img/06d.png'>
           <img class='an imgan5' :class="{'active': step6_an}" src='img/06e.png'>
@@ -546,7 +547,7 @@
       </div>
     </div>
     <div class='save' v-show='open.save1'>
-      
+
       <div @click="baaa" class="bq"></div>
       <img src='img/save_a.png'>
       <div @click="goSave1a" class='save1'></div>
@@ -580,12 +581,12 @@
     <div class='save' v-show='open.save1c'>
       <div @click="backBQ" class="bq"></div>
       <div style='text-align: center;'>
-        <img  src='img/q.png'>
-        <img class='q1' :class="{'active': qq}" src="img/q1.png">      
+        <img src='img/q.png'>
+        <img class='q1' :class="{'active': qq}" src="img/q1.png">
         <img class='q2' :class="{'active': qq}" src="img/q2.png">
         <img class='q3' src="img/q3.png">
       </div>
-      
+
       <div class='footer'>
         <img src='img/bottom5.jpg'>
       </div>
@@ -595,8 +596,8 @@
         <div @click="showNose" class='nose'></div>
         <div @click="showzz" class='zz'></div>
         <img src="img/z.png">
-        <div  class="no1" v-show='shownose'>        
-          <div class="closenose" @click="closenose"></div>    
+        <div class="no1" v-show='shownose'>
+          <div class="closenose" @click="closenose"></div>
           <img src="img/no.png">
           <div @click="takenose" class='takepic'></div>
           <div class='no2'>
@@ -616,5 +617,6 @@
     </div>
   </div>
 </body>
-  <script src="./js/index.js"></script><!-- 主要js -->
+<script src="./js/index.js"></script><!-- 主要js -->
+
 </html>
