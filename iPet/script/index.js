@@ -327,6 +327,7 @@ var app = new Vue({
          const vm = this;
          vm.event2 = false;
          vm.run2 = true;
+         vm.scrollToTop();
          start();
       },
       runEnd() {
