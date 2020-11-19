@@ -159,6 +159,7 @@
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .title {
       font-size: 24px;
       margin-bottom: 10px;
+      text-align: center;
    }
 
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .txt {
@@ -798,5 +799,17 @@
 
    .design-section .rotate-bg.right {
       animation-name: rotate-bg2_xs;
+   }
+
+   .slider .slider-slick-content .slider-slick-list {
+      height: auto;
+   }
+
+   .slider .slider-slick-content .text .title {
+      text-align: center;
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content .list .img {
+      margin: 0;
    }
 }

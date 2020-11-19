@@ -1,4 +1,6 @@
 let audio_video = false;
+var direction;
+
 $(function () {
 
     $(".audio-mp4").on('ended', function () {
@@ -331,6 +333,12 @@ $(function () {
                 } else if (direction == "up") {
                     qhd_float -= 2.5;
                 }
+                if (qhd_float > 60) {
+                    qhd_float = 60
+                }
+                if (qhd_float < -60) {
+                    qhd_float = -60
+                }
                 $(".inner-sky img").css({
                     "left": `${qhd_float}px`,
                     "top": `${qhd_float/2}px`,
@@ -349,6 +357,12 @@ $(function () {
                 } else if (direction == "up") {
                     qhd_float -= 2.5;
                 }
+                if (qhd_float > 60) {
+                    qhd_float = 60
+                }
+                if (qhd_float < -60) {
+                    qhd_float = -60
+                }
                 $(".inner-sky img").css({
                     "left": `${qhd_float}px`,
                     "top": `${qhd_float/2}px`,
@@ -361,6 +375,7 @@ $(function () {
                 });
             }
         }
+
 
         if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
             qhd_float = 0;
@@ -480,7 +495,6 @@ $(function () {
 /**
  * 判斷滾動時是往上滾動或往下滾動
  */
-var direction;
 var scrollFunction = function (e) {
     e = e || window.event;
     if (e.wheelDelta) {
