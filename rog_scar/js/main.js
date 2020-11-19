@@ -503,6 +503,238 @@ $(function () {
             $(".io .usb").addClass("active");
         }
     });
+
+    /**
+     * audio cross btn click
+     */
+    $(".audio-black-frame .cross-btn").click(function () {
+        $(".audio-black-frame").addClass("hide");
+        $(".audio-layers").removeClass("active");
+    });
+
+    /**
+     * audio-arrow 按鈕事件
+     */
+
+    var audioLayers = $(".audio-layers");
+    $(".audio-layers .prev-arrow").click(function () {
+        var count = $(this).parents(".audio-layers").index();
+        $(audioLayers[count]).removeClass("active");
+        if (count == 0) {
+            $(audioLayers[audioLayers.length - 1]).addClass("active");
+        } else {
+            $(audioLayers[count - 1]).addClass("active");
+        }
+    });
+    $(".audio-layers .next-arrow").click(function () {
+        var count = $(this).parents(".audio-layers").index();
+        $(audioLayers[count]).removeClass("active");
+        if (count == audioLayers.length - 1) {
+            $(audioLayers[0]).addClass("active");
+        } else {
+            $(audioLayers[count + 1]).addClass("active");
+        }
+    });
+
+
+    /**
+     * keyboard learn more click
+     */
+    $(".keyboard-btn .learn-btn").click(function () {
+        $(".keyboard-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".keyboard-thumb1").addClass("active");
+        }, 200);
+    });
+
+    /**
+     * keyboard cross btn click
+     */
+    $(".keyboard-black-frame .cross-btn").click(function () {
+        $(".keyboard-black-frame").addClass("hide");
+        $(".keyboard-layers").removeClass("active");
+    });
+
+    /**
+     * keyboard-arrow 按鈕事件
+     */
+
+    var keyboardLayers = $(".keyboard-layers");
+    $(".keyboard-layers .prev-arrow").click(function () {
+        var count = $(this).parents(".keyboard-layers").index();
+        $(keyboardLayers[count]).removeClass("active");
+        if (count == 0) {
+            $(keyboardLayers[keyboardLayers.length - 1]).addClass("active");
+        } else {
+            $(keyboardLayers[count - 1]).addClass("active");
+        }
+    });
+    $(".keyboard-layers .next-arrow").click(function () {
+        var count = $(this).parents(".keyboard-layers").index();
+        $(keyboardLayers[count]).removeClass("active");
+        if (count == keyboardLayers.length - 1) {
+            $(keyboardLayers[0]).addClass("active");
+        } else {
+            $(keyboardLayers[count + 1]).addClass("active");
+        }
+    });
+
+    /**
+     * cooling learn more click
+     */
+    $(".cooling-learnmore .learn-btn").click(function () {
+        $(".cooling-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".cooling-thumb1").addClass("active");
+        }, 200);
+    });
+
+    /**
+     * cooling cross btn click
+     */
+    $(".cooling-black-frame .cross-btn").click(function () {
+        $(".cooling-black-frame").addClass("hide");
+        $(".cooling-layers").removeClass("active");
+    });
+
+    /**
+     * cooling-arrow 按鈕事件
+     */
+
+    var coolingLayers = $(".cooling-layers");
+    $(".cooling-layers .prev-arrow").click(function () {
+        var count = $(this).parents(".cooling-layers").index();
+        $(coolingLayers[count]).removeClass("active");
+        if (count == 0) {
+            $(coolingLayers[coolingLayers.length - 1]).addClass("active");
+        } else {
+            $(coolingLayers[count - 1]).addClass("active");
+        }
+    });
+    $(".cooling-layers .next-arrow").click(function () {
+        var count = $(this).parents(".cooling-layers").index();
+        $(coolingLayers[count]).removeClass("active");
+        if (count == coolingLayers.length - 1) {
+            $(coolingLayers[0]).addClass("active");
+        } else {
+            $(coolingLayers[count + 1]).addClass("active");
+        }
+    });
+
+    /**
+     * performance learn more click
+     */
+    $(".performance-btn .learn-btn").click(function () {
+        $(".performance-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".performance-thumb1").addClass("active");
+        }, 200);
+    });
+
+    /**
+     * performance cross btn click
+     */
+    $(".performance-black-frame .cross-btn").click(function () {
+        $(".performance-black-frame").addClass("hide");
+        $(".performance-layers").removeClass("active");
+    });
+    /**
+     * performance-arrow 按鈕事件
+     */
+    var performanceLayers = $(".performance-layers");
+    $(".performance-layers .prev-arrow").click(function () {
+        var count = $(this).parents(".performance-layers").index();
+        $(performanceLayers[count]).removeClass("active");
+        if (count == 0) {
+            $(performanceLayers[performanceLayers.length - 1]).addClass("active");
+        } else {
+            $(performanceLayers[count - 1]).addClass("active");
+        }
+    });
+    $(".performance-layers .next-arrow").click(function () {
+        var count = $(this).parents(".performance-layers").index();
+        $(performanceLayers[count]).removeClass("active");
+        if (count == performanceLayers.length - 1) {
+            $(performanceLayers[0]).addClass("active");
+        } else {
+            $(performanceLayers[count + 1]).addClass("active");
+        }
+    });
+
+    /**
+     * design thumb click
+     */
+    $(document).on("click", ".slick-thumb1", function () {
+        $(".design-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".design-thumb1").addClass("active");
+        }, 200);
+    });
+    $(document).on("click", ".slick-thumb2", function () {
+        $(".design-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".design-thumb2").addClass("active");
+        }, 200);
+    });
+    $(document).on("click", ".slick-thumb3", function () {
+        $(".design-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".design-thumb3").addClass("active");
+        }, 200);
+    });
+    $(document).on("click", ".slick-thumb4", function () {
+        $(".design-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".design-thumb4").addClass("active");
+        }, 200);
+    });
+    $(document).on("click", ".slick-thumb5", function () {
+        $(".design-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".design-thumb5").addClass("active");
+        }, 200);
+    });
+    $(document).on("click", ".slick-thumb6", function () {
+        $(".design-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".design-thumb6").addClass("active");
+        }, 200);
+    });
+    $(document).on("click", ".slick-thumb7", function () {
+        $(".design-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".design-thumb7").addClass("active");
+        }, 200);
+    });
+    /**
+     * design第二層的關閉按鈕事件
+     */
+    $(".design-black-frame .cross-btn").click(function () {
+        $(".design-black-frame").addClass("hide");
+        $(".design-layers").removeClass("active");
+    });
+    /**
+     * design-thumb按鈕事件
+     */
+    var designLayers = $(".design-layers");
+    $(".design-layers .prev-arrow").click(function () {
+        var count = $(this).parents(".design-layers").index();
+        $(designLayers[count]).removeClass("active");
+        if (count == 0) {
+            $(designLayers[designLayers.length - 1]).addClass("active");
+        } else {
+            $(designLayers[count - 1]).addClass("active");
+        }
+    });
+    $(".design-layers .next-arrow").click(function () {
+        var count = $(this).parents(".design-layers").index();
+        $(designLayers[count]).removeClass("active");
+        if (count == designLayers.length - 1) {
+            $(designLayers[0]).addClass("active");
+        } else {
+            $(designLayers[count + 1]).addClass("active");
+        }
+    });
 });
 
 /**

@@ -92,6 +92,42 @@
       width: 1080px;
       top: 60.5%;
    }
+
+   .audio-box .audio-layers.audio-thumb1 .audio-nb,
+   .audio-box .audio-layers,
+   .keyboard-box .keyboard-layers,
+   .cooling-box .cooling-layers,
+   .performance-box .performance-layers,
+   .design-box .design-layers {
+      width: 1600px;
+      height: 896px;
+   }
+
+   .design-box .design-layers .text-frame {
+      left: 900px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .inner-video {
+      left: 806px;
+      top: 190px;
+      width: 396px;
+   }
+
+   .performance-box .performance-layers .text-frame {
+      left: 310px;
+   }
+
+   .cooling-box .cooling-layers .text-frame {
+      left: 900px;
+   }
+
+   .keyboard-box .keyboard-layers .text-frame {
+      left: 290px;
+   }
+
+   .audio-box .audio-layers .text-frame {
+      left: 280px;
+   }
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 732px) {
@@ -603,5 +639,42 @@
    .visual-section .main-bg {
       width: 1280px;
       height: 878px;
+   }
+
+
+   .audio-box .audio-layers.audio-thumb1 .audio-nb,
+   .audio-box .audio-layers,
+   .keyboard-box .keyboard-layers,
+   .cooling-box .cooling-layers,
+   .performance-box .performance-layers,
+   .design-box .design-layers {
+      width: 1600px;
+      height: 896px;
+   }
+
+   .design-box .design-layers .text-frame {
+      left: 900px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .inner-video {
+      left: 806px;
+      top: 190px;
+      width: 396px;
+   }
+
+   .performance-box .performance-layers .text-frame {
+      left: 310px;
+   }
+
+   .cooling-box .cooling-layers .text-frame {
+      left: 900px;
+   }
+
+   .keyboard-box .keyboard-layers .text-frame {
+      left: 290px;
+   }
+
+   .audio-box .audio-layers .text-frame {
+      left: 280px;
    }
 }

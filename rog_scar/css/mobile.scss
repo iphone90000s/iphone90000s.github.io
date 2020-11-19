@@ -717,6 +717,151 @@
    .slider .slider-slick {
       width: 100%;
    }
+
+   .layer-frame .cross-btn {
+      right: 40px;
+      top: 40px;
+      width: 20px;
+   }
+
+   .layer-frame .title {
+      font-size: 18px;
+      margin-bottom: 30px;
+   }
+
+   .layer-frame .title:after {
+      bottom: -15px;
+   }
+
+   .layer-frame .text {
+      font-size: 13px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .audio-nb,
+   .audio-box .audio-layers,
+   .keyboard-box .keyboard-layers,
+   .cooling-box .cooling-layers,
+   .performance-box .performance-layers,
+   .design-box .design-layers {
+      width: 732px;
+      height: 100%;
+      background-position: left top;
+   }
+
+   .design-box .design-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .inner-video {
+      top: 60px;
+      width: 236px;
+      left: 370px;
+   }
+
+   .performance-box .performance-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .cooling-box .cooling-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .keyboard-box .keyboard-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .audio-box .audio-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1279px) {
+
+   .layer-frame .cross-btn {
+      right: 40px;
+      top: 40px;
+      width: 20px;
+   }
+
+   .layer-frame .title {
+      font-size: 18px;
+      margin-bottom: 30px;
+   }
+
+   .layer-frame .title:after {
+      bottom: -15px;
+   }
+
+   .layer-frame .text {
+      font-size: 13px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .audio-nb,
+   .audio-box .audio-layers,
+   .keyboard-box .keyboard-layers,
+   .cooling-box .cooling-layers,
+   .performance-box .performance-layers,
+   .design-box .design-layers {
+      width: 100%;
+      height: 100%;
+      background-position: left top;
+   }
+
+   .design-box .design-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .inner-video {
+      top: 60px;
+      width: 236px;
+      left: 370px;
+   }
+
+   .performance-box .performance-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .cooling-box .cooling-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .keyboard-box .keyboard-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
+
+   .audio-box .audio-layers .text-frame {
+      left: 220px;
+      top: auto;
+      bottom: 50px;
+      width: 300px;
+   }
 }
 
 //bg img
