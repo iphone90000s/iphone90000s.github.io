@@ -353,23 +353,66 @@
     }
 }
 
-@keyframes battery-bg {
-    0% {
-        background-image: url("../img/battery-bg-step1.png");
+@keyframes cooling-bg_2x {
+    10% {
+        background-image: url("../img/cooling-animate-1st_2x.png");
     }
 
-    50% {
-        background-image: url("../img/battery-bg-step2.png");
+    25% {
+        background-image: url("../img/cooling-animate-2nd_2x.png");
     }
 
-    75% {
-        background-image: url("../img/battery-bg-step3.png");
+    40% {
+        background-image: url("../img/cooling-animate-3rd_2x.png");
+    }
+
+    55% {
+        background-image: url("../img/cooling-animate-4th_2x.png");
+    }
+
+    70% {
+        background-image: url("../img/cooling-animate-5th_2x.png");
+    }
+
+    90% {
+        background-image: url("../img/cooling-animate-6th_2x.png");
     }
 
     100% {
-        background-image: url("../img/battery-bg-step3.png");
+        background-image: none;
     }
 }
+
+@keyframes cooling-bg_xs {
+    10% {
+        background-image: url("../img/cooling-animate-1st_xs.png");
+    }
+
+    25% {
+        background-image: url("../img/cooling-animate-2nd_xs.png");
+    }
+
+    40% {
+        background-image: url("../img/cooling-animate-3rd_xs.png");
+    }
+
+    55% {
+        background-image: url("../img/cooling-animate-4th_xs.png");
+    }
+
+    70% {
+        background-image: url("../img/cooling-animate-5th_xs.png");
+    }
+
+    90% {
+        background-image: url("../img/cooling-animate-6th_xs.png");
+    }
+
+    100% {
+        background-image: none;
+    }
+}
+
 
 @keyframes rotate-bg1 {
     0% {
@@ -393,6 +436,50 @@
     }
 }
 
+@keyframes rotate-bg1_xs {
+    0% {
+        background-image: url("../img/design-bg-animate-5th_xs.png");
+    }
+
+    50% {
+        background-image: url("../img/design-bg-animate-3rd_xs.png");
+    }
+
+    75% {
+        background-image: url("../img/design-bg-animate-2nd_xs.png");
+    }
+
+    90% {
+        background-image: url("../img/design-bg-animate-1st_xs.png");
+    }
+
+    100% {
+        background-image: url("../img/design-bg-animate-1st_xs.png");
+    }
+}
+
+@keyframes rotate-bg1_2x {
+    0% {
+        background-image: url("../img/design-bg-animate-5th_2x.png");
+    }
+
+    50% {
+        background-image: url("../img/design-bg-animate-3rd_2x.png");
+    }
+
+    75% {
+        background-image: url("../img/design-bg-animate-2nd_2x.png");
+    }
+
+    90% {
+        background-image: url("../img/design-bg-animate-1st_2x.png");
+    }
+
+    100% {
+        background-image: url("../img/design-bg-animate-1st_2x.png");
+    }
+}
+
 @keyframes rotate-bg2 {
     0% {
         background-image: url("../img/design-bg-animate-3rd.png");
@@ -408,5 +495,41 @@
 
     100% {
         background-image: url("../img/design-bg-animate-5th.png");
+    }
+}
+
+@keyframes rotate-bg2_xs {
+    0% {
+        background-image: url("../img/design-bg-animate-3rd_xs.png");
+    }
+
+    50% {
+        background-image: url("../img/design-bg-animate-4th_xs.png");
+    }
+
+    75% {
+        background-image: url("../img/design-bg-animate-5th_xs.png");
+    }
+
+    100% {
+        background-image: url("../img/design-bg-animate-5th_xs.png");
+    }
+}
+
+@keyframes rotate-bg2_2x {
+    0% {
+        background-image: url("../img/design-bg-animate-3rd_2x.png");
+    }
+
+    50% {
+        background-image: url("../img/design-bg-animate-4th_2x.png");
+    }
+
+    75% {
+        background-image: url("../img/design-bg-animate-5th_2x.png");
+    }
+
+    100% {
+        background-image: url("../img/design-bg-animate-5th_2x.png");
     }
 }

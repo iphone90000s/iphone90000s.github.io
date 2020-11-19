@@ -1984,63 +1984,63 @@ body {
 
   .performance {
     .performance-notebook {
-      width: calc(953px * 1.5);
-      height: calc(913px * 1.5);
+      width: calc(953px * 1.2);
+      height: calc(913px * 1.2);
 
       .cpu {
-        width: calc(953px * .45 * 1.5);
+        width: calc(953px * .45 * 1.2);
       }
 
       .gpu {
-        width: calc(953px * .3 * 1.5);
+        width: calc(953px * .3 * 1.2);
       }
     }
   }
 
   .keystone {
     .keystone-notebook {
-      width: calc(952px * 1.5);
-      height: calc(661px * 1.5);
+      width: calc(952px * 1.2);
+      height: calc(661px * 1.2);
     }
 
     .keystone-in {
-      transform: translate(calc(300% * 1.5), calc(300% * 1.5));
-      width: calc(50px * 1.5);
-      height: calc(34px * 1.5);
+      transform: translate(calc(300% * 1.2), calc(300% * 1.2));
+      width: calc(50px * 1.2);
+      height: calc(34px * 1.2);
     }
   }
 
   .io {
     .io-notebook {
       .notebook {
-        width: calc(952px * 1.5);
-        height: calc(546px * 1.5);
+        width: calc(952px * 1.2);
+        height: calc(546px * 1.2);
       }
 
       .usb {
         &.io-left1 {
-          left: calc(115px * 1.5);
-          top: calc(518px * 1.5);
+          left: calc(115px * 1.2);
+          top: calc(518px * 1.2);
         }
 
         &.io-left2 {
-          left: calc(170px * 1.5);
-          top: calc(516px * 1.5);
+          left: calc(170px * 1.2);
+          top: calc(516px * 1.2);
         }
 
         &.io-left3 {
-          left: calc(214px * 1.5);
-          top: calc(510px * 1.5);
+          left: calc(214px * 1.2);
+          top: calc(510px * 1.2);
         }
 
         &.io-right1 {
-          left: calc(550px * 1.5);
-          top: calc(400px * 1.5);
+          left: calc(550px * 1.2);
+          top: calc(400px * 1.2);
         }
 
         &.io-right2 {
-          left: calc(600px * 1.5);
-          top: calc(360px * 1.5);
+          left: calc(600px * 1.2);
+          top: calc(360px * 1.2);
         }
 
       }
@@ -2487,6 +2487,7 @@ body {
 
   .armoury .armoury-info {
     width: 1880px;
+    height: 1100px;
   }
 
   .run-bar-box .run-bar-inner .ac-bar .bar {
@@ -2509,6 +2510,161 @@ body {
 
   .run-bar-box .run-bar-inner span {
     font-size: calc(24px * 1.25);
+  }
+}
+
+
+@media only screen and (min-width: 1921px) {
+  .visual-section .main-bg {
+    width: 2560;
+    height: 1746px;
+  }
+
+  .visual-section .blur-bg .main-bg {
+    width: 2560;
+    height: 1600px;
+  }
+
+  .design-section .rotate-bg,
+  .design-section .main-bg {
+    width: 2560px;
+    height: 1960px;
+  }
+
+  .performance-section .main-bg {
+    width: 2560px;
+    height: 1600px;
+  }
+
+  .display-section .blur-bg.qhd-bg .main-bg,
+  .display-section .blur-bg.fullhd-bg .main-bg {
+    width: 2560px;
+    height: 1600px;
+  }
+
+  .cooling-section .cooling-bg .main-bg,
+  .cooling-section .cooling-bg .cooling-set,
+  .cooling-section .cooling-bg .cooling-animate {
+    width: 2560px;
+    height: 2160px;
+  }
+
+  .keyboard .main-bg,
+  .keyboard .keyboard-line {
+    width: 2560px;
+    height: 1600px;
+  }
+
+  .battery .battery-bg .main-bg,
+  .battery .battery-bg .animate-bg-nd,
+  .battery .battery-bg .animate-bg-rd {
+    width: 2560px;
+    height: 1753px;
+  }
+
+  .keystone .main-bg {
+    width: 2560px;
+    height: 1600px;
+  }
+
+  .connectivity .main-bg {
+    width: 2560px;
+    height: 1760px;
+  }
+
+  .io-section .main-bg {
+    width: 2560px;
+    height: 1207px;
+  }
+
+  .armoury .main-bg {
+    width: 2560px;
+    height: 1863px;
+  }
+
+  .peripherals .main-bg {
+    width: 2560px;
+    height: 1867px;
+  }
+
+}
+
+//bg img
+@media only screen and (min-width: 1921px) {
+  .visual-section .blur-bg .main-bg {
+    background-image: url(../img/video-bg_2x.png);
+  }
+
+  .design-section .main-bg {
+    background-image: url(../img/design-bg-animate-3rd_2x.png);
+  }
+
+  .performance-section .main-bg {
+    background-image: url(../img/performance-bg_2x.png);
+  }
+
+  .display-section .blur-bg.fullhd-bg .main-bg {
+    background-image: url(../img/display-bg_2x.png);
+  }
+
+  .display-section .blur-bg.qhd-bg .main-bg {
+    background-image: url(../img/qhd-bg_2x.png);
+  }
+
+  .cooling-section .cooling-bg .main-bg {
+    background-image: url(../img/cooling-bg_2x.png);
+  }
+
+  .keyboard .main-bg {
+    background-image: url(../img/keyboard-bg_2x.png);
+  }
+
+  .keyboard .keyboard-line {
+    background-image: url(../img/keyboard-line_2x.png);
+  }
+
+  .battery .battery-bg .main-bg {
+    background-image: url(../img/battery-bg-step1_2x.png);
+  }
+
+  .battery .battery-bg .animate-bg-nd {
+    background-image: url(../img/battery-bg-step2_2x.png);
+  }
+
+  .battery .battery-bg .animate-bg-rd {
+    background-image: url(../img/battery-bg-step3_2x.png);
+  }
+
+  .keystone .main-bg {
+    background-image: url(../img/keystone-bg_2x.png);
+  }
+
+  .connectivity .main-bg {
+    background-image: url(../img/connectivity-bg_2x.png);
+  }
+
+  .io-section .main-bg {
+    background-image: url(../img/io-bg_2x.png);
+  }
+
+  .armoury .main-bg {
+    background-image: url(../img/armorycrate-bg_2x.png);
+  }
+
+  .peripherals .main-bg {
+    background-image: url(../img/peripherals-bg_2x.png);
+  }
+
+  .cooling-section .cooling-bg .cooling-animate {
+    animation-name: cooling-bg_2x;
+  }
+
+  .design-section .rotate-bg.left {
+    animation-name: rotate-bg1_2x;
+  }
+
+  .design-section .rotate-bg.right {
+    animation-name: rotate-bg2_2x;
   }
 }
 

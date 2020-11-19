@@ -690,4 +690,113 @@
       width: calc(1920px * 0.375);
       height: calc(1400px * 0.375);
    }
+
+   .nvidia .nvidia-slick-container,
+   .slick-frame {
+      width: 100%;
+   }
+
+   .slider .slider-menu .menu-list.slick-slide {
+      height: auto;
+   }
+
+   .slider {
+      margin: 0;
+      width: 100%;
+      display: block;
+   }
+
+   .slider-menu {
+      width: 320px;
+      margin: auto;
+      display: block;
+      height: auto;
+   }
+
+   .slider .slider-slick {
+      width: 100%;
+   }
+}
+
+//bg img
+@media only screen and (max-width: 731px) {
+   .visual-section .main-bg {
+      background-image: url(../img/main-banner_xs.png);
+   }
+
+   .visual-section .blur-bg .main-bg {
+      background-image: url(../img/video-bg_xs.png);
+   }
+
+   .design-section .main-bg {
+      background-image: url(../img/design-bg-animate-3rd_xs.png);
+   }
+
+   .performance-section .main-bg {
+      background-image: url(../img/performance-bg_xs.png);
+   }
+
+   .display-section .blur-bg.fullhd-bg .main-bg {
+      background-image: url(../img/display-bg_xs.png);
+   }
+
+   .display-section .blur-bg.qhd-bg .main-bg {
+      background-image: url(../img/qhd-bg_xs.png);
+   }
+
+   .cooling-section .cooling-bg .main-bg {
+      background-image: url(../img/cooling-bg_xs.png);
+   }
+
+   .keyboard .main-bg {
+      background-image: url(../img/keyboard-bg_xs.png);
+   }
+
+   .keyboard .keyboard-line {
+      background-image: url(../img/keyboard-line_xs.png);
+   }
+
+   .battery .battery-bg .main-bg {
+      background-image: url(../img/battery-bg-step1_xs.png);
+   }
+
+   .battery .battery-bg .animate-bg-nd {
+      background-image: url(../img/battery-bg-step2_xs.png);
+   }
+
+   .battery .battery-bg .animate-bg-rd {
+      background-image: url(../img/battery-bg-step3_xs.png);
+   }
+
+   .keystone .main-bg {
+      background-image: url(../img/keystone-bg_xs.png);
+   }
+
+   .connectivity .main-bg {
+      background-image: url(../img/connectivity-bg_xs.png);
+   }
+
+   .io-section .main-bg {
+      background-image: url(../img/io-bg_xs.png);
+   }
+
+   .armoury .main-bg {
+      background-image: url(../img/armorycrate-bg_xs.png);
+   }
+
+   .peripherals .main-bg {
+      background-image: url(../img/peripherals-bg_xs.png);
+   }
+
+   .cooling-section .cooling-bg .cooling-animate {
+      animation-name: cooling-bg_xs;
+   }
+
+   .design-section .rotate-bg.left {
+      animation-name: rotate-bg1_xs;
+   }
+
+   .design-section .rotate-bg.right {
+      animation-name: rotate-bg2_xs;
+   }
 }
