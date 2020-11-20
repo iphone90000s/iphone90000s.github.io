@@ -1,10 +1,23 @@
-html,
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background-color: #000;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  overflow-x: hidden;
   background-color: #000;
+
+  &.scroll {
+    overflow-x: hidden;
+  }
+
+  &.active {
+    overflow: hidden !important;
+  }
 }
 
 * {
@@ -44,6 +57,13 @@ body {
 @font-face {
   font-family: "RogFont";
   src: url("../fonts/RogFont/RogFont.otf");
+}
+
+.overviewContent {
+  &.active {
+    overflow-y: hidden;
+    height: 100%;
+  }
 }
 
 .peripherals-section {
@@ -485,9 +505,16 @@ body {
 
 }
 
+.audio-btn {
+  margin: -50px auto 50px;
+  display: table;
+  position: relative;
+  z-index: 5;
+}
+
 .audio {
   position: relative;
-  margin-top: -80px;
+  margin-top: -250px;
 
   .black-frame {
     position: absolute;
@@ -2342,6 +2369,12 @@ body {
     left: 0;
     top: 0;
   }
+
+  .main-bg {
+    width: 1920px;
+    height: 1200px;
+    background-image: url("../img/audio-bg.png");
+  }
 }
 
 .video-section {}
@@ -2352,6 +2385,54 @@ body {
 
 .aura-section {
   margin-top: 100px;
+
+  .main-bg {
+    width: 1920px;
+    height: 1200px;
+    background-image: url("../img/aura-bg.png");
+  }
+
+  .headset-box {
+    position: absolute;
+    left: 380px;
+    top: 390px;
+
+    .headset {
+      width: 340px;
+      height: 290px;
+      background-image: url(../img/headset.png);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .nb-box {
+    position: absolute;
+    left: 735px;
+    top: 220px;
+
+    .nb {
+      width: 673px;
+      height: 543px;
+      background-image: url(../img/nb.png);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .mouse-box {
+    position: absolute;
+    left: 1410px;
+    top: 470p;
+
+    .mouse {
+      width: 112px;
+      height: 211px;
+      background-image: url(../img/mouse.png);
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .exclusive-section {
@@ -2473,7 +2554,7 @@ body {
     top: 0;
     left: 50%;
     background-repeat: no-repeat;
-    transform: translateX(-50%);
+    transform: perspective(400px) translateX(-50%);
     visibility: hidden;
     z-index: 1;
     opacity: 0;
@@ -2488,6 +2569,18 @@ body {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    &.left-ready {
+      opacity: 1;
+      z-index: 100;
+      left: -50%;
+    }
+
+    &.right-ready {
+      opacity: 1;
+      z-index: 100;
+      left: 150%;
     }
 
     .text-frame {
@@ -2558,11 +2651,9 @@ body {
         height: 100%;
 
         &.active {
-          transform: translateX(-100%);
+          transform: perspective(400px) translateX(-100%);
         }
       }
-
-
     }
 
     &.audio-thumb2 {
@@ -2596,6 +2687,18 @@ body {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    &.left-ready {
+      opacity: 1;
+      z-index: 100;
+      left: -50%;
+    }
+
+    &.right-ready {
+      opacity: 1;
+      z-index: 100;
+      left: 150%;
     }
 
     .text-frame {
@@ -2649,6 +2752,18 @@ body {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    &.left-ready {
+      opacity: 1;
+      z-index: 100;
+      left: -50%;
+    }
+
+    &.right-ready {
+      opacity: 1;
+      z-index: 100;
+      left: 150%;
     }
 
     .text-frame {
@@ -2707,6 +2822,18 @@ body {
       }
     }
 
+    &.left-ready {
+      opacity: 1;
+      z-index: 100;
+      left: -50%;
+    }
+
+    &.right-ready {
+      opacity: 1;
+      z-index: 100;
+      left: 150%;
+    }
+
     .text-frame {
       position: absolute;
       left: 1100px;
@@ -2761,18 +2888,30 @@ body {
     transform: translateX(-50%);
     visibility: hidden;
     z-index: 1;
-    opacity: 0;
     transition: 0.5s ease all;
 
     &.active {
       opacity: 1;
       visibility: initial;
       z-index: 99;
+      left: 50%;
 
       .text-frame {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    &.left-ready {
+      opacity: 1;
+      z-index: 100;
+      left: -50%;
+    }
+
+    &.right-ready {
+      opacity: 1;
+      z-index: 100;
+      left: 150%;
     }
 
     .text-frame {

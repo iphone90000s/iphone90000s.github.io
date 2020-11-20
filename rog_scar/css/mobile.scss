@@ -3,6 +3,14 @@
       width: 320px;
    }
 
+   .battery-section {
+      margin-top: 0;
+   }
+
+   .audio {
+      margin-top: -150px;
+   }
+
    .performance .blur-bg {
       width: 731px;
       position: relative;
@@ -571,6 +579,11 @@
       height: 2px;
    }
 
+   .audio-section .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1600px * 0.375);
+   }
+
    .design-section .main-bg,
    .design-section .rotate-bg {
       width: calc(1920px * 0.375);
@@ -866,6 +879,10 @@
 
 //bg img
 @media only screen and (max-width: 731px) {
+   .audio-section .main-bg {
+      background-image: url(../img/audio-bg_xs.png);
+   }
+
    .visual-section .main-bg {
       background-image: url(../img/main-banner_xs.png);
    }

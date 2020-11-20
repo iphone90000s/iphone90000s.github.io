@@ -69,7 +69,7 @@
    }
 
    .audio {
-      margin-top: 70px;
+      margin-top: -250px;
    }
 
    .keystone {
@@ -371,7 +371,7 @@
    }
 
    .audio {
-      margin-top: 20px;
+      margin-top: -200px;
    }
 
    .atmos {
@@ -571,6 +571,11 @@
       height: 800px;
    }
 
+   .audio-section .main-bg {
+      width: 1280px;
+      height: 800px;
+   }
+
    .design-section .main-bg,
    .design-section .rotate-bg {
       width: 1280px;
@@ -677,4 +682,13 @@
    .audio-box .audio-layers .text-frame {
       left: 280px;
    }
+
+   .design-box .design-layers .text-frame,
+   .performance-box .performance-layers .text-frame,
+   .cooling-box .cooling-layers .text-frame,
+   .keyboard-box .keyboard-layers .text-frame,
+   .audio-box .audio-layers .text-frame {
+      top: 270px;
+   }
+
 }

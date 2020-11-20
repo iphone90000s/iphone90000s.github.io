@@ -429,48 +429,6 @@ $(function () {
             }
         }
 
-        if (window.innerWidth < 732) {
-            if ($(window).scrollTop() > $(".audio-section").offset().top) {
-                if (!audio_video) {
-                    $(".audio-final").removeClass("active");
-                    $(".audio-mp4").get(0).play();
-                    audio_video = true;
-                }
-            }
-        } else {
-            if ($(window).scrollTop() > $(".audio-section").offset().top) {
-                if (!audio_video) {
-                    $(".audio-final").removeClass("active");
-                    $(".audio-mp4").get(0).play();
-                    audio_video = true;
-                }
-            }
-        }
-
-
-
-        // if ($(window).scrollTop() > $(".audio-section").offset().top + ($(".audio-section").height() * 0.1)) {
-        //     if (direction == "down") {
-        //         float5 -= 7.5;
-        //     } else if (direction == "up") {
-        //         float5 += 7.5;
-        //     }
-        //     if (float5 >= 100) {
-        //         float5 = 100
-        //     }
-        //     if (float5 <= 0) {
-        //         float5 = 0;
-        //     }
-        //     $(".audio .black-frame").css({
-        //         "transform": `translateX(-${float5}%)`
-        //     });
-        // } else {
-        //     $(".audio .black-frame").css({
-
-        //         "transform": `translateX(0%)`
-        //     });
-        // }
-
         /**
          * battery背景動畫
          */
@@ -505,35 +463,30 @@ $(function () {
     });
 
     /**
-     * audio cross btn click
+     * audio learn more click
      */
-    $(".audio-black-frame .cross-btn").click(function () {
-        $(".audio-black-frame").addClass("hide");
-        $(".audio-layers").removeClass("active");
+    $(".audio-btn .learn-btn").click(function () {
+        bodyScrollHidden();
+        $(".audio-black-frame").removeClass("hide");
+        setTimeout(function () {
+            $(".audio-mp4").get(0).play();
+            audio_video = true;
+            $(".black-mask").addClass("active");
+            $(".audio-thumb1").addClass("active");
+        }, 200);
     });
 
     /**
      * audio-arrow 按鈕事件
      */
 
-    var audioLayers = $(".audio-layers");
     $(".audio-layers .prev-arrow").click(function () {
         var count = $(this).parents(".audio-layers").index();
-        $(audioLayers[count]).removeClass("active");
-        if (count == 0) {
-            $(audioLayers[audioLayers.length - 1]).addClass("active");
-        } else {
-            $(audioLayers[count - 1]).addClass("active");
-        }
+        layerChagne($(".audio-layers"), count, 'next');
     });
     $(".audio-layers .next-arrow").click(function () {
         var count = $(this).parents(".audio-layers").index();
-        $(audioLayers[count]).removeClass("active");
-        if (count == audioLayers.length - 1) {
-            $(audioLayers[0]).addClass("active");
-        } else {
-            $(audioLayers[count + 1]).addClass("active");
-        }
+        layerChagne($(".audio-layers"), count, 'next');
     });
 
 
@@ -541,90 +494,57 @@ $(function () {
      * keyboard learn more click
      */
     $(".keyboard-btn .learn-btn").click(function () {
+        bodyScrollHidden();
         $(".keyboard-black-frame").removeClass("hide");
         setTimeout(function () {
             $(".keyboard-thumb1").addClass("active");
         }, 200);
     });
 
-    /**
-     * keyboard cross btn click
-     */
-    $(".keyboard-black-frame .cross-btn").click(function () {
-        $(".keyboard-black-frame").addClass("hide");
-        $(".keyboard-layers").removeClass("active");
-    });
 
     /**
      * keyboard-arrow 按鈕事件
      */
 
-    var keyboardLayers = $(".keyboard-layers");
     $(".keyboard-layers .prev-arrow").click(function () {
         var count = $(this).parents(".keyboard-layers").index();
-        $(keyboardLayers[count]).removeClass("active");
-        if (count == 0) {
-            $(keyboardLayers[keyboardLayers.length - 1]).addClass("active");
-        } else {
-            $(keyboardLayers[count - 1]).addClass("active");
-        }
+        layerChagne($(".keyboard-layers"), count, 'prev');
     });
     $(".keyboard-layers .next-arrow").click(function () {
         var count = $(this).parents(".keyboard-layers").index();
-        $(keyboardLayers[count]).removeClass("active");
-        if (count == keyboardLayers.length - 1) {
-            $(keyboardLayers[0]).addClass("active");
-        } else {
-            $(keyboardLayers[count + 1]).addClass("active");
-        }
+        layerChagne($(".keyboard-layers"), count, 'next');
     });
 
     /**
      * cooling learn more click
      */
     $(".cooling-learnmore .learn-btn").click(function () {
+        bodyScrollHidden();
         $(".cooling-black-frame").removeClass("hide");
         setTimeout(function () {
             $(".cooling-thumb1").addClass("active");
         }, 200);
     });
 
-    /**
-     * cooling cross btn click
-     */
-    $(".cooling-black-frame .cross-btn").click(function () {
-        $(".cooling-black-frame").addClass("hide");
-        $(".cooling-layers").removeClass("active");
-    });
 
     /**
      * cooling-arrow 按鈕事件
      */
 
-    var coolingLayers = $(".cooling-layers");
     $(".cooling-layers .prev-arrow").click(function () {
         var count = $(this).parents(".cooling-layers").index();
-        $(coolingLayers[count]).removeClass("active");
-        if (count == 0) {
-            $(coolingLayers[coolingLayers.length - 1]).addClass("active");
-        } else {
-            $(coolingLayers[count - 1]).addClass("active");
-        }
+        layerChagne($(".cooling-layers"), count, 'prev');
     });
     $(".cooling-layers .next-arrow").click(function () {
         var count = $(this).parents(".cooling-layers").index();
-        $(coolingLayers[count]).removeClass("active");
-        if (count == coolingLayers.length - 1) {
-            $(coolingLayers[0]).addClass("active");
-        } else {
-            $(coolingLayers[count + 1]).addClass("active");
-        }
+        layerChagne($(".cooling-layers"), count, 'next');
     });
 
     /**
      * performance learn more click
      */
     $(".performance-btn .learn-btn").click(function () {
+        bodyScrollHidden();
         $(".performance-black-frame").removeClass("hide");
         setTimeout(function () {
             $(".performance-thumb1").addClass("active");
@@ -632,111 +552,206 @@ $(function () {
     });
 
     /**
-     * performance cross btn click
-     */
-    $(".performance-black-frame .cross-btn").click(function () {
-        $(".performance-black-frame").addClass("hide");
-        $(".performance-layers").removeClass("active");
-    });
-    /**
      * performance-arrow 按鈕事件
      */
-    var performanceLayers = $(".performance-layers");
     $(".performance-layers .prev-arrow").click(function () {
         var count = $(this).parents(".performance-layers").index();
-        $(performanceLayers[count]).removeClass("active");
-        if (count == 0) {
-            $(performanceLayers[performanceLayers.length - 1]).addClass("active");
-        } else {
-            $(performanceLayers[count - 1]).addClass("active");
-        }
+        layerChagne($(".performance-layers"), count, 'prev');
     });
     $(".performance-layers .next-arrow").click(function () {
         var count = $(this).parents(".performance-layers").index();
-        $(performanceLayers[count]).removeClass("active");
-        if (count == performanceLayers.length - 1) {
-            $(performanceLayers[0]).addClass("active");
-        } else {
-            $(performanceLayers[count + 1]).addClass("active");
-        }
+        layerChagne($(".performance-layers"), count, 'next');
     });
 
     /**
      * design thumb click
      */
-    $(document).on("click", ".slick-thumb1", function () {
+    $(document).on("click", ".slick-img", function () {
+        bodyScrollHidden();
         $(".design-black-frame").removeClass("hide");
-        setTimeout(function () {
-            $(".design-thumb1").addClass("active");
-        }, 200);
+        if ($(this).hasClass("slick-thumb1")) {
+            setTimeout(function () {
+                $(".design-thumb1").addClass("active");
+                $(".design-thumb1").removeClass("left-ready")
+                $(".design-thumb1").removeClass("right-ready");
+                $(".design-thumb7").addClass("left-ready");
+                $(".design-thumb2").addClass("right-ready");
+            }, 200);
+        } else if ($(this).hasClass("slick-thumb2")) {
+            setTimeout(function () {
+                $(".design-thumb2").addClass("active");
+                $(".design-thumb2").removeClass("left-ready")
+                $(".design-thumb2").removeClass("right-ready");
+                $(".design-thumb1").addClass("left-ready");
+                $(".design-thumb3").addClass("right-ready");
+            }, 200);
+        } else if ($(this).hasClass("slick-thumb3")) {
+            setTimeout(function () {
+                $(".design-thumb3").addClass("active");
+                $(".design-thumb3").removeClass("left-ready")
+                $(".design-thumb3").removeClass("right-ready");
+                $(".design-thumb2").addClass("left-ready");
+                $(".design-thumb4").addClass("right-ready");
+            }, 200);
+        } else if ($(this).hasClass("slick-thumb4")) {
+            setTimeout(function () {
+                $(".design-thumb4").addClass("active");
+                $(".design-thumb4").removeClass("left-ready")
+                $(".design-thumb4").removeClass("right-ready");
+                $(".design-thumb3").addClass("left-ready");
+                $(".design-thumb5").addClass("right-ready");
+            }, 200);
+        } else if ($(this).hasClass("slick-thumb5")) {
+            setTimeout(function () {
+                $(".design-thumb5").addClass("active");
+                $(".design-thumb5").removeClass("left-ready")
+                $(".design-thumb5").removeClass("right-ready");
+                $(".design-thumb4").addClass("left-ready");
+                $(".design-thumb6").addClass("right-ready");
+            }, 200);
+        } else if ($(this).hasClass("slick-thumb6")) {
+            setTimeout(function () {
+                $(".design-thumb6").addClass("active");
+                $(".design-thumb6").removeClass("left-ready")
+                $(".design-thumb6").removeClass("right-ready");
+                $(".design-thumb5").addClass("left-ready");
+                $(".design-thumb7").addClass("right-ready");
+            }, 200);
+        } else if ($(this).hasClass("slick-thumb7")) {
+            setTimeout(function () {
+                $(".design-thumb7").addClass("active");
+                $(".design-thumb7").removeClass("left-ready")
+                $(".design-thumb7").removeClass("right-ready");
+                $(".design-thumb6").addClass("left-ready");
+                $(".design-thumb1").addClass("right-ready");
+            }, 200);
+        }
     });
-    $(document).on("click", ".slick-thumb2", function () {
-        $(".design-black-frame").removeClass("hide");
-        setTimeout(function () {
-            $(".design-thumb2").addClass("active");
-        }, 200);
-    });
-    $(document).on("click", ".slick-thumb3", function () {
-        $(".design-black-frame").removeClass("hide");
-        setTimeout(function () {
-            $(".design-thumb3").addClass("active");
-        }, 200);
-    });
-    $(document).on("click", ".slick-thumb4", function () {
-        $(".design-black-frame").removeClass("hide");
-        setTimeout(function () {
-            $(".design-thumb4").addClass("active");
-        }, 200);
-    });
-    $(document).on("click", ".slick-thumb5", function () {
-        $(".design-black-frame").removeClass("hide");
-        setTimeout(function () {
-            $(".design-thumb5").addClass("active");
-        }, 200);
-    });
-    $(document).on("click", ".slick-thumb6", function () {
-        $(".design-black-frame").removeClass("hide");
-        setTimeout(function () {
-            $(".design-thumb6").addClass("active");
-        }, 200);
-    });
-    $(document).on("click", ".slick-thumb7", function () {
-        $(".design-black-frame").removeClass("hide");
-        setTimeout(function () {
-            $(".design-thumb7").addClass("active");
-        }, 200);
-    });
+
     /**
-     * design第二層的關閉按鈕事件
+     * 第二層的關閉按鈕事件
      */
-    $(".design-black-frame .cross-btn").click(function () {
+    $(".layer-frame .cross-btn").click(function () {
+        bodyScrollOpen();
+        $(".audio-box .black-mask").removeClass("active");
+        $(".audio-box .inner-video .audio-final").removeClass("active");
         $(".design-black-frame").addClass("hide");
         $(".design-layers").removeClass("active");
+        $(".performance-black-frame").addClass("hide");
+        $(".performance-layers").removeClass("active");
+        $(".cooling-black-frame").addClass("hide");
+        $(".cooling-layers").removeClass("active");
+        $(".keyboard-black-frame").addClass("hide");
+        $(".keyboard-layers").removeClass("active");
+        $(".audio-black-frame").addClass("hide");
+        $(".audio-layers").removeClass("active");
     });
     /**
      * design-thumb按鈕事件
      */
-    var designLayers = $(".design-layers");
     $(".design-layers .prev-arrow").click(function () {
         var count = $(this).parents(".design-layers").index();
-        $(designLayers[count]).removeClass("active");
-        if (count == 0) {
-            $(designLayers[designLayers.length - 1]).addClass("active");
-        } else {
-            $(designLayers[count - 1]).addClass("active");
-        }
+        layerChagne($(".design-layers"), count, 'prev');
+
     });
     $(".design-layers .next-arrow").click(function () {
         var count = $(this).parents(".design-layers").index();
-        $(designLayers[count]).removeClass("active");
-        if (count == designLayers.length - 1) {
-            $(designLayers[0]).addClass("active");
-        } else {
-            $(designLayers[count + 1]).addClass("active");
-        }
+        layerChagne($(".design-layers"), count, 'next');
     });
+    $(document).bind('mousewheel', function (e) {
+        var delta = e.originalEvent.wheelDelta;
+        if (e.target.className.indexOf("design-layers") != -1) {
+            var count = $(".design-layers").index(e.target);
+            if (delta < 0) { //next
+                layerChagne($(".design-layers"), count, 'next');
+            } else { //prev
+                layerChagne($(".design-layers"), count, 'prev');
+            }
+        }
+        if (e.target.className.indexOf("performance-layers") != -1) {
+            var count = $(".performance-layers").index(e.target);
+            if (delta < 0) { //next
+                layerChagne($(".performance-layers"), count, 'next');
+            } else { //prev
+                layerChagne($(".performance-layers"), count, 'prev');
+            }
+        }
+        if (e.target.className.indexOf("cooling-layers") != -1) {
+            var count = $(".cooling-layers").index(e.target);
+            if (delta < 0) { //next
+                layerChagne($(".cooling-layers"), count, 'next');
+            } else { //prev
+                layerChagne($(".cooling-layers"), count, 'prev');
+            }
+        }
+        if (e.target.className.indexOf("keyboard-layers") != -1) {
+            var count = $(".keyboard-layers").index(e.target);
+            if (delta < 0) { //next
+                layerChagne($(".keyboard-layers"), count, 'next');
+            } else { //prev
+                layerChagne($(".keyboard-layers"), count, 'prev');
+            }
+        }
+        if (e.target.className.indexOf("audio-layers") != -1) {
+            var count = $(".audio-layers").index(e.target);
+            if (delta < 0) { //next
+                layerChagne($(".audio-layers"), count, 'next');
+            } else { //prev
+                layerChagne($(".audio-layers"), count, 'next');
+            }
+        }
+        if (e.target.className.indexOf("audio-nb") != -1) {
+            var count = $(".audio-layers").index(0);
+            if (delta < 0) { //next
+                layerChagne($(".audio-layers"), count, 'next');
+            } else { //prev
+                layerChagne($(".audio-layers"), count, 'next');
+            }
+        }
+    })
 });
 
+function layerChagne(layers, count, txt) {
+    $(layers[count]).removeClass("active");
+    $(layers).removeClass("left-ready");
+    $(layers).removeClass("right-ready");
+    if (txt == 'next') {
+        if (count == layers.length - 1) {
+            $(layers[0]).addClass("active");
+            $(layers[count]).addClass("left-ready");
+            $(layers[1]).addClass("right-ready");
+        } else {
+            $(layers[count + 1]).addClass("active");
+            $(layers[count]).addClass("left-ready");
+            $(layers[count + 2]).addClass("right-ready");
+        }
+    } else {
+        if (count == 0) {
+            $(layers[layers.length - 1]).addClass("active");
+            $(layers[layers.length - 2]).addClass("left-ready");
+            $(layers[count]).addClass("right-ready");
+        } else {
+            $(layers[count - 1]).addClass("active");
+            $(layers[count - 2]).addClass("left-ready");
+            $(layers[count]).addClass("right-ready");
+        }
+    }
+}
+
+function bodyScrollHidden() {
+    $("body").addClass("active");
+    $("body").removeClass("scroll");
+}
+
+function bodyScrollOpen() {
+    $("body").removeClass("active");
+    $("body").addClass("scroll");
+}
+
+function isMobile() {
+    var ua = navigator.userAgent;
+    return /(iPad|iPhone|Android|Mobile)/i.test(ua) || false;
+}
 /**
  * 數字跳動插件
  */
