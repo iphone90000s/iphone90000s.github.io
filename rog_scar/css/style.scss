@@ -2393,9 +2393,21 @@ body {
   }
 
   .headset-box {
-    position: absolute;
-    left: 380px;
-    top: 390px;
+    position: relative;
+
+    .headset-left {
+      position: absolute;
+      left: 34px;
+      top: 180px;
+      z-index: -1;
+    }
+
+    .headset-right {
+      position: absolute;
+      left: 182px;
+      top: 174px;
+      z-index: -1;
+    }
 
     .headset {
       width: 340px;
@@ -2407,9 +2419,37 @@ body {
   }
 
   .nb-box {
-    position: absolute;
-    left: 735px;
-    top: 220px;
+    position: relative;
+
+    .nb-block-shadow {
+      width: 360px;
+      z-index: -1;
+      height: 230px;
+      left: 250px;
+      top: 80px;
+      filter: blur(15px);
+      position: absolute;
+    }
+
+    .nb-block-top {
+      position: absolute;
+      background: blue;
+      width: 570px;
+      z-index: -1;
+      height: 230px;
+      left: 60px;
+      top: 120px;
+    }
+
+    .nb-block-bottom {
+      position: absolute;
+      width: 630px;
+      z-index: -1;
+      height: 190px;
+      left: 21px;
+      filter: blur(15px);
+      top: 325px;
+    }
 
     .nb {
       width: 673px;
@@ -2421,9 +2461,16 @@ body {
   }
 
   .mouse-box {
-    position: absolute;
-    left: 1410px;
-    top: 470p;
+    position: relative;
+
+    .mouse-block {
+      position: absolute;
+      z-index: -1;
+      width: 50px;
+      height: 120px;
+      top: 65px;
+      left: 35px;
+    }
 
     .mouse {
       width: 112px;
@@ -2431,6 +2478,132 @@ body {
       background-image: url(../img/mouse.png);
       background-size: 100% auto;
       background-repeat: no-repeat;
+    }
+  }
+
+  .product-box {
+    position: relative;
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px auto;
+  }
+
+  .color-box {
+    display: flex;
+    width: 1080px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .palette {
+      position: relative;
+      z-index: 9999;
+      margin-right: 70px;
+      width: 150px;
+      height: 150px;
+
+      canvas {
+        position: absolute;
+        box-sizing: border-box;
+      }
+    }
+
+    .status {
+      width: 215px;
+      display: flex;
+      align-items: center;
+      opacity: 0.5;
+      transition: 0.5s ease all;
+      cursor: pointer;
+
+      &.active,
+      &:hover {
+        opacity: 1;
+      }
+
+      font {
+        color: #fff;
+        font-family: "Roboto";
+        font-size: 18px;
+        margin-left: 20px;
+      }
+
+      .bg {
+        width: 58px;
+        height: 58px;
+        background-size: 100% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      &.static {
+        .bg {
+          background-image: url(../img/static.png);
+        }
+
+      }
+
+      &.breathing {
+        .bg {
+          background-image: url(../img/breathing.png);
+        }
+      }
+
+      &.strobing {
+        .bg {
+          background-image: url(../img/strobing.png);
+        }
+      }
+
+      &.colorcycle {
+        .bg {
+          background-image: url(../img/colorcycle.png);
+        }
+      }
+
+      &.rainbow {
+        .bg {
+          background-image: url(../img/rainbow.png);
+        }
+      }
+
+      &.music {
+        .bg {
+          background-image: url(../img/music.png);
+        }
+      }
+
+      &.starry {
+        .bg {
+          background-image: url(../img/starry.png);
+        }
+      }
+
+      &.smart {
+        .bg {
+          background-image: url(../img/smart.png);
+        }
+      }
+    }
+
+
+    .status-box {
+      display: flex;
+      flex-direction: column;
+      width: calc(1080px - 190px);
+
+      .status-fst {
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      .status-snd {
+        width: 100%;
+        display: flex;
+      }
     }
   }
 }

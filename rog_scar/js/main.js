@@ -1,5 +1,6 @@
 let audio_video = false;
 var direction;
+let paletteLock = false;
 $(function () {
 
     $(".audio-mp4").on('ended', function () {
@@ -10,9 +11,9 @@ $(function () {
     /**
      * @summary 當畫面重整時，強制回到網頁最上方
      */
-    $(window).on('beforeunload', function () {
-        $(window).scrollTop(0);
-    });
+    // $(window).on('beforeunload', function () {
+    //     $(window).scrollTop(0);
+    // });
 
     /**
      * keystone的glitch效果
@@ -215,6 +216,10 @@ $(function () {
         }
         if ($(window).scrollTop() > $(".aura-section").offset().top - height) {
             $(".aura-section .section-inner").addClass("active");
+            // if (!paletteLock) {
+            //     paletteLock = true;
+            //     let colorWheel = new ColorWheel(350, ".palette");
+            // }
         }
         if ($(window).scrollTop() > $(".keystone-section").offset().top - height) {
             $(".keystone-section .section-inner").addClass("active");

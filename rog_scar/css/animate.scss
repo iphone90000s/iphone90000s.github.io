@@ -533,3 +533,21 @@
         background-image: url("../img/design-bg-animate-5th_2x.png");
     }
 }
+
+@keyframes KeyBreathing {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
