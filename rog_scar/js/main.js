@@ -1,6 +1,5 @@
 let audio_video = false;
 var direction;
-let paletteLock = false;
 $(function () {
 
     $(".audio-mp4").on('ended', function () {
@@ -216,10 +215,6 @@ $(function () {
         }
         if ($(window).scrollTop() > $(".aura-section").offset().top - height) {
             $(".aura-section .section-inner").addClass("active");
-            // if (!paletteLock) {
-            //     paletteLock = true;
-            //     let colorWheel = new ColorWheel(350, ".palette");
-            // }
         }
         if ($(window).scrollTop() > $(".keystone-section").offset().top - height) {
             $(".keystone-section .section-inner").addClass("active");
@@ -713,7 +708,33 @@ $(function () {
                 layerChagne($(".audio-layers"), count, 'next');
             }
         }
-    })
+    });
+
+    //調色盤選項
+    $(".static").click(function () {
+
+    });
+    $(".breathing").click(function () {
+
+    });
+    $(".strobing").click(function () {
+
+    });
+    $(".colorcycle").click(function () {
+
+    });
+    $(".rainbow").click(function () {
+
+    });
+    $(".music").click(function () {
+
+    });
+    $(".smart").click(function () {
+
+    });
+    $(".starry").click(function () {
+
+    });
 });
 
 function layerChagne(layers, count, txt) {
