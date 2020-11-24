@@ -23,7 +23,11 @@
       <div @click="goMypet()" class="click-btn"></div>
       <div class="footer">
         <img style='opacity: 0;' src="img/bottom0.jpg">
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
         <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div v-show="open.mypet" class="mypet">
@@ -111,30 +115,63 @@
           </div>
         </div>
       </div>
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom0.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div v-show="open.is03" class="is03">
       <img class="is03a" src="img/03A.png">
       <img class="is03b" :class="{'active':is03active }" src="img/03B.png">
       <div @click="goVaccine" class='click-btn' :class="{'active':is03active }"></div>
+      <div class="footer">
+        <img src='img/bottom1.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div v-show="open.vaccine" class="vaccine">
       <img src="img/03_1.png">
       <div @click="goVaccine2" class='click-btn'></div>
-      <div class='footer'>
-        <img src="img/bottom1.jpg">
+      <div class="footer">
+        <img src='img/bottom1.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div v-show="open.vaccine2" class="vaccine2">
       <img src="img/03_2.png">
-      <div @click="goDoc" class='click-btn'></div>
+      <div class="footer">
+        <img src='img/bottom1.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div v-show="open.doc" class="doc">
       <img src="img/doc.png">
       <div @click="goDocask" class='click-btn2'></div>
       <div @click="goDoc2" class='click-btn'></div>
+      <div class="footer">
+        <img style="opacity: 0;" src='img/bottom1.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div v-show="open.ask" class="ask">
       <img src="img/ask.png">
@@ -189,7 +226,14 @@
         </div>
         <img class='map-bottom' src="img/map-bottom.png">
       </div>
-      <div class='footer'><img src="img/bottom2.jpg"></div>
+      <div class="footer">
+        <img src='img/bottom2.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div v-show="open.docinfo" class="docinfo">
       <img class='info1' src="img/info1.png">
@@ -197,7 +241,14 @@
       <img src="img/info3.png">
       <img class='info4' src="img/info4.png">
       <div @click="goOnline" class='reservation'><img src="img/reservation.png"></div>
-      <div class='footer'><img src="img/bottom2.jpg"></div>
+      <div class="footer">
+        <img src='img/bottom2.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div v-show="open.online" class="online">
       <img src="img/online.png">
@@ -230,7 +281,14 @@
           <div @click="goCalendar" class='calendar-btn'></div>
         </div>
       </div>
-      <div class='footer'><img src="img/bottom2.jpg"></div>
+      <div class="footer">
+        <img src='img/bottom2.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div v-show="open.calendar" class="calendar">
       <div class='all'>
@@ -293,11 +351,11 @@
       </div>
       <div class="footer">
         <img src="img/bottom3.jpg">
-        <div class='btn1'></div>
+        <div @click="go1" class='btn1'></div>
         <div @click="gobackToDoc" class='btn2'></div>
         <div class='btn3'></div>
         <div @click="gostep6" class='btn4'></div>
-        <div class='btn5'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class="event" v-show="event1">
@@ -334,12 +392,25 @@
         </div>
       </div>
       <div class="footer">
-        <img src="img/bottom3.jpg">
+        <img src='img/bottom3.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class="event" v-show="event2">
       <img src="img/run1.png">
       <div @click="gotoRun2" class='callevent2_1'></div>
+      <div class="footer">
+        <img src='img/bottom3.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div class="event" v-show="event3">
       <img src="img/event3.png">
@@ -379,7 +450,12 @@
         </div>
       </div>
       <div class="footer">
-        <img src="img/bottom3.jpg">
+        <img src='img/bottom3.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class="event" v-show="event4">
@@ -426,7 +502,12 @@
         </div>
       </div>
       <div class="footer">
-        <img src="img/bottom3.jpg">
+        <img src='img/bottom3.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div @click="pushok" class="push" v-show="open.push2">
@@ -449,18 +530,31 @@
         <div @click='runEnd' class='end-btn'></div>
       </div>
       <div class="footer">
-        <img src="img/bottom3.jpg">
+        <img src='img/bottom3.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='runfinal' v-show='runfinal'>
       <div class='final'>
-        <img src='img/runfinal.png'>
+        <img src='img/runfinal.gif'>
         <div @click="goIG" class='social'></div>
         <div @click="goIG" class='social2'></div>
         <div class='kms' v-text='kms'></div>
         <div class='times' v-text='times'></div>
         <div class='kms2'>8.38km</div>
         <div class='times2'>00:22:58</div>
+      </div>
+      <div class="footer">
+        <img style="opacity: 0;" src='img/bottom3.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='ig' v-show='ig'>
@@ -473,16 +567,32 @@
         <div @click="gostep6_2" class='step06_2'></div>
         <div @click="gostep6_3" class='step06_3'></div>
       </div>
+      <div class="footer">
+        <img src='img/bottom4.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div class="step6" v-show='open.step6_1'>
       <div style="position: relavice;">
-        <img src='img/06-1.png'>
+        <img src='img/06-1.gif'>
         <div class='back' @click="backToStep6"></div>
+      </div>
+      <div class="footer">
+        <img src='img/bottom4.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class="step6" v-show='open.step6_2'>
       <div style="position: relavice;">
-        <img src='img/06-2.png'>
+        <img src='img/06-2.gif'>
         <div class='ani'>
           <img class='an imgan1' :class="{'active': step6_an}" src='img/06a.png'>
           <img class='an imgan2' :class="{'active': step6_an}" src='img/06b.png'>
@@ -514,6 +624,14 @@
         </div>
         <div class='back' @click="backToStep6"></div>
       </div>
+      <div class="footer">
+        <img src='img/bottom4.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div class="step6" v-show='open.year'>
       <div style="position: relative;">
@@ -540,13 +658,26 @@
         </div>
         <div class='back' @click="backToStep6"></div>
       </div>
+      <div class="footer">
+        <img src='img/bottom4.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div class='save' v-show='open.save'>
       <img src='img/save.png'>
       <div @click="goSave1" class='gosave1'></div>
       <div @click="goSave2" class='gosave2'></div>
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='save' v-show='open.save1'>
@@ -555,8 +686,13 @@
       <img src='img/save_a.png'>
       <div @click="goSave1a" class='save1'></div>
       <div @click="gos" class='save1s'></div>
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='save' v-show='open.saves'>
@@ -564,21 +700,39 @@
       <img src='img/as.png'>
       <div @click="openlightbox" class='n'></div>
       <img @click="closelightbox" class='lightbox' v-show='lightbox' src='img/bf.png'>
+      <div class="footer">
+        <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
+      </div>
     </div>
     <div class='save' v-show='open.save1a'>
       <div @click="backBQ" class="bq"></div>
       <img src='img/save_b.png'>
       <div @click="goSave1b" class='save1a'></div>
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='save' v-show='open.save1b'>
       <div @click="backBQ" class="bq"></div>
       <img src='img/save_c.png'>
       <div @click="goSave1c" class='save1b'></div>
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='save' v-show='open.save1c'>
@@ -587,11 +741,16 @@
         <img src='img/q.png'>
         <img class='q1' :class="{'active': qq}" src="img/q1.png">
         <img class='q2' :class="{'active': qq}" src="img/q2.png">
-        <img class='q3' src="img/q3.png">
+        <img @click="goSave2" class='q3' src="img/q3.png">
       </div>
 
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='save' v-show='open.save2'>
@@ -601,21 +760,31 @@
         <img src="img/z.png">
         <div class="no1" v-show='shownose'>
           <div class="closenose" @click="closenose"></div>
-          <img src="img/no.png">
+          <img src="img/no.gif">
           <div @click="takenose" class='takepic'></div>
           <div class='no2'>
             <img v-show='shownose2' src='img/no2.png'>
           </div>
         </div>
       </div>
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
     <div class='save' v-show='open.total'>
       <img src="img/total.png">
-      <div class='footer'>
+      <div class="footer">
         <img src='img/bottom5.jpg'>
+        <div @click="go1" class='btn1'></div>
+        <div @click="gobackToDoc" class='btn2'></div>
+        <div class='btn3'></div>
+        <div @click="gostep6" class='btn4'></div>
+        <div @click="go5" class='btn5'></div>
       </div>
     </div>
   </div>

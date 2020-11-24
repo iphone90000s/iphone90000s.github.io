@@ -296,12 +296,6 @@ var app = new Vue({
          vm.event3 = false;
          vm.event3ok = true;
       },
-      gobackToDoc() {
-         const vm = this;
-         vm.scrollToTop();
-         vm.open.calendar = false;
-         vm.open.doc = true;
-      },
       goDocask() {
          const vm = this;
          vm.scrollToTop();
@@ -345,13 +339,7 @@ var app = new Vue({
          vm.runfinal = false;
          vm.ig = true;
       },
-      gostep6() {
-         const vm = this;
-         vm.scrollToTop();
-         vm.open.calendar = false;
-         vm.open.step6 = true;
-         vm.open.create = false;
-      },
+
       backToStep6() {
          const vm = this;
          vm.scrollToTop();
@@ -414,6 +402,7 @@ var app = new Vue({
       goSave2() {
          const vm = this;
          vm.scrollToTop();
+         vm.open.save1c = false;
          vm.open.save = false;
          vm.open.save2 = true;
       },
@@ -496,6 +485,220 @@ var app = new Vue({
          vm.scrollToTop();
          vm.open.save2 = false;
          vm.open.total = true;
+      },
+
+      gobackToDoc() {
+         const vm = this;
+         vm.scrollToTop();
+         vm.open.doc = true;
+
+         vm.open.save = false;
+         vm.open.vaccine = false;
+         vm.open.login = false;
+         vm.open.create = false;
+         vm.open.mypet = false;
+         vm.open.is03 = false;
+         vm.open.vaccine2 = false;
+         vm.open.ask = false;
+         vm.open.docfinal = false;
+
+         vm.open.docfinal = false;
+         vm.open.doc2 = false;
+         vm.open.docinfo = false;
+         vm.open.online = false;
+         vm.open.calendar = false;
+
+         vm.open.event1 = false;
+         vm.open.event2 = false;
+         vm.open.event3 = false;
+         vm.open.event4 = false;
+         vm.open.push2 = false;
+         vm.open.run2 = false;
+         vm.open.runfinal = false;
+         vm.open.ig = false;
+         vm.open.step6 = false;
+         vm.open.step6_1 = false;
+         vm.open.step6_2 = false;
+         vm.open.step6_3 = false;
+         vm.open.year = false;
+         vm.open.save1 = false;
+         vm.open.saves = false;
+
+         vm.open.save1a = false;
+         vm.open.save1b = false;
+         vm.open.save1c = false;
+         vm.open.save2 = false;
+         vm.open.total = false;
+      },
+      gostep6() {
+         const vm = this;
+         vm.scrollToTop();
+         vm.open.step6 = true;
+
+         vm.open.vaccine = false;
+         vm.open.login = false;
+         vm.open.create = false;
+         vm.open.mypet = false;
+         vm.open.is03 = false;
+         vm.open.vaccine2 = false;
+         vm.open.doc = false;
+         vm.open.ask = false;
+         vm.open.docfinal = false;
+
+         vm.open.docfinal = false;
+         vm.open.doc2 = false;
+         vm.open.docinfo = false;
+         vm.open.online = false;
+         vm.open.calendar = false;
+
+         vm.open.event1 = false;
+         vm.open.event2 = false;
+         vm.open.event3 = false;
+         vm.open.event4 = false;
+         vm.open.push2 = false;
+         vm.open.run2 = false;
+         vm.open.runfinal = false;
+         vm.open.ig = false;
+         vm.open.step6_1 = false;
+         vm.open.step6_2 = false;
+         vm.open.step6_3 = false;
+         vm.open.year = false;
+         vm.open.save = false;
+         vm.open.save1 = false;
+         vm.open.saves = false;
+
+         vm.open.save1a = false;
+         vm.open.save1b = false;
+         vm.open.save1c = false;
+         vm.open.save2 = false;
+         vm.open.total = false;
+      },
+      goCal() {
+         const vm = this;
+         vm.scrollToTop();
+         vm.open.calendar = true;
+
+         vm.open.vaccine = false;
+
+         vm.open.login = false;
+         vm.open.create = false;
+         vm.open.mypet = false;
+         vm.open.is03 = false;
+         vm.open.vaccine2 = false;
+         vm.open.doc = false;
+         vm.open.ask = false;
+         vm.open.docfinal = false;
+
+         vm.open.docfinal = false;
+         vm.open.doc2 = false;
+         vm.open.docinfo = false;
+         vm.open.online = false;
+
+         vm.open.event1 = false;
+         vm.open.event2 = false;
+         vm.open.event3 = false;
+         vm.open.event4 = false;
+         vm.open.push2 = false;
+         vm.open.run2 = false;
+         vm.open.runfinal = false;
+         vm.open.ig = false;
+         vm.open.step6 = false;
+         vm.open.step6_1 = false;
+         vm.open.step6_2 = false;
+         vm.open.step6_3 = false;
+         vm.open.year = false;
+         vm.open.save = false;
+         vm.open.save1 = false;
+         vm.open.saves = false;
+
+         vm.open.save1a = false;
+         vm.open.save1b = false;
+         vm.open.save1c = false;
+         vm.open.save2 = false;
+         vm.open.total = false;
+      },
+      go1() {
+         const vm = this;
+         vm.scrollToTop();
+         vm.open.vaccine = true;
+
+         vm.open.login = false;
+         vm.open.create = false;
+         vm.open.mypet = false;
+         vm.open.is03 = false;
+         vm.open.vaccine2 = false;
+         vm.open.doc = false;
+         vm.open.ask = false;
+         vm.open.docfinal = false;
+
+         vm.open.docfinal = false;
+         vm.open.doc2 = false;
+         vm.open.docinfo = false;
+         vm.open.online = false;
+         vm.open.calendar = false;
+
+         vm.open.event1 = false;
+         vm.open.event2 = false;
+         vm.open.event3 = false;
+         vm.open.event4 = false;
+         vm.open.push2 = false;
+         vm.open.run2 = false;
+         vm.open.runfinal = false;
+         vm.open.ig = false;
+         vm.open.step6 = false;
+         vm.open.step6_1 = false;
+         vm.open.step6_2 = false;
+         vm.open.step6_3 = false;
+         vm.open.year = false;
+         vm.open.save = false;
+         vm.open.save1 = false;
+         vm.open.saves = false;
+
+         vm.open.save1a = false;
+         vm.open.save1b = false;
+         vm.open.save1c = false;
+         vm.open.save2 = false;
+         vm.open.total = false;
+      },
+      go5() {
+         const vm = this;
+         vm.scrollToTop();
+         vm.open.save = true;
+
+         vm.open.vaccine = false;
+         vm.open.login = false;
+         vm.open.create = false;
+         vm.open.mypet = false;
+         vm.open.is03 = false;
+         vm.open.vaccine2 = false;
+         vm.open.doc = false;
+         vm.open.ask = false;
+         vm.open.docfinal = false;
+         vm.open.docfinal = false;
+         vm.open.doc2 = false;
+         vm.open.docinfo = false;
+         vm.open.online = false;
+         vm.open.calendar = false;
+         vm.open.event1 = false;
+         vm.open.event2 = false;
+         vm.open.event3 = false;
+         vm.open.event4 = false;
+         vm.open.push2 = false;
+         vm.open.run2 = false;
+         vm.open.runfinal = false;
+         vm.open.ig = false;
+         vm.open.step6 = false;
+         vm.open.step6_1 = false;
+         vm.open.step6_2 = false;
+         vm.open.step6_3 = false;
+         vm.open.year = false;
+         vm.open.save1 = false;
+         vm.open.saves = false;
+         vm.open.save1a = false;
+         vm.open.save1b = false;
+         vm.open.save1c = false;
+         vm.open.save2 = false;
+         vm.open.total = false;
       }
 
    },
