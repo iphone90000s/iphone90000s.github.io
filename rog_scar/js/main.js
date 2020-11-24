@@ -712,28 +712,137 @@ $(function () {
 
     //調色盤選項
     $(".static").click(function () {
-
+        $(".status").removeClass("active");
+        $(".static").addClass("active");
+        $(".palette").removeClass("active");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("hide");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").removeClass("animate-starry");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycle");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-strobing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-smart");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-music");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycleSvg");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
+        $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
+        $(".color-rainbow").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
     });
     $(".breathing").click(function () {
-
+        $(".status").removeClass("active");
+        $(".breathing").addClass("active");
+        $(".palette").removeClass("active");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("hide");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").removeClass("animate-starry");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycle");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-strobing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-smart");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-music");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycleSvg");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
+        $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
+        $(".color-rainbow").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
     });
     $(".strobing").click(function () {
-
+        $(".status").removeClass("active");
+        $(".strobing").addClass("active");
+        $(".palette").removeClass("active");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("hide");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").removeClass("animate-starry");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycle");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycleSvg");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-music");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-strobing");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
+        $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
+        $(".color-rainbow").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
     });
     $(".colorcycle").click(function () {
-
+        $(".status").removeClass("active");
+        $(".colorcycle").addClass("active");
+        $(".palette").addClass("active");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("hide");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").removeClass("animate-starry");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-strobing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-music");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-smart");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-colorcycle");
+        $(".headset-left-svg, .headset-right-svg").addClass("animate-colorcycleSvg");
+        $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
+        $(".color-rainbow").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
     });
     $(".rainbow").click(function () {
-
+        $(".status").removeClass("active");
+        $(".rainbow").addClass("active");
+        $(".palette").addClass("active");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("hide");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").removeClass("animate-starry");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-strobing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycle");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycleSvg");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-music");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-smart");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").addClass("animate-rainbow");
+        $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").addClass("hide");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").addClass("animate-rainbow");
     });
     $(".music").click(function () {
-
+        $(".status").removeClass("active");
+        $(".music").addClass("active");
+        $(".palette").addClass("active");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("hide");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").removeClass("animate-starry");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-strobing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycle");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycleSvg");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-smart");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-music");
+        $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
+        $(".color-rainbow").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
     });
     $(".smart").click(function () {
-
+        $(".status").removeClass("active");
+        $(".smart").addClass("active");
+        $(".palette").addClass("active");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("hide");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").removeClass("animate-starry");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-strobing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycle");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycleSvg");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-smart");
+        $(".headset-left-svg, .headset-right-svg").addClass("animate-smartSvg");
+        $(".color-rainbow").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
     });
     $(".starry").click(function () {
-
+        $(".status").removeClass("active");
+        $(".starry").addClass("active");
+        $(".palette").addClass("active");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-strobing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycle");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-breathing");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-colorcycleSvg");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
+        $(".setcolor,.headset-left-svg, .headset-right-svg").removeClass("animate-smart");
+        $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
+        $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").addClass("hide");
+        $(".color-rainbow").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").addClass("animate-starry");
     });
 });
 

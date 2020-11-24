@@ -700,6 +700,60 @@
       height: calc(1400px * 0.375);
    }
 
+   .aura-section .product-box {
+      transform: scale(0.25);
+      width: 320px;
+      transform-origin: top;
+   }
+
+   .aura-section .color-box .palette {
+      margin: auto;
+      transform: scale(0.75);
+   }
+
+   .aura-section .color-box .status-box {
+      width: 320px;
+   }
+
+   .aura-section .color-box .status-box .status-fst,
+   .aura-section .color-box .status-box .status-snd {
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 0;
+   }
+
+   .aura-section .color-box .status-box .status {
+      width: 45%;
+      display: inline-flex;
+      margin: 10px 0;
+      justify-content: center;
+   }
+
+   .aura-section .color-box .status .bg {
+      width: 30px;
+      height: 30px;
+   }
+
+   .aura-section .color-box .status font {
+      font-size: 14px;
+   }
+
+   .keystone-section {
+      margin-top: -50px;
+   }
+
+   .aura-section .color-box {
+      position: relative;
+      display: table;
+      width: 320px;
+      top: -470px;
+   }
+
+   .aura-section .main-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1600px * 0.375);
+   }
+
    .peripherals .main-bg {
       width: calc(1920px * 0.375);
       height: calc(1400px * 0.375);
@@ -813,7 +867,7 @@
 
    .layer-frame .title {
       font-size: 18px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
    }
 
    .layer-frame .title:after {
@@ -836,10 +890,14 @@
    }
 
    .design-box .design-layers .text-frame {
-      left: 220px;
       top: auto;
       bottom: 50px;
-      width: 300px;
+      width: 95%;
+      left: 2.5%;
+   }
+
+   .layer-frame .btn-frame {
+      margin-top: 10px;
    }
 
    .audio-box .audio-layers.audio-thumb1 .inner-video {
@@ -849,31 +907,31 @@
    }
 
    .performance-box .performance-layers .text-frame {
-      left: 220px;
+      left: 0;
+      width: 95%;
+      left: 2.5%;
       top: auto;
-      bottom: 50px;
-      width: 300px;
    }
 
    .cooling-box .cooling-layers .text-frame {
-      left: 220px;
       top: auto;
-      bottom: 50px;
-      width: 300px;
+      bottom: 20px;
+      width: 95%;
+      left: 2.5%;
    }
 
    .keyboard-box .keyboard-layers .text-frame {
-      left: 220px;
       top: auto;
-      bottom: 50px;
-      width: 300px;
+      bottom: 20px;
+      width: 95%;
+      left: 2.5%;
    }
 
    .audio-box .audio-layers .text-frame {
-      left: 220px;
       top: auto;
-      bottom: 50px;
-      width: 300px;
+      bottom: 20px;
+      width: 95%;
+      left: 2.5%;
    }
 }
 
@@ -949,6 +1007,10 @@
 
    .peripherals .main-bg {
       background-image: url(../img/peripherals-bg_xs.png);
+   }
+
+   .aura-section .main-bg {
+      background-image: url(../img/aura-bg_xs.png);
    }
 
    .cooling-section .cooling-bg .cooling-animate {

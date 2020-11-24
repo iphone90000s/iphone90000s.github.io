@@ -131,6 +131,17 @@
 }
 
 @media only screen and (max-width: 1279px) and (min-width: 732px) {
+   .aura-section .product-box {
+      transform: scale(0.5);
+      transform-origin: top;
+      width: 720px;
+   }
+
+   .aura-section .color-box {
+      transform-origin: top;
+      transform: scale(0.5) translateY(-520px);
+   }
+
    .slider-menu {
       width: 632px;
    }
@@ -626,8 +637,13 @@
       height: 606px;
    }
 
+   .aura-section .main-bg {
+      width: 1280px;
+      height: 600px;
+   }
+
    .armoury .main-bg {
-      width: 1920px;
+      width: 1280px;
       height: 938px;
    }
 
