@@ -2423,6 +2423,36 @@ body {
   animation: KeyStarry 1800ms linear infinite normal;
 }
 
+.mask-left {
+  -webkit-mask: url(../img/headset-left.svg) no-repeat 100% 100%;
+  width: 121.719px;
+  height: 110.25px;
+  position: absolute;
+  z-index: -1;
+}
+
+.mask-right {
+  -webkit-mask: url(../img/headset-right.svg) no-repeat 100% 100%;
+  width: 134.25px;
+  height: 112.875px;
+  position: absolute;
+  z-index: -1;
+}
+
+.mask-left.rainbow,
+.mask-right.rainbow {
+  background: linear-gradient(90deg, #fd118d, #fc0613, #fe580e, #ffd832, #d0f945, #53fe3d, #2ffe3e, #2cfea7, #23f6ff, #007dfb, #0023f9, #6a1cfb, #f01cfa, #fd118d, #fc0613, #fe580e, #ffd832, #d0f945, #53fe3d, #2ffe3e, #2cfea7, #23f6ff, #007dfb, #0023f9, #6a1cfb, #f01cfa, #fd118d);
+  background-size: calc(600%) 100%;
+  background-position: 0 0;
+  opacity: 0;
+  z-index: -2;
+
+  &.animate-rainbow {
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
 .color-rainbow3 {
   position: absolute;
   z-index: -2;

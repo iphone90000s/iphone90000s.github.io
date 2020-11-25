@@ -726,7 +726,7 @@ $(function () {
         $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
         $(".color-rainbow").removeClass("animate-rainbow");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
     });
     $(".breathing").click(function () {
         $(".status").removeClass("active");
@@ -743,7 +743,7 @@ $(function () {
         $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
         $(".color-rainbow").removeClass("animate-rainbow");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
     });
     $(".strobing").click(function () {
         $(".status").removeClass("active");
@@ -759,7 +759,7 @@ $(function () {
         $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").removeClass("animate-rainbow");
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
         $(".color-rainbow").removeClass("animate-rainbow");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
     });
     $(".colorcycle").click(function () {
         $(".status").removeClass("active");
@@ -775,8 +775,8 @@ $(function () {
         $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-colorcycle");
         $(".headset-left-svg, .headset-right-svg").addClass("animate-colorcycleSvg");
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
-        $(".color-rainbow").removeClass("animate-rainbow");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".color-rainbow").removeClass("animate-rainbow");        
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
     });
     $(".rainbow").click(function () {
         $(".status").removeClass("active");
@@ -793,7 +793,7 @@ $(function () {
         $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").addClass("animate-rainbow");
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
         $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").addClass("hide");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").addClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left.rainbow, .mask-right.rainbow").addClass("animate-rainbow");
     });
     $(".music").click(function () {
         $(".status").removeClass("active");
@@ -810,7 +810,8 @@ $(function () {
         $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-music");
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
         $(".color-rainbow").removeClass("animate-rainbow");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
+        
     });
     $(".smart").click(function () {
         $(".status").removeClass("active");
@@ -826,7 +827,7 @@ $(function () {
         $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-smart");
         $(".headset-left-svg, .headset-right-svg").addClass("animate-smartSvg");
         $(".color-rainbow").removeClass("animate-rainbow");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
     });
     $(".starry").click(function () {
         $(".status").removeClass("active");
@@ -841,7 +842,7 @@ $(function () {
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
         $(".nb-block-shadow, .nb-block-top, .nb-block-bottom").addClass("hide");
         $(".color-rainbow").removeClass("animate-rainbow");
-        $(".color-rainbow, .color-rainbow2, .color-rainbow3").removeClass("animate-rainbow");
+        $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
         $(".mouse-block, .headset-left-svg, .headset-right-svg, .color-block").addClass("animate-starry");
     });
 });

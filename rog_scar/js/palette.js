@@ -41,8 +41,8 @@ class ColorWheel {
     // canvas setup
     this.width = size;
     this.height = size;
-    this.radLarge = size / 2 - 4;
-    this.radSmall = this.radLarge - 35;
+    this.radLarge = size / 2 - 10;
+    this.radSmall = this.radLarge - 25;
     this.parent = document.querySelector(parent);
     this.cx = this.width / 2;
     this.cy = this.height / 2;
@@ -51,7 +51,7 @@ class ColorWheel {
     this.color = null;
     this.pos = null;
     // segment construction
-    this.points = 20;
+    this.points = 3;
     this.angle = 360 / this.points;
     this.arc = (Math.PI * 2) / this.points;
     // create
