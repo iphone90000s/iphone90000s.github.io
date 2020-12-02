@@ -1,0 +1,431 @@
+@media only screen and (max-width: 1279px) and (min-width: 1024px) {
+   .overviewContent .container {
+
+      .product-section .title .rog-strix {
+         font-size: 120px;
+      }
+
+      .performance-section .circle-frame .circle-box .sub-title {
+         font-size: 16px;
+      }
+
+      .product-section .text {
+         width: 650px;
+      }
+
+      .main-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1440px * 0.67);
+      }
+
+      .product-section {
+         height: calc(1958px * 0.67);
+      }
+
+      .product-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1958px * 0.67);
+      }
+
+      .product-section .video-box .play-btn {
+         width: 67px;
+         height: 67px;
+      }
+
+      .product-section .text {
+         font-size: calc(19.5px * 0.67);
+      }
+
+      .product-section .line {
+         width: calc(1263px * 0.67);
+         height: calc(1241px * 0.67);
+         top: calc(400px * 0.67);
+         left: calc(180px * 0.67);
+      }
+
+      .product-section .back-man {
+         width: calc(1500px * 0.6);
+         height: calc(1500px * 0.6);
+      }
+
+      .product-section .title .rog-strix-shadowimg {
+         height: 130px;
+         width: 860px;
+         left: 20px;
+         top: 45px;
+         background-size: 100% auto;
+         background-position: left top;
+      }
+
+      .product-section .title.big-size .rog-strix {
+         font-size: 180px;
+      }
+
+      .product-section .title.big-size {
+         margin-top: -100px;
+      }
+
+      .product-section .title .rog-g15-shadowimg {
+         left: 20px;
+         top: 67px;
+         height: 160px;
+         width: 800px;
+         background-size: 100% auto;
+      }
+
+      .product-section .video-box {
+         width: calc(1222px * 0.5);
+         height: calc(810px * 0.5);
+      }
+
+      .slick-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(900px * 0.67);
+      }
+
+      .influencer-section .people-bg,
+      .influencer-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(762px * 0.67);
+      }
+
+      .influencer-section .left-box {
+         transform: scale(0.67);
+         left: calc(calc(50% - 560px) * 0.67);
+         top: calc(130px * 0.67);
+      }
+
+      .influencer-section .right-box {
+         transform: scale(0.67);
+         left: calc(calc(50% + 350px) * 0.67);
+         top: calc(310px * 0.67);
+      }
+
+      .design-section .title {
+         padding: 100px 0 0;
+      }
+
+      .design-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1805px * 0.67);
+      }
+
+      .design-section .main-nb {
+         width: calc(1920px * 0.67);
+         height: calc(1805px * 0.67);
+      }
+
+      .design-section .main-bg .text {
+         left: calc(220px * 0.67);
+         width: calc(346px * 0.67);
+         top: calc(450px * 0.67);
+      }
+
+      .design-section .color-option {
+         top: calc(550px * 0.67);
+      }
+
+      .design-section {
+         height: calc(1150px * 0.67);
+      }
+
+      .design-section .color-option .choose-bar .choose {
+         width: calc(110px * 0.67);
+         height: calc(43px * 0.67);
+      }
+
+      .rainbow-text {
+         width: 700px;
+         margin: 35px 0;
+         font-size: calc(56.25px * 0.67);
+      }
+
+      .design-section .color-option .choose-color {
+         font-size: 18px;
+         margin-left: 195px;
+      }
+
+      .design-section .color-option .choose-bar {
+         width: 400px;
+         height: 55px;
+      }
+
+      .design-section .color-option .choose-bar .bar-in {
+         margin-left: 140px;
+      }
+
+      .cover-section {
+         height: calc(3720px * 0.67);
+      }
+
+      .cover-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(3720px * 0.67);
+      }
+
+      .cover-section .text {
+         font-size: calc(72px * 0.67);
+      }
+
+      .cover-section .text .hide-text {
+         width: calc(610px * 0.67);
+      }
+
+      .cover-section .text.light {
+         left: calc(400px * 0.67);
+         top: calc(260px * 0.67);
+
+         .hide-text {
+            left: calc(-240px * 0.67);
+         }
+      }
+
+      .cover-section .text.durability {
+         left: calc(800px * 0.67);
+         top: calc(1190px * 0.67);
+
+         .hide-text {
+            left: calc(40px * 0.67);
+         }
+
+      }
+
+      .cover-section .text.smaller {
+         left: calc(500px * 0.67);
+         top: calc(2080px * 0.67);
+
+         .hide-text {
+            left: calc(-220px * 0.67);
+         }
+
+      }
+
+      .cover-section .text.bigger {
+         left: calc(820px * 0.67);
+         top: calc(3010px * 0.67);
+
+         .hide-text {
+            left: calc(-140px * 0.67);
+         }
+      }
+
+      .main-bg .box-title .box-bg-revert {
+         top: -28%;
+      }
+
+      .performance-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1030px * 0.67);
+      }
+
+      .display-section .switch-box {
+         margin: 50px auto 0;
+      }
+
+      .display-section {
+         height: 1600px;
+      }
+
+      .main-bg .text {
+         width: 650px;
+         font-size: calc(19.5px * 0.67);
+      }
+
+      .performance-section .circle-frame {
+         margin: 0 auto;
+         width: 650px;
+      }
+
+      .display-section .main-bg .title {
+         padding: 100px 0 0;
+      }
+
+      .performance-section .circle-frame .circle-box {
+         transform: scale(0.67);
+      }
+
+      .performance-run-section .main-bg {
+         width: 1280px;
+         height: 1000px;
+      }
+
+      .performance-run-section .learn-more {
+         top: 820px;
+      }
+
+      .learn-more {
+         transform: translateX(-50%) scale(0.67);
+      }
+
+      .display-section .main-bg,
+      .display-section .main-bg.hz {
+         width: calc(1920px * 0.67);
+         height: calc(2690px * 0.67);
+      }
+
+      .cool-section .circle-frame {
+         width: 650px;
+         margin: 0 auto;
+      }
+
+      .cool-section .circle-frame .circle-box {
+         transform: scale(0.67);
+      }
+
+      .cool-section .cool-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1938px * 0.67);
+      }
+
+      .cool-section .learn-more {
+         top: 1120px;
+      }
+
+      .bundle-section .bundle-bg {
+         width: 1440px;
+         height: 960px;
+      }
+
+      .software-section .main-bg.armoury-bg {
+         width: 1760px;
+         height: 710px;
+      }
+
+      .software-section .main-bg {
+         width: 1440px;
+         height: 1070px;
+      }
+
+      .cool-section .cool-nb,
+      .cool-section .cool-animate {
+         width: 1280px;
+         height: 550px;
+      }
+
+      .audio-section .circle-frame {
+         margin: 0 auto;
+         width: 650px;
+      }
+
+      .battery-section .main-bg .title {
+         padding: 50px 0 0;
+      }
+
+      .audio-section .circle-frame .circle-box {
+         transform: scale(0.67);
+      }
+
+      .audio-section .top-bg {
+         width: calc(1920px * 0.67);
+         height: calc(870px * 0.67);
+      }
+
+      .audio-section .main-bg.audio-bg {
+         margin-top: -70px;
+         width: calc(1920px * 0.67);
+         height: calc(1409px * 0.67);
+      }
+
+      .audio-section .bottom-bg {
+         width: calc(1920px * 0.67);
+         height: calc(300px * 0.67);
+      }
+
+      .audio-section .bottom-bg .learn-more {
+         top: 115px;
+      }
+
+      .audio-section .bottom-bg .text {
+         margin-top: -80px;
+      }
+
+      .battery-section .top-bg {
+         width: calc(1920px * 0.67);
+         height: calc(580px * 0.67);
+      }
+
+      .battery-section .main-bg.battery-nb,
+      .battery-section .main-bg.battery-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1226px * 0.67);
+      }
+
+      .battery-section .scroll-frame {
+         width: calc(930px * 0.67);
+         height: calc(522px * 0.67);
+         top: calc(270px * 0.67);
+      }
+
+      .connectivity-section .main-bg.wifi-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1000px * 0.67);
+      }
+
+      .battery-section .circle-frame .circle-box {
+         transform: scale(0.67);
+      }
+
+      .connectivity-section .circle-frame {
+         transform: translateX(-50%) scale(0.67);
+         top: calc(130px * 0.67);
+         transform-origin: top;
+      }
+
+      .connectivity-section .bar-frame {
+         transform: scale(0.67);
+      }
+
+      .io-section .io-port {
+         font-size: calc(18px * 0.8);
+      }
+
+      .io-section .main-bg {
+         width: calc(1920px * 0.67);
+         height: calc(1792px * 0.67);
+      }
+
+      .io-section .io-port.io-port-1 {
+         left: calc(443px * 0.67);
+         top: calc(1190px * 0.67);
+      }
+
+      .io-section .io-port.io-port-2 {
+         left: calc(630px * 0.67);
+         top: calc(1205px * 0.67);
+      }
+
+      .io-section .io-port.io-port-3 {
+         left: calc(675px * 0.67);
+         top: calc(1220px * 0.67);
+      }
+
+      .io-section .io-port.io-port-4 {
+         left: calc(1060px * 0.67);
+         top: calc(1195px * 0.67);
+      }
+
+      .small-size {
+         font-size: 12px;
+      }
+
+      .io-section .io-port.io-port-5 {
+         left: calc(1186px * 0.67);
+         top: calc(1170px * 0.67);
+      }
+
+      .software-section .main-bg {
+         width: 1280px;
+         height: 980px;
+      }
+
+      .software-section .main-bg.armoury-bg {
+         width: 1920px;
+         height: 620px;
+      }
+
+      .bundle-section .bundle-bg {
+         width: 1280px;
+         height: 800px;
+      }
+   }
+}
