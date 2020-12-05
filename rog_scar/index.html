@@ -9,6 +9,9 @@
   <script src="./js/glitch.js"></script><!-- glitch 套件 -->
   <script src="./js/slick.js"></script><!-- 輪播套件 -->
   <script src="./js/main.js"></script><!-- 主要js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet">
 </head>
 
 <body class="scroll">
@@ -53,9 +56,19 @@
             <div class="play-btn-glitch"></div>
           </div>
           <video class="visual-mp4" muted playsinline>
-            <source type="video/mp4" src="./video/audio.mp4">
+            <source type="video/mp4" src="./video/video.mp4">
           </video>
         </div>
+      </div>
+    </div>
+    <div class="scar-container influencer-section">
+      <div class="main-bg">
+        <div class="int">
+          <div class="title"></div>
+          <div class="text">
+            “Lorem ipsum dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. ”
+          </div>
+        </div>        
       </div>
     </div>
     <div class="scar-container design-section">
@@ -80,54 +93,56 @@
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">Customized <br>Armor Cap</div>
+                <div class="main-text">CUSTOMIZED</div>
+                <div class="main-text">ARMOR CAP</div>
               </div>
-              <div class="text">Personalized style</div>
+              <div class="text">PERSONALIZED STYLE</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">Translucent </div>
+                <div class="main-text">TRANSLUCENT</div>
               </div>
-              <div class="text">C part</div>
+              <div class="text">KEYBOARD DESK</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">Optical <br>Mechanical KB</div>
+                <div class="main-text">OPTICAL </div>
+                <div class="main-text">MECHANICAL</div>
+                <div class="main-text">KEYBOARD</div>
               </div>
-              <div class="text">XX Faster</div>
+              <div class="text">XX FASTER</div>
             </div>
           </div>
         </div>
         <div class="blur-bg">
           <div class="menu">
-            <div class="menu-list">
-              <div class="cross-btn">
-                <div class="left-cross"></div>
-                <div class="right-cross"></div>
-              </div>
-              <div class='choose-color'>
-                <div class="color-text color-1">COLOR 1</div>
-                <div class="color-text color-2">COLOR 2</div>
-                <div class="color-text color-3">COLOR 3</div>
+            <div class="color-option">
+              <div class="color-box">
+                <div class="title">Colors</div>
+                <div class="option-inner black"><font>Black</font></div>
+                <div class="option-inner rubber"><font>Rubber</font></div>
+                <div class="option-inner silver active"><font>Silver</font></div>
               </div>
             </div>
           </div>
-          <div class="main-bg"></div>
-          <div class="rotate-bg"></div>
+          <div class="main-bg">
+            <div class="nb-bg silver"></div>
+          </div>
+          <div class="rotate-bg hide"></div>
         </div>
         <div class="view-container slick-frame">
           <div class="prev-arrow"></div>
           <div class="slick-container">
             <div class="slick-inner">
-              <div class="slick-img slick-thumb1"><img alt="" title="" src="./img/thumb1.png"></div>
-              <div class="slick-img slick-thumb2"><img alt="" title="" src="./img/thumb2.png"></div>
-              <div class="slick-img slick-thumb3"><img alt="" title="" src="./img/thumb3.png"></div>
-              <div class="slick-img slick-thumb4"><img alt="" title="" src="./img/thumb4.png"></div>
-              <div class="slick-img slick-thumb5"><img alt="" title="" src="./img/thumb5.png"></div>
-              <div class="slick-img slick-thumb6"><img alt="" title="" src="./img/thumb6.png"></div>
-              <div class="slick-img slick-thumb7"><img alt="" title="" src="./img/thumb7.png"></div>
+              <div class="slick-img slick-thumb1"><img alt="" title="" src="./img/design-thumb1.png"></div>
+              <div class="slick-img slick-thumb2"><img alt="" title="" src="./img/design-thumb2.png"></div>
+              <div class="slick-img slick-thumb3"><img alt="" title="" src="./img/design-thumb3.png"></div>
+              <div class="slick-img slick-thumb4"><img alt="" title="" src="./img/design-thumb4.png"></div>
+              <div class="slick-img slick-thumb5"><img alt="" title="" src="./img/design-thumb5.png"></div>
+              <div class="slick-img slick-thumb6"><img alt="" title="" src="./img/design-thumb6.png"></div>
+              <div class="slick-img slick-thumb7"><img alt="" title="" src="./img/design-thumb7.png"></div>
             </div>
           </div>
           <div class="next-arrow"></div>
@@ -151,23 +166,26 @@
           </div>
           <div class="hl-btn-frame">
             <div class="hl-style blue">
-              <div class="title">AMD®</div>
+              <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text">Cezanne-H9</div>
+                <div class="main-text">WINDOWS</div>
+                <div class="main-text">10 PRO</div>
               </div>
-              <div class="text">CPU</div>
+              <div class="text">OS</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text">Windows 10 Pro</div>
+                <div class="main-text">CEZANNE-R9</div>
+                <div class="main-text">5900HX</div>
               </div>
-              <div class="text"></div>
+              <div class="text">CPU</div>
             </div>
             <div class="hl-style blue">
               <div class="title">Up to a Geforce</div>
               <div class="main-text-outside">
-                <div class="main-text">RTX 3080 super</div>
+                <div class="main-text">RTX 3080</div>
+                <div class="main-text">SUPER</div>
               </div>
               <div class="text">GPU</div>
             </div>
@@ -185,20 +203,18 @@
               <div class="main-text-outside">
                 <div class="main-text">2 TB</div>
               </div>
-              <div class="text">PCIE X4 SSD Storage</div>
+              <div class="text">PCIE X4 SSD STORAGE</div>
             </div>
           </div>
         </div>
         <div class="performance">
           <div class="blur-bg">
-            <div class="main-bg"></div>
-          </div>
-          <div class="performance-set">
-            <div class="performance-notebook">
+            <div class="main-bg">
               <div class="cpu"></div>
               <div class="gpu"></div>
             </div>
           </div>
+              
           <div class="performance-btn">
             <div class="learn-btn">
               <font>LEARN MORE</font>
@@ -207,7 +223,6 @@
           </div>
         </div>
         <div class="nvidia">
-          <div class="nvidia-top"></div>
           <div class="view-container nvidia-slick-container">
             <div class="nvidia-prev-arrow prev-arrow"></div>
             <div class="nvidia-slick-content">
@@ -242,7 +257,6 @@
             </div>
             <div class="nvidia-next-arrow next-arrow"></div>
           </div>
-          <div class="nvidia-bottom"></div>
         </div>
       </div>
     </div>
@@ -267,7 +281,7 @@
         <div class="view-container">
           <div class="hl-btn-frame">
             <div class="hl-style blue">
-              <div class="title">UP TO</div>
+              <div class="title">Up to</div>
               <div class="main-text-outside">
                 <div class="main-text blue">360 HZ</div>
               </div>
@@ -276,9 +290,9 @@
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">3 ms</div>
+                <div class="main-text two-layer">3 MS</div>
               </div>
-              <div class="text">Response Rate</div>
+              <div class="text">RESPONSE RATE</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
@@ -292,16 +306,16 @@
             <div class="hl-style blue">
               <div class="title">SRGB</div>
               <div class="main-text-outside">
-                <div class="main-text blue">Adaptive Sync</div>
+                <div class="main-text blue">ADAPTIVE SYNE</div>
               </div>
-              <div class="text">Technology</div>
+              <div class="text">TECHNOLOGY</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
                 <div class="main-text two-layer">85%</div>
               </div>
-              <div class="text">Screen-to-body</div>
+              <div class="text">SCREEN-TO-BODY</div>
             </div>
           </div>
         </div>
@@ -396,25 +410,34 @@
           </div>
           <div class="hl-btn-frame">
             <div class="hl-style blue">
-              <div class="title">UP TO</div>
+              <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text blue">4 fan outlets</div>
+                <div class="main-text blue">4 FAN OUTLETS</div>
               </div>
-              <div class="text">improve airflow</div>
+              <div class="text">IMPROVE AIRFLOW ON ALL MODELS</div>
             </div>
             <div class="hl-style blue">
               <div class="title">UP TO</div>
               <div class="main-text-outside">
-                <div class="main-text">XX%</div>
+                <div class="main-text">XX°C COOLER CPU</div>
               </div>
-              <div class="text">noise reduction</div>
+              <div class="text">WITH LIQUID METEAL</div>
+            </div>
+          </div>
+           <div class="hl-btn-frame">
+            <div class="hl-style blue">
+              <div class="title">Up to</div>
+              <div class="main-text-outside">
+                <div class="main-text blue">3dB</div>
+              </div>
+              <div class="text">IMPROVEMENT ON TURBO MODE</div>
             </div>
             <div class="hl-style blue">
-              <div class="title">UP TO</div>
+              <div class="title">ROG Boost OC</div>
               <div class="main-text-outside">
-                <div class="main-text">XX°C Cooler CPU</div>
+                <div class="main-text">1645 mHZ</div>
               </div>
-              <div class="text">with Liquid Metal</div>
+              <div class="text">ON TURBO MODE</div>
             </div>
           </div>
         </div>
@@ -425,11 +448,6 @@
             <div class="cooling-animate"></div>
           </div>
           <div class="cooling-position">
-            <div class="view-container run-container">
-              <div class="run-index">
-                <font>0</font>
-              </div>
-            </div>
             <div class="cooling-learnmore">
               <div class="learn-btn">
                 <font>LEARN MORE</font>
@@ -478,14 +496,22 @@
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">2.0 mm</div>
+                <div class="main-text two-layer">OPTICAL</div>
+                <div class="main-text two-layer">MECHANICAL</div>
               </div>
-              <div class="text">Travel distance</div>
+              <div class="text">KEYBOARD</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">Per-key</div>
+                <div class="main-text two-layer">1.9 MM</div>
+              </div>
+              <div class="text">TRAVEL DISTANCE</div>
+            </div>
+            <div class="hl-style blue">
+              <div class="title"></div>
+              <div class="main-text-outside">
+                <div class="main-text">PER-KEY</div>
               </div>
               <div class="text">RGB</div>
             </div>
@@ -494,30 +520,30 @@
               <div class="main-text-outside">
                 <div class="main-text">100 M</div>
               </div>
-              <div class="text">Key press Lifetime</div>
+              <div class="text">KEY PRESS LIFETIME</div>
             </div>
           </div>
           <div class="hl-btn-frame">
             <div class="hl-style blue">
               <div class="title">Zero debounce delay</div>
               <div class="main-text-outside">
-                <div class="main-text blue">0.2 ms</div>
+                <div class="main-text blue">0.2 MS</div>
               </div>
-              <div class="text">Response time</div>
+              <div class="text">RESPONSE TIME</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
                 <div class="main-text two-layer">0.15mm</div>
               </div>
-              <div class="text">Keycap Dish</div>
+              <div class="text">KEYCAP DISH</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">Aura SYNC</div>
+                <div class="main-text two-layer">AURA SYNC</div>
               </div>
-              <div class="text">Technology</div>
+              <div class="text">TECHNOLOGY</div>
             </div>
           </div>
         </div>
@@ -574,29 +600,26 @@
               <div class="main-text-outside">
                 <div class="main-text blue">4X</div>
               </div>
-              <div class="text">Speakers</div>
+              <div class="text">SPEAKERS</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">5.1.2 Channel</div>
+                <div class="main-text two-layer">5.1.2 CHANNEL</div>
               </div>
-              <div class="text">Virtual Surround Sound</div>
+              <div class="text">VIRTUAL SURROUND SOUND</div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">2-Way</div>
+                <div class="main-text two-layer">TWO-WAY</div>
               </div>
-              <div class="text">AI Noise-Cancelation</div>
+              <div class="text">AI NOISE-CANCELATION</div>
             </div>
-          </div>
-          <div class="hl-btn-frame atmos-frame">
-            <div class="atmos">
-              <img alt="atmos" title="atmos" src="./img/atmos_stacked.png">
-            </div>
-            <div class="hi-res">
-              <img alt="hi-res" title="hi-res" src="./img/hi-res-audio.png">
+            <div class="hl-style blue">
+              <div class="atmos">
+                <img alt="atmos" title="atmos" src="./img/atmos_stacked.png">
+              </div>
             </div>
           </div>
         </div>
@@ -633,21 +656,21 @@
               <div class="main-text-outside">
                 <div class="main-text two-layer">4X</div>
               </div>
-              <div class="text">Battery </div>
+              <div class="text">BATTERY </div>
             </div>
             <div class="hl-style blue">
               <div class="title"></div>
               <div class="main-text-outside">
-                <div class="main-text two-layer">Type-C</div>
+                <div class="main-text two-layer">TYPC-C</div>
               </div>
-              <div class="text">Charging</div>
+              <div class="text">CHARING</div>
             </div>
             <div class="hl-style blue">
-              <div class="title">Up to</div>
+              <div class="title">UP TO</div>
               <div class="main-text-outside">
-                <div class="main-text blue">XX Hr</div>
+                <div class="main-text blue">XX HR</div>
               </div>
-              <div class="text">Battery life</div>
+              <div class="text">BATTERY LIFE</div>
             </div>
           </div>
         </div>
@@ -813,52 +836,60 @@
               <div class="main-text-outside">
                 <div class="main-text blue">4X</div>
               </div>
-              <div class="text">Higher network capacity</div>
+              <div class="text">HIEGHER NETWORK CAPACITY</div>
             </div>
             <div class="hl-style blue">
               <div class="title">Up to</div>
               <div class="main-text-outside">
                 <div class="main-text blue">75%</div>
               </div>
-              <div class="text">Lower latency</div>
+              <div class="text">LOWER LATENCY</div>
             </div>
             <div class="hl-style blue">
               <div class="title">Up to</div>
               <div class="main-text-outside">
                 <div class="main-text blue">30%</div>
               </div>
-              <div class="text">Wider coverage with RangeBoost</div>
-            </div>
-          </div>
-        </div>
-        <div class="view-container">
-          <div class="run-bar-box">
-            <div class="higher-wifi">3X HIGHER WIFI THROUGHPUT</div>
-            <div class="run-bar-inner">
-              <span>Intel® Wi-Fi 6 (802.11ax)</span>
-              <div class="intel-bar upper-bar">
-                <div class="bar"></div>
-                <div class="mbps">
-                  <font>0</font> Mbps
-                </div>
-              </div>
-            </div>
-            <div class="run-bar-inner">
-              <span>802.11ac</span>
-              <div class="ac-bar upper-bar">
-                <div class="bar"></div>
-                <div class="mbps">
-                  <font>0</font> Mbps
-                </div>
-              </div>
-            </div>
-            <div class="run-bar-inner">
-              <div class="speed-text">*SPEED MAY VARY ACCORDING TO SETUP </div>
+              <div class="text">WIDER COVERAGE WITH RANGEBOOST</div>
             </div>
           </div>
         </div>
         <div class="connectivity">
-          <div class="main-bg"></div>
+          <div class="run-box">
+            <div class="run-box-animate">
+              <div class="run-in">
+                <div class="run-bar-box">
+                  <div class="higher-wifi">3X HIGHER WIFI THROUGHPUT</div>
+                  <div class="run-bar-inner">
+                    <span>Intel® Wi-Fi 6 (802.11ax)</span>
+                    <div class="intel-bar upper-bar">
+                      <div class="bar"></div>
+                      <div class="mbps">
+                        <font>0</font> Mbps
+                      </div>
+                    </div>
+                  </div>
+                  <div class="run-bar-inner">
+                    <span>802.11ac</span>
+                    <div class="ac-bar upper-bar">
+                      <div class="bar"></div>
+                      <div class="mbps">
+                        <font>0</font> Mbps
+                      </div>
+                    </div>
+                  </div>
+                  <div class="run-bar-inner">
+                    <div class="speed-text">*SPEED MAY VARY ACCORDING TO SETUP </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blur-bg">
+            <div class="main-bg"></div>
+            <div class="nb"></div>
+            <div class="light"></div>
+          </div>          
         </div>
       </div>
     </div>
@@ -871,34 +902,62 @@
         <div class="view-container upper-layer">
           <div class="gradient-title">Comprehensive <br> Connectivity</div>
           <div class='content-text'>
-            Versatile I/O ports keep you connected on the go. Hook up next-gen devices to amp up your set-up at Gen 2
-            speeds via the USB 3.2 Type-C™ with DisplayPort™ 1.4 and USB Power Delivery. Three Type-A USB 3.2 Gen 1
-            ports
-            are ready for your favorite gaming gear, while HDMI 2.0b lets you connect a 4K monitor or TV at up to
-            60Hz.
-            Integrated Gigabit Ethernet boasts lower networking latency for competitive multiplayer gaming,
-            complementing
-            the built-in Wi-Fi.
+            Versatile I/O ports keep you connected anywhere. Hook up next-gen devices to amp up your setup at Gen 2 speeds via the USB 3.2 Type-C™ with DisplayPort™ 1.4 and USB Power Delivery. Three Type-A USB 3.2 Gen 1 ports are ready for your favorite gaming gear, while HDMI 2.0b lets you connect a 4K monitor or TV at up to 60Hz. The key ports are strategically positioned at the back to keep cable clutter out of your space.
           </div>
         </div>
         <div class="io">
-          <div class="main-bg"></div>
-          <div class="io-notebook">
-            <div class="notebook"></div>
-            <div class="io-left1 usb">
-              <img src="./img/io-left1.png">
+          <div class="options options17">
+            <div class="selects select15">15”</div>
+            <div class="selects select17">17”</div>
+          </div>
+          <div class="main-bg options17">
+            <div class="port-15 port-int">
+              <div class="ports-gen-c ports-inner">
+                <div class="line"></div>
+                <div class="txt"> USB3.2 Gen2 Type-C (support Display Port & PD Charger)</div>
+              </div>
+              <div class="ports-hdmi ports-inner">
+                <div class="line"></div>
+                <div class="txt">HDMI (2.0b)</div>
+              </div>
+              <div class="ports-rj45 ports-inner">
+                <div class="line"></div>
+                <div class="txt">LAN RJ45 jack</div>
+              </div>
+              <div class="ports-gen-a2 ports-inner">
+                <div class="line"></div>
+                <div class="txt">USB 3.2 Gen 1 Type-A x2</div>
+              </div>
+              <div class="ports-audio-jack ports-inner">
+                <div class="line"></div>
+                <div class="txt">Audio jack</div>
+              </div>
             </div>
-            <div class="io-left2 usb">
-              <img src="./img/io-left2.png">
-            </div>
-            <div class="io-left3 usb">
-              <img src="./img/io-left3.png">
-            </div>
-            <div class="io-right1 usb">
-              <img src="./img/io-right1.png">
-            </div>
-            <div class="io-right2 usb">
-              <img src="./img/io-right2.png">
+            <div class="port-17 port-int active">
+              <div class="ports-gen-a ports-inner">
+                <div class="line"></div>
+                <div class="txt">USB 3.2 Gen 1 Type-A </div>
+              </div>
+              <div class="ports-gen-c ports-inner">
+                <div class="line"></div>
+                <div class="txt"> USB3.2 Gen2 Type-C (support Display Port & PD Charger)</div>
+              </div>
+              <div class="ports-hdmi ports-inner">
+                <div class="line"></div>
+                <div class="txt">HDMI (2.0b)</div>
+              </div>
+              <div class="ports-rj45 ports-inner">
+                <div class="line"></div>
+                <div class="txt">LAN RJ45 jack</div>
+              </div>
+              <div class="ports-gen-a2 ports-inner">
+                <div class="line"></div>
+                <div class="txt">USB 3.2 Gen 1 Type-A x2</div>
+              </div>
+              <div class="ports-audio-jack ports-inner">
+                <div class="line"></div>
+                <div class="txt">Audio jack</div>
+              </div>
             </div>
           </div>
         </div>
@@ -932,118 +991,37 @@
       <div class="section-inner">
         <div class="slider-top"></div>
         <div class="slider">
-          <div class="slider-menu">
-            <div class="menu-list gameFirst">
-              <span>GameFirst IV</span>
-              <div class="pipe">|</div>
-            </div>
-            <div class="menu-list gameVisual1">
-              <span>GameVisual</span>
-              <div class="pipe">|</div>
-            </div>
-            <div class="menu-list GameVisual2">
-              <span>GameVisual</span>
-              <div class="pipe">|</div>
-            </div>
-            <div class="menu-list sonicStudio">
-              <span>Sonic Studio</span>
-              <div class="pipe">|</div>
-            </div>
-            <div class="menu-list xsplit">
-              <span>Xsplit Gamecaster</span>
-              <div class="pipe">|</div>
-            </div>
-            <div class="menu-list androidApp">
-              <span>Android App</span>
-              <div class="pipe">|</div>
-            </div>
-          </div>
           <div class="slider-slick view-container">
             <div class="slider-prev-btn prev-arrow"></div>
             <div class="slider-slick-content">
               <div class="slider-slick-list">
                 <div class="img">
-                  <img src="./img/slider-img.jpg">
+                  <img src="./img/app.png">
                 </div>
                 <div class="text">
-                  <div class="title">GameFirst V</div>
+                  <div class="title">Android/iOS App</div>
                   <div class="txt">
-                    GeForce RTX is powered by NVIDIA Turing, the world's most advanced GPU architecture for gamers
-                    and
-                    creators. Get truly next-gen performance and features with dedicated AI and ray tracing cores
-                    for
-                    the
-                    ultimate experience.
+                    Pick up the free Armoury Crate mobile app for Android or iOS to easily access your settings without interrupting your game! Available now on both Google Play™ and the App Store.
                   </div>
                 </div>
               </div>
               <div class="slider-slick-list">
                 <div class="img">
-                  <img src="./img/slider-img.jpg">
+                  <img src="./img/aura.png">
                 </div>
                 <div class="text">
-                  <div class="title">GameFirst V</div>
+                  <div class="title">Aura Creator</div>
                   <div class="txt">
-                    GeForce RTX is powered by NVIDIA Turing, the world's most advanced GPU architecture for gamers
-                    and
-                    creators. Get truly next-gen performance and features with dedicated AI and ray tracing cores
-                    for
-                    the
-                    ultimate experience.
-                  </div>
-                </div>
-              </div>
-              <div class="slider-slick-list">
-                <div class="img">
-                  <img src="./img/slider-img.jpg">
-                </div>
-                <div class="text">
-                  <div class="title">GameFirst V</div>
-                  <div class="txt">
-                    GeForce RTX is powered by NVIDIA Turing, the world's most advanced GPU architecture for gamers
-                    and
-                    creators. Get truly next-gen performance and features with dedicated AI and ray tracing cores
-                    for
-                    the
-                    ultimate experience.
-                  </div>
-                </div>
-              </div>
-              <div class="slider-slick-list">
-                <div class="img">
-                  <img src="./img/slider-img.jpg">
-                </div>
-                <div class="text">
-                  <div class="title">GameFirst V</div>
-                  <div class="txt">
-                    GeForce RTX is powered by NVIDIA Turing, the world's most advanced GPU architecture for gamers
-                    and
-                    creators. Get truly next-gen performance and features with dedicated AI and ray tracing cores
-                    for
-                    the
-                    ultimate experience.
-                  </div>
-                </div>
-              </div>
-              <div class="slider-slick-list">
-                <div class="img"><img src="./img/slider-img.jpg"></div>
-                <div class="text">
-                  <div class="title">GameFirst V</div>
-                  <div class="txt">
-                    GeForce RTX is powered by NVIDIA Turing, the world's most advanced GPU architecture for gamers
-                    and
-                    creators. Get truly next-gen performance and features with dedicated AI and ray tracing cores
-                    for
-                    the
-                    ultimate experience.
+                    Aura Creator is a powerful lighting editor that lets you craft complex RGB effects from the ground up. An easy-to-use interface allows you to personalize preloaded lighting effects, layer and transition them to perfection, and activate them across a full array of Aura Sync devices. Create custom RGB lighting and let your personality shine.
                   </div>
                 </div>
               </div>
             </div>
             <div class="slider-next-btn next-arrow"></div>
           </div>
-          <div class="slider-bottom"></div>
         </div>
+        
+          <div class="slider-bottom"></div>
       </div>
     </div>
     <div class="scar-container peripherals-section">
@@ -1066,9 +1044,132 @@
           </div>
         </div>
         <div class="peripherals">
-          <div class="main-bg"></div>
-          <div class="peripherals-product">
-            <img src="./img/peripherals-notebook.png">
+          <div class="main-bg">
+            <div class="look-btn look-bag"></div>
+            <div class="look-btn look-nb"></div>
+            <div class="look-btn look-transformer"></div>
+            <div class="look-btn look-headset"></div>
+            <div class="look-btn look-mouse"></div>
+          </div>
+        </div>
+      </div>
+      <div class="popup">
+        <div class="popup-inner">
+          <div class="close-btn"></div>
+          <div class="popup-back popup-product hide">
+            <div class="title">ROG BACKPECK</div>
+            <div class="popup-slick">
+              <div class="prev-arrow"></div>
+              <div class="next-arrow"></div>
+              <div class='popup-slick-inner'>                
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+              </div>
+            </div>
+            <div class="popup-other">
+              <div class="popup-option">
+                <div class="option-inner option1"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option2"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-nb popup-product hide">
+            <div class="title">ROG BACKPECK</div>
+            <div class="popup-slick">
+              <div class="prev-arrow"></div>
+              <div class="next-arrow"></div>
+              <div class='popup-slick-inner'>                
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+              </div>
+            </div>
+            <div class="popup-other">
+              <div class="popup-option">
+                <div class="option-inner option1"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option2"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-transformer popup-product hide">
+            <div class="title">ROG BACKPECK</div>
+            <div class="popup-slick">
+              <div class="prev-arrow"></div>
+              <div class="next-arrow"></div>
+              <div class='popup-slick-inner'>                
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+              </div>
+            </div>
+            <div class="popup-other">
+              <div class="popup-option">
+                <div class="option-inner option1"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option2"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-headset popup-product hide">
+            <div class="title">ROG BACKPECK</div>
+            <div class="popup-slick">
+              <div class="prev-arrow"></div>
+              <div class="next-arrow"></div>
+              <div class='popup-slick-inner'>                
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+              </div>
+            </div>
+            <div class="popup-other">
+              <div class="popup-option">
+                <div class="option-inner option1"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option2"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="popup-mouse popup-product hide">
+            <div class="title">ROG BACKPECK</div>
+            <div class="popup-slick">
+              <div class="prev-arrow"></div>
+              <div class="next-arrow"></div>
+              <div class='popup-slick-inner'>                
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+                <div class="popup-slick-img"></div>
+              </div>
+            </div>
+            <div class="popup-other">
+              <div class="popup-option">
+                <div class="option-inner option1"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option2"></div>
+              </div>
+              <div class="popup-option">
+                <div class="option-inner option3"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -1079,13 +1180,14 @@
       </div>
       <div class="design-box">
         <div class="design-layers design-thumb1">
+          <div class="float-box-sli float-box"></div>
+          <div class="float-box-bla float-box"></div>
           <div class="text-frame">
-            <div class="title">Stun at every angle</div>
+            <div class="title">Change up your look</div>
             <div class="text">
-              Thoughtful details set this laptop apart from the competition. Our 360° design philosophy puts subtle but
-              distinctive elements across every part of the machine. The dot matrix design splashed across the lid cuts
-              down to meet cross-hatched vents beneath the base. An expansive rubberized grip holds the laptop firmly in
-              place and makes it easier to carry. Typographic elements around the trim subtly shows off your ROG pride.
+              Add a pop of personality to your chassis with Customizable Armour Caps. Two additional color options come in the box and swap out effortlessly, letting you switch up your style anytime. For a fully customized touch, we also have a 3D printing template that makes it easy to create original looks of your own.
+              <br><br>
+              Get the Customizable Armor Caps 3D printing template.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1095,12 +1197,9 @@
         </div>
         <div class="design-layers design-thumb2">
           <div class="text-frame">
-            <div class="title">Stun at every angle</div>
+            <div class="title">Pixel perfect polish</div>
             <div class="text">
-              Thoughtful details set this laptop apart from the competition. Our 360° design philosophy puts subtle but
-              distinctive elements across every part of the machine. The dot matrix design splashed across the lid cuts
-              down to meet cross-hatched vents beneath the base. An expansive rubberized grip holds the laptop firmly in
-              place and makes it easier to carry. Typographic elements around the trim subtly shows off your ROG pride.
+              An asymmetrical slash across the lid shows off our signature style, updated with a sleek dot matrix design created with precise perforations. The dots add a touch of shimmer from any angle and evoke a backdrop of city lights at night. Capped with aluminum, the lid is resilient and fingerprint resistant so that it stays sleek all day.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1125,12 +1224,9 @@
         </div>
         <div class="design-layers design-thumb4">
           <div class="text-frame">
-            <div class="title">Light ‘em up</div>
+            <div class="title">Upgraded Bezel Glow</div>
             <div class="text">
-              Game in a customized glow with clean RGB lighting. The wraparound light bar, updated with a higher density
-              of LEDs, illuminates the three front edges of the chassis, while additional lights beneath the display add
-              a diffused glow on deck. Coordinate illumination across your entire suite of compatible Aura Sync
-              peripherals to set the mood for competitive play.
+              Game in a customized glow with clean RGB lighting. The wraparound light bar has a higher LED density to evenly illuminate the three front edges of the chassis, while additional LEDs beneath the display add a diffused glow on deck. Coordinate illumination across your entire suite of compatible Aura Sync peripherals to set the mood for competitive play.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1142,9 +1238,7 @@
           <div class="text-frame">
             <div class="title">Soft-touch surface</div>
             <div class="text">
-              Soft-touch paint slashed across the most commonly used parts of the keyboard and palm area minimizes
-              smudges and fingerprints to stay clean and stylish through the day. The thin textured coating over the
-              plastic is cooler than metal alternatives and is more comfortable to use over extended play sessions.
+              Soft-touch paint slashed across the most commonly used parts of the keyboard and palm rest minimizes smudges and fingerprints to stay clean and stylish through the day. It adds a matte finish to the resilient plastic deck that keeps surface temperatures cooler and more comfortable to the touch than metal over extended play sessions.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1154,11 +1248,9 @@
         </div>
         <div class="design-layers design-thumb6">
           <div class="text-frame">
-            <div class="title">Soft-touch surface</div>
+            <div class="title">Smaller form factor</div>
             <div class="text">
-              Soft-touch paint slashed across the most commonly used parts of the keyboard and palm area minimizes
-              smudges and fingerprints to stay clean and stylish through the day. The thin textured coating over the
-              plastic is cooler than metal alternatives and is more comfortable to use over extended play sessions.
+              Carry tournament-level gaming power with you on the go in a small and portable chassis. A footprint that’s 7% smaller than previous generations makes it easy to bring your A-game anywhere. The streamlined new design enables an 87% screen-to-body ratio with superslim bezels that make gameplay more immersive.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1170,9 +1262,7 @@
           <div class="text-frame">
             <div class="title">Expanded touchpad</div>
             <div class="text">
-              Everyday comfort and usability is improved with a touchpad that’s 85% larger in active area than previous
-              generations. More space means more comfortable hand movements and gestures while you’re navigating. The
-              glass pad is coated in a matte finish that adds strength with a silky smooth feel.
+              Improve everyday comfort and usability with an active  touchpad area that’s 85% larger than previous generations. More space means greater precision along with more comfortable hand movements and gestures while you’re navigating. The glass pad is coated in a matte finish that adds strength with a silky smooth feel.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1189,12 +1279,9 @@
       <div class="performance-box">
         <div class="performance-layers performance-thumb1">
           <div class="text-frame">
-            <div class="title">Superfast SSD storage</div>
+            <div class="title">AMD® Ryzen™ CPUs</div>
             <div class="text">
-              Take back time for tasks that matter with superfast SSD storage. Two responsive M.2 NVMe PCIe® 3.0 SSDs
-              make massive games and apps load at blazing fast speeds, boosting your productivity. The doubled- SSD slot
-              lets you add terabytes to your overall storage, giving you the space for huge projects like complex videos
-              and 3D scenes, with space to spare for your ever-growing game library.
+              Power through anything with up to the latest AMD Ryzen™ 9 CPU. Built using cutting-edge 7nm fabrication technology, this 8-core processor is designed to deliver the most immersive gaming experience you can get in a laptop. It handles demanding tasks with ease, activating up to 16 parallel threads to speed up heavy workloads like streaming, multitasking, and more. Bolstered by ROG Intelligent Cooling, the unlocked CPU can even be overclocked for faster performance.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1204,12 +1291,9 @@
         </div>
         <div class="performance-layers performance-thumb2">
           <div class="text-frame">
-            <div class="title">Superfast SSD storage</div>
+            <div class="title">NVIDIA® GeForce® RTX™ graphics</div>
             <div class="text">
-              Take back time for tasks that matter with superfast SSD storage. Two responsive M.2 NVMe PCIe® 3.0 SSDs
-              make massive games and apps load at blazing fast speeds, boosting your productivity. The doubled- SSD slot
-              lets you add terabytes to your overall storage, giving you the space for huge projects like complex videos
-              and 3D scenes, with space to spare for your ever-growing game library.
+              Everything from esports to AAA gaming runs fast and fluid, powered by cutting-edge GPUs up to a GeForce® RTX 3080. Built on Ampere, NVIDIA’s 2nd gen RTX architecture, these GPUs combine new streaming multiprocessors with 2nd gen RT cores and 3rd gen Tensor cores to enable the most realistic ray-traced graphics and advanced AI features. They also support NVIDIA Reflex low-latency technologies for competitive multiplayer edge and Broadcast effects that take streams to the next level.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1219,12 +1303,9 @@
         </div>
         <div class="performance-layers performance-thumb3">
           <div class="text-frame">
-            <div class="title">Superfast SSD storage</div>
+            <div class="title">Dual-channel DDR4 memory</div>
             <div class="text">
-              Take back time for tasks that matter with superfast SSD storage. Two responsive M.2 NVMe PCIe® 3.0 SSDs
-              make massive games and apps load at blazing fast speeds, boosting your productivity. The doubled- SSD slot
-              lets you add terabytes to your overall storage, giving you the space for huge projects like complex videos
-              and 3D scenes, with space to spare for your ever-growing game library.
+              Multitask like a pro with up to 64GB of dual-channel DDR4-3200 memory. Fast and responsive, this high-performance RAM stands up to any challenge. Gamers can switch gears between the latest AAA titles, streaming software, and chat with teammates without missing a beat, while serious power users and creators can run every program they need at once for peak productivity.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1234,12 +1315,9 @@
         </div>
         <div class="performance-layers performance-thumb4">
           <div class="text-frame">
-            <div class="title">Superfast SSD storage</div>
+            <div class="title">Superfast RAID 0 storage</div>
             <div class="text">
-              Take back time for tasks that matter with superfast SSD storage. Two responsive M.2 NVMe PCIe® 3.0 SSDs
-              make massive games and apps load at blazing fast speeds, boosting your productivity. The doubled- SSD slot
-              lets you add terabytes to your overall storage, giving you the space for huge projects like complex videos
-              and 3D scenes, with space to spare for your ever-growing game library.
+              Take back time for tasks that matter with superfast SSD storage up to a 2TB RAID 0 array. Two responsive M.2 NVMe PCIe® 3.0 SSDs connect directly to the CPU, bypassing bottlenecks to enable throughput up to XXXXMB/s and make massive games and apps load at blazing fast speeds. Doubling up on SSDs lets you carry terabytes of storage for an ever-growing game library, along with everything else you need to get through your day-to-day.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1256,12 +1334,9 @@
       <div class="cooling-box">
         <div class="cooling-layers cooling-thumb1">
           <div class="text-frame">
-            <div class="title">3D Flow Zone</div>
+            <div class="title">Liquid metal</div>
             <div class="text">
-              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake for the Strix SCAR
-              15/17, its hinges are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut
-              carves out the bottom of the screen to ensure that the venting below is unobstructed, while giving the
-              laptop its signature asymmetrical style.
+              Liquid metal compound from Thermal Grizzly reduces CPU temperatures by up to XX°C compared to standard thermal paste. Painting it onto CPUs is delicate work typically done by hand, but ROG commissioned custom equipment to automate the process with mechanical precision, and designed a patented internal fence to contain the compound. We’ve updated our patented process for AMD CPUs, adding a special step to protect surface-mounted components on the processor package.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1273,10 +1348,7 @@
           <div class="text-frame">
             <div class="title">3D Flow Zone</div>
             <div class="text">
-              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake for the Strix SCAR
-              15/17, its hinges are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut
-              carves out the bottom of the screen to ensure that the venting below is unobstructed, while giving the
-              laptop its signature asymmetrical style.
+              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake, the hinges on the Strix SCAR are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut carves out space below the screen to ensure that the venting is unobstructed, while giving the laptop its signature asymmetrical style.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1288,10 +1360,7 @@
           <div class="text-frame">
             <div class="title">3D Flow Zone</div>
             <div class="text">
-              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake for the Strix SCAR
-              15/17, its hinges are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut
-              carves out the bottom of the screen to ensure that the venting below is unobstructed, while giving the
-              laptop its signature asymmetrical style.
+              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake, the hinges on the Strix SCAR are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut carves out space below the screen to ensure that the venting is unobstructed, while giving the laptop its signature asymmetrical style.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1301,12 +1370,9 @@
         </div>
         <div class="cooling-layers cooling-thumb4">
           <div class="text-frame">
-            <div class="title">3D Flow Zone</div>
+            <div class="title">CoolZone keyboard</div>
             <div class="text">
-              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake for the Strix SCAR
-              15/17, its hinges are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut
-              carves out the bottom of the screen to ensure that the venting below is unobstructed, while giving the
-              laptop its signature asymmetrical style.
+              Extended gaming sessions warm up internal components and can cause the keyboard above to become uncomfortable to touch over time. To keep your fingers cool, the Strix SCAR 15/17 has strategic vents around the WASD keys that allow airflow from the fan below. This design improves comfort for longer gaming marathons by keeping surface temperatures under 30° Celsius, a reduction of up to 14% compared to competing laptops.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1316,12 +1382,9 @@
         </div>
         <div class="cooling-layers cooling-thumb5">
           <div class="text-frame">
-            <div class="title">3D Flow Zone</div>
+            <div class="title">Self-cleaning cooling 2.0</div>
             <div class="text">
-              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake for the Strix SCAR
-              15/17, its hinges are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut
-              carves out the bottom of the screen to ensure that the venting below is unobstructed, while giving the
-              laptop its signature asymmetrical style.
+              Keeping the heatsinks free of debris is critical to maintaining optimal thermal dissipation, so we developed anti-dust tunnels that catch particles and channel them away from core cooling components to prevent build-up. This self-cleaning system helps ensure consistent cooling performance over time, which improves long-term stability and overall reliability. Our latest design shortens the tunnels to make more space for airflow around the fans.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1333,10 +1396,7 @@
           <div class="text-frame">
             <div class="title">More ultrathin fins</div>
             <div class="text">
-              Thermal energy is dissipated by heatsinks in the flanks. Each one is lined with ultra-thin copper fins as
-              slim as 0.1mm, allowing higher density and lower air resistance than typical fins that are twice as thick.
-              Depending on the CPU and GPU, there are up to 284 heatsink fins totaling 178,125mm2 of surface area,
-              increasing heat dissipation by 10.4%, while reducing air resistance by 8.2%.
+              Thermal energy is dissipated by four heatsinks and fan outlets in the flanks. Each heatsink is lined with ultra-thin copper fins as slim as 0.1mm, allowing both higher density and lower air resistance than typical fins that are twice as thick. Between them, there are XXX fins for a total surface area of XXX,XXXmm2. 
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1346,12 +1406,21 @@
         </div>
         <div class="cooling-layers cooling-thumb7">
           <div class="text-frame">
-            <div class="title">3D Flow Zone</div>
+            <div class="title">Extended heat spreader</div>
             <div class="text">
-              Ample airflow is a fundamental aspect of effective cooling. To amp up cool air intake for the Strix SCAR
-              15/17, its hinges are shifted forward in front of a heavily ventilated 3D Flow Zone. A trapezoidal cut
-              carves out the bottom of the screen to ensure that the venting below is unobstructed, while giving the
-              laptop its signature asymmetrical style.
+              The comprehensive thermal design includes an extended heat spreader that absorbs heat from the CPU, GPU, VRAM, and VRM. It stretches across up to 6 heat pipes that cover the same components. This extensive thermal coverage helps sustain and extend the overall performance, reliability, and lifespan of the system.
+            </div>
+            <div class='btn-frame'>
+              <div class="prev-arrow"></div>
+              <div class="next-arrow"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cooling-layers cooling-thumb8">
+          <div class="text-frame">
+            <div class="title">The right mode for the moment</div>
+            <div class="text">
+              Gaming laptops are versatile enough to tackle a range of tasks, but requirements vary wildly, so Intelligent Cooling adapts accordingly. It automatically switches between operating modes that optimize performance and acoustics for different games and applications. Turbo mode uses the highest fan speed and clocks to sustain maximum speed,  Performance mode adjusts the clocks and cooling to lower noise levels for gaming, and Silent mode runs even quieter for lighter work and entertainment.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1371,11 +1440,7 @@
           <div class="text-frame">
             <div class="title">Lightspeed switches</div>
             <div class="text">
-              Optical mechanical switches enable rapidfire inputs with high accuracy. Instead of relying on electrical
-              contact, the trigger mechanism is a beam of light that eliminates debounce delay, taking the response time
-              down to just 0.2ms for lightning fast inputs. Built for serious, long-term gaming, each key is rated to a
-              lifespan of over 100 million presses—5x more than typical laptops. Fire off complex commands and mash
-              cooldowns with confidence.
+              Optical mechanical switches enable rapidfire inputs with high accuracy. Instead of relying on electrical contact that requires a debounce delay of 5ms to filter unwanted interference, they trigger precisely with a beam of light that takes the response time down to just 0.2ms. Built for serious, long-term gaming, the switches are rated to a lifespan of over 100 million presses—5x more than typical laptop keyboards. Fire off complex commands and mash cooldowns with confidence.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1385,13 +1450,9 @@
         </div>
         <div class="keyboard-layers keyboard-thumb2">
           <div class="text-frame">
-            <div class="title">Lightspeed switches</div>
+            <div class="title">Keyboard layout</div>
             <div class="text">
-              Optical mechanical switches enable rapidfire inputs with high accuracy. Instead of relying on electrical
-              contact, the trigger mechanism is a beam of light that eliminates debounce delay, taking the response time
-              down to just 0.2ms for lightning fast inputs. Built for serious, long-term gaming, each key is rated to a
-              lifespan of over 100 million presses—5x more than typical laptops. Fire off complex commands and mash
-              cooldowns with confidence.
+              Taking inspiration from the best desktop keyboards, the function keys are spaced for fewer misses, and enlarged directional arrows are isolated for precise finger control. Five dedicated gaming hotkeys give quick access to features like volume, mic mute, and Armoury Crate. The touchpad transforms into a digital numpad with the press of a button for easy access anytime.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1401,13 +1462,9 @@
         </div>
         <div class="keyboard-layers keyboard-thumb2">
           <div class="text-frame">
-            <div class="title">Lightspeed switches</div>
+            <div class="title">Keyboard layout</div>
             <div class="text">
-              Optical mechanical switches enable rapidfire inputs with high accuracy. Instead of relying on electrical
-              contact, the trigger mechanism is a beam of light that eliminates debounce delay, taking the response time
-              down to just 0.2ms for lightning fast inputs. Built for serious, long-term gaming, each key is rated to a
-              lifespan of over 100 million presses—5x more than typical laptops. Fire off complex commands and mash
-              cooldowns with confidence.
+              Taking inspiration from the best desktop keyboards, the function keys are spaced for fewer misses, and enlarged directional arrows are isolated for precise finger control. Five dedicated gaming hotkeys give quick access to features like volume, mic mute, and Armoury Crate. The touchpad transforms into a digital numpad with the press of a button for easy access anytime.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1432,12 +1489,9 @@
           </div>
           <div class="audio-nb"></div>
           <div class="text-frame">
-            <div class="title">Quad Speakers</div>
+            <div class="title">Quad Speakers with Dolby Atmos</div>
             <div class="text">
-              Two tweeters positioned above the keyboard fire high-frequency sound directly at you, while two woofers
-              beneath them offer deep bass, volume, and dynamic amplification by Smart Amp. This quad-speaker setup is
-              optimized by Dolby Atmos algorithms to deliver perfectly balanced audio across the sound spectrum without
-              losing clarity or detail.
+              Two tweeters and two woofers powered by Smart Amp offer richer sound with 2.8x more volume, 3x more powerful bass, and up to 3x the dynamic range of alternatives. This quad-speaker setup delivers immersive surround sound optimized by Dolby Atmos technology to deliver balanced, multidimensional audio across the full spectrum without losing clarity or detail.
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>
@@ -1449,11 +1503,7 @@
           <div class="text-frame">
             <div class="title">AI Noise-Cancelation</div>
             <div class="text">
-              Advanced Two-Way AI Noise-Cancelation works for both upstream and downstream connections, letting you
-              remove noise from your mic input and incoming feeds. Audio settings can even be customized on a per-app
-              basis, filtering specific apps like voice chat so you can have crystal clear in-game communications
-              without touching game audio. Our noise-canceling technology runs on the CPU, freeing up the GPU to
-              maximize gaming performance.
+              Advanced Two-Way AI Noise-Cancelation works for both upstream and downstream connections, letting you remove noise from your mic input and incoming feeds. Audio settings can even be customized on a per-app basis, filtering specific apps like voice chat so you can have crystal clear in-game communications without touching game audio. Our noise-canceling technology runs on the CPU, freeing up the GPU to maximize gaming performance. 
             </div>
             <div class='btn-frame'>
               <div class="prev-arrow"></div>

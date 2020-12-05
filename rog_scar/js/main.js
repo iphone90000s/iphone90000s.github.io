@@ -1,12 +1,364 @@
 let audio_video = false;
 var direction;
-$(function () {
+$(function () {       
+    /**
+     * 滾動事件
+     */
+    gsap.registerPlugin(ScrollTrigger);
 
+    ScrollTrigger.create({
+        trigger: ".design-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".design-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".performance",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".performance-section .cpu").addClass("active");
+            $(".performance-section .gpu").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".performance-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".performance-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".display-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".display-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".display-fullhd",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".dispaly-mp4").get(0).play();
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".cooling-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".cooling-section .section-inner").addClass("active");
+        },    
+    });
+    
+    
+    ScrollTrigger.create({
+        trigger: ".video-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".video-section .section-inner").addClass("active");
+        },    
+    });
+    
+    ScrollTrigger.create({
+        trigger: ".keyboard-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".keyboard-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".keyboard",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".keyboard-line").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".audio-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".audio-section .section-inner").addClass("active");
+        },    
+    });
+    
+    ScrollTrigger.create({
+        trigger: ".battery-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".battery-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".battery",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".battery").addClass("active");
+        },    
+    });
+    
+    ScrollTrigger.create({
+        trigger: ".aura-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".aura-section .section-inner").addClass("active");
+        },    
+    });
+    
+    
+    ScrollTrigger.create({
+        trigger: ".keystone-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".keystone-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".keystone",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".keystone-in").addClass("active");
+        },    
+    });
+        
+    ScrollTrigger.create({
+        trigger: ".connectivity-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+             $(".connectivity-section .section-inner").addClass("active");
+        },    
+    });
+
+    var conLock = true;
+    ScrollTrigger.create({
+        trigger: ".connectivity",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            
+            $(".connectivity .light").addClass("active");
+            $(".run-box .run-box-animate").addClass("active");
+            if (conLock) {
+                conLock = false;
+                setTimeout(function () {
+                    $(".upper-bar .bar").addClass("active");
+                $(".run-bar-inner .intel-bar .mbps font").animateNumbers(2400, true, 1000);
+                 $(".run-bar-inner .ac-bar .mbps font").animateNumbers(867, true, 1000);
+                },1000)
+                
+            }
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".io-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".io-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".exclusive-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".exclusive-section .section-inner").addClass("active");
+        },    
+    });
+
+    ScrollTrigger.create({
+        trigger: ".slider-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+        onToggle: function () {
+            $(".slider-section .section-inner").addClass("active");
+        },    
+    });
+        
+     ScrollTrigger.create({
+        trigger: ".peripherals-section",
+        start: "top 50%+=100px",
+        end: "bottom 50%+=100px",
+         onToggle: function () {
+            $(".peripherals-section .section-inner").addClass("active");
+        },    
+    });
+
+
+    $(".color-box .option-inner").click(function () {
+
+        $(".color-box .option-inner").removeClass("active");
+        $(".design-section .nb-bg").removeClass("silver");
+        $(".design-section .nb-bg").removeClass("rubber");
+        $(".design-section .nb-bg").removeClass("black");
+        $(this).addClass("active");
+        
+        if ($(this).hasClass("black")) {
+           $(".design-section .nb-bg").addClass("black");
+        }
+        if ($(this).hasClass("rubber")) {
+            $(".design-section .nb-bg").addClass("rubber");
+        }
+        if ($(this).hasClass("silver")) {
+            $(".design-section .nb-bg").addClass("silver");
+        }
+    });
     $(".audio-mp4").on('ended', function () {
         $(".audio-final").addClass("active");
         audio_video = false;
     });
 
+    $(".io-section .options .selects").click(function(){
+
+         if ($(this).hasClass("select15")) {
+            $(".io-section .options").addClass("options15");
+            $(".io-section .options").removeClass("options17");
+
+            $(".io-section .main-bg").addClass("options15");
+            $(".io-section .main-bg").removeClass("options17");
+
+            $(".port-15").addClass("active");
+            $(".port-17").removeClass("active");
+        }
+         if ($(this).hasClass("select17")) {
+            $(".io-section .options").addClass("options17");
+            $(".io-section .options").removeClass("options15");
+
+            $(".io-section .main-bg").addClass("options17");
+            $(".io-section .main-bg").removeClass("options15");
+             
+            $(".port-15").removeClass("active");
+            $(".port-17").addClass("active");
+        }
+    })
+
+    $(".popup-inner .close-btn").click(function () {        
+        $(".popup").removeClass("active");
+    })
+    $(".look-btn").click(function () {
+        $(".popup").addClass("active");
+        $(".popup-product").addClass("hide");
+        if ($(this).hasClass("look-bag")) {
+            $(".popup-back").removeClass("hide");
+        }
+        if ($(this).hasClass("look-nb")) {
+            $(".popup-nb").removeClass("hide");
+        }
+        if ($(this).hasClass("look-transformer")) {
+            $(".popup-transformer").removeClass("hide");
+        }
+        if ($(this).hasClass("look-headset")) {
+            $(".popup-headset").removeClass("hide");
+        }
+        if ($(this).hasClass("look-mouse")) {
+            $(".popup-mouse").removeClass("hide");
+        }
+    });
+
+     $(".popup-back .popup-slick-inner").slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+     });
+    
+    $(".popup-nb .popup-slick-inner").slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+    
+    $(".popup-transformer .popup-slick-inner").slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+    
+    $(".popup-headset .popup-slick-inner").slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+    
+    $(".popup-mouse .popup-slick-inner").slick({
+        dots: false,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1
+     });
+    
+    $(".popup-back .prev-arrow").click(function () {
+        $(".popup-back .popup-slick-inner").slick("slickPrev");
+    });
+    $(".popup-back .next-arrow").click(function () {
+        $(".popup-back .popup-slick-inner").slick("slickNext");
+    });
+
+    $(".popup-nb .prev-arrow").click(function () {
+        $(".popup-nb .popup-slick-inner").slick("slickPrev");
+    });
+    $(".popup-nb .next-arrow").click(function () {
+        $(".popup-nb .popup-slick-inner").slick("slickNext");
+    });
+
+    $(".popup-transformer .prev-arrow").click(function () {
+        $(".popup-transformer .popup-slick-inner").slick("slickPrev");
+    });
+    $(".popup-transformer .next-arrow").click(function () {
+        $(".popup-transformer .popup-slick-inner").slick("slickNext");
+    });
+
+    $(".popup-headset .prev-arrow").click(function () {
+        $(".popup-headset .popup-slick-inner").slick("slickPrev");
+    });
+    $(".popup-headset .next-arrow").click(function () {
+        $(".popup-headset .popup-slick-inner").slick("slickNext");
+    });
+    $(".popup-mouse .prev-arrow").click(function () {
+        $(".popup-mouse .popup-slick-inner").slick("slickPrev");
+    });
+    $(".popup-mouse .next-arrow").click(function () {
+        $(".popup-mouse .popup-slick-inner").slick("slickNext");
+    });
     /**
      * @summary 當畫面重整時，強制回到網頁最上方
      */
@@ -29,6 +381,7 @@ $(function () {
         glitch2TimeMax: 400
     });
 
+   
     /**
      * @summary design區塊的輪播
      */
@@ -103,47 +456,6 @@ $(function () {
         $(".slider-slick-content").slick("slickNext");
     });
     /**
-     * 當畫面小於1280時，slider區域的選單改為可拖曳
-     */
-    if (window.innerWidth < 1280) {
-        $(".slider-menu").slick({
-            dots: false,
-            arrows: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-        });
-    }
-
-    /**
-     * slider區域的選單個別click時，會將slider的輪播跳轉至選取的畫面
-     */
-    $(".gameFirst").click(function () {
-        $(".slider-slick-content").slick("slickGoTo", 0)
-    });
-
-    $(".gameVisual1").click(function () {
-        $(".slider-slick-content").slick("slickGoTo", 1)
-    });
-
-    $(".GameVisual2").click(function () {
-        $(".slider-slick-content").slick("slickGoTo", 2)
-    });
-
-    $(".sonicStudio").click(function () {
-        $(".slider-slick-content").slick("slickGoTo", 3)
-    });
-
-    $(".xsplit").click(function () {
-        $(".slider-slick-content").slick("slickGoTo", 4)
-    });
-
-    $(".androidApp").click(function () {
-        $(".slider-slick-content").slick("slickGoTo", 5)
-    });
-
-    /**
      * cooling區域的影片播放按鈕
      */
     $(".cooling-btn").click(function () {
@@ -169,7 +481,6 @@ $(function () {
 
     let performance＿float = 0;
     let qhd_float = 0;
-    // let float5 = 0;
     let height = document.body.clientHeight - 200;
     var beforeScrollTop = document.body.scrollTop;
     $(window).scroll(function (e) {
@@ -184,282 +495,92 @@ $(function () {
             direction = 'up';
         }
         beforeScrollTop = afterScrollTop;
-
-
-        /**
-         * 滾動到該區域時進行淡入淡出效果
-         */
-        if ($(window).scrollTop() > $(".design-section").offset().top - height) {
-            $(".design-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".performance-section").offset().top - height) {
-            $(".performance-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".display-section").offset().top - height) {
-            $(".display-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".cooling-section").offset().top - height) {
-            $(".cooling-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".video-section").offset().top - height) {
-            $(".video-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".keyboard-section").offset().top - height) {
-            $(".keyboard-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".audio-section").offset().top - height) {
-            $(".audio-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".battery-section").offset().top - height) {
-            $(".battery-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".aura-section").offset().top - height) {
-            $(".aura-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".keystone-section").offset().top - height) {
-            $(".keystone-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".connectivity-section").offset().top - height) {
-            $(".connectivity-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".io-section").offset().top - height) {
-            $(".io-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".exclusive-section").offset().top - height) {
-            $(".exclusive-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".slider-section").offset().top - height) {
-            $(".slider-section .section-inner").addClass("active");
-        }
-        if ($(window).scrollTop() > $(".peripherals-section").offset().top - height) {
-            $(".peripherals-section .section-inner").addClass("active");
-        }
-
         /**
          * rog-scar 滾動視差
          */
-        if (window.innerWidth < 732) {
-            if ($(window).scrollTop() > $(".rotate-bg").offset().top - ($(".rotate-bg").offset().top * 0.1)) {
-                if (direction == "down") {
-                    $(".rotate-bg").addClass("left");
-                    $(".rotate-bg").removeClass("right");
-                } else if (direction == "up") {
-                    $(".rotate-bg").addClass("right");
-                    $(".rotate-bg").removeClass("left");
-                }
-            }
-        } else {
-            if ($(window).scrollTop() > $(".rotate-bg").offset().top + ($(".rotate-bg").offset().top * 0.1)) {
-                if (direction == "down") {
-                    $(".rotate-bg").addClass("left");
-                    $(".rotate-bg").removeClass("right");
-                } else if (direction == "up") {
-                    $(".rotate-bg").addClass("right");
-                    $(".rotate-bg").removeClass("left");
-                }
-            }
-        }
-
-        /**
-         * performance 滾動視差
-         */
-        if (window.innerWidth < 732) {
-            if ($(window).scrollTop() > $(".performance-notebook").offset().top - ($(".performance-notebook").offset().top * 0.1)) {
-                if (direction == "down") {
-                    performance＿float -= 2.5;
-                } else if (direction == "up") {
-                    performance＿float += 2.5;
-                }
-                if (performance＿float > 30) {
-                    performance＿float = 30
-                }
-                if (performance＿float < -30) {
-                    performance＿float = -30
-                }
-                $(".performance-notebook").css({
-                    "transform": `translateY(${performance＿float}px)`
-                });
-
-                $(".cpu").addClass("active");
-                $(".gpu").addClass("active");
-            } else {
-                performance＿float = 0;
-                $(".performance-notebook").css({
-                    "transform": `translateY(${performance＿float}px)`
-                });
-            }
-        } else {
-            if ($(window).scrollTop() > $(".performance-notebook").offset().top - 200) {
-                if (direction == "down") {
-                    performance＿float -= 2.5;
-                } else if (direction == "up") {
-                    performance＿float += 2.5;
-                }
-                if (performance＿float > 30) {
-                    performance＿float = 30
-                }
-                if (performance＿float < -30) {
-                    performance＿float = -30
-                }
-                $(".performance-notebook").css({
-                    "transform": `translateY(${performance＿float}px)`
-                });
-
-                $(".cpu").addClass("active");
-                $(".gpu").addClass("active");
-            } else {
-                performance＿float = 0;
-                $(".performance-notebook").css({
-                    "transform": `translateY(${performance＿float}px)`
-                });
-            }
-        }
-
-        if ($(window).scrollTop() > $(".performance-notebook").offset().top + $(".performance-notebook").height()) {
-            performance＿float = 0;
-            $(".performance-notebook").css({
-                "transform": `translateY(${performance＿float}px)`
-            });
-        }
-
-        /**
-         * fullhd 滾動視差
-         */
-        if (window.innerWidth < 732) {
-            if ($(window).scrollTop() > $(".fullhd-notebook").offset().top - ($(".fullhd-notebook").offset().top * 0.1)) {
-                $(".dispaly-mp4").get(0).play();
-            }
-        } else {
-            if ($(window).scrollTop() > $(".fullhd-notebook").offset().top - 100) {
-                $(".dispaly-mp4").get(0).play();
-            }
-        }
-
+        // if (window.innerWidth < 732) {
+        //     if ($(window).scrollTop() > $(".rotate-bg").offset().top - ($(".rotate-bg").offset().top * 0.1)) {
+        //         if (direction == "down") {
+        //             $(".rotate-bg").addClass("left");
+        //             $(".rotate-bg").removeClass("right");
+        //         } else if (direction == "up") {
+        //             $(".rotate-bg").addClass("right");
+        //             $(".rotate-bg").removeClass("left");
+        //         }
+        //     }
+        // } else {
+        //     if ($(window).scrollTop() > $(".rotate-bg").offset().top + ($(".rotate-bg").offset().top * 0.1)) {
+        //         if (direction == "down") {
+        //             $(".rotate-bg").addClass("left");
+        //             $(".rotate-bg").removeClass("right");
+        //         } else if (direction == "up") {
+        //             $(".rotate-bg").addClass("right");
+        //             $(".rotate-bg").removeClass("left");
+        //         }
+        //     }
+        // }
 
         /**
          * qhd 滾動視差
          */
-        if (window.innerWidth < 732) {
-            if ($(window).scrollTop() > $(".qhd-notebook").offset().top - ($(".qhd-notebook").offset().top * 0.1)) {
-                if (direction == "down") {
-                    qhd_float += 2.5;
-                } else if (direction == "up") {
-                    qhd_float -= 2.5;
-                }
-                if (qhd_float > 60) {
-                    qhd_float = 60
-                }
-                if (qhd_float < -60) {
-                    qhd_float = -60
-                }
-                $(".inner-sky img").css({
-                    "left": `${qhd_float}px`,
-                    "top": `${qhd_float/2}px`,
-                });
-            } else {
-                float4 = 0;
-                $(".inner-sky img").css({
-                    "left": `${qhd_float}px`,
-                    "top": `${qhd_float}px`,
-                });
-            }
-        } else {
-            if ($(window).scrollTop() > $(".qhd-notebook").offset().top - 300) {
-                if (direction == "down") {
-                    qhd_float += 2.5;
-                } else if (direction == "up") {
-                    qhd_float -= 2.5;
-                }
-                if (qhd_float > 60) {
-                    qhd_float = 60
-                }
-                if (qhd_float < -60) {
-                    qhd_float = -60
-                }
-                $(".inner-sky img").css({
-                    "left": `${qhd_float}px`,
-                    "top": `${qhd_float/2}px`,
-                });
-            } else {
-                float4 = 0;
-                $(".inner-sky img").css({
-                    "left": `${qhd_float}px`,
-                    "top": `${qhd_float}px`,
-                });
-            }
-        }
+        // if (window.innerWidth < 732) {
+        //     if ($(window).scrollTop() > $(".qhd-notebook").offset().top - ($(".qhd-notebook").offset().top * 0.1)) {
+        //         if (direction == "down") {
+        //             qhd_float += 2.5;
+        //         } else if (direction == "up") {
+        //             qhd_float -= 2.5;
+        //         }
+        //         if (qhd_float > 60) {
+        //             qhd_float = 60
+        //         }
+        //         if (qhd_float < -60) {
+        //             qhd_float = -60
+        //         }
+        //         $(".inner-sky img").css({
+        //             "left": `${qhd_float}px`,
+        //             "top": `${qhd_float/2}px`,
+        //         });
+        //     } else {
+        //         float4 = 0;
+        //         $(".inner-sky img").css({
+        //             "left": `${qhd_float}px`,
+        //             "top": `${qhd_float}px`,
+        //         });
+        //     }
+        // } else {
+        //     if ($(window).scrollTop() > $(".qhd-notebook").offset().top - 300) {
+        //         if (direction == "down") {
+        //             qhd_float += 2.5;
+        //         } else if (direction == "up") {
+        //             qhd_float -= 2.5;
+        //         }
+        //         if (qhd_float > 60) {
+        //             qhd_float = 60
+        //         }
+        //         if (qhd_float < -60) {
+        //             qhd_float = -60
+        //         }
+        //         $(".inner-sky img").css({
+        //             "left": `${qhd_float}px`,
+        //             "top": `${qhd_float/2}px`,
+        //         });
+        //     } else {
+        //         float4 = 0;
+        //         $(".inner-sky img").css({
+        //             "left": `${qhd_float}px`,
+        //             "top": `${qhd_float}px`,
+        //         });
+        //     }
+        // }
 
 
-        if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
-            qhd_float = 0;
-            $(".inner-sky img").css({
-                "left": `${qhd_float}px`,
-                "top": `${qhd_float}px`,
-            });
-        }
-        /**
-         * cooling的數字跳動
-         */
-
-        if (window.innerWidth < 732) {
-            if ($(window).scrollTop() > $(".cooling-section").offset().top - ($(".cooling-section").height() * 0.1)) {
-                $(".run-index font").animateNumbers(39, true, 1000);
-            }
-        } else {
-            if ($(window).scrollTop() > $(".cooling-section").offset().top + ($(".cooling-section").height() * 0.1)) {
-                $(".run-index font").animateNumbers(39, true, 1000);
-            }
-        }
-
-        if (window.innerWidth < 732) {
-            if ($(window).scrollTop() > $(".keyboard-section").offset().top - ($(".keyboard-section").offset().top * 0.1)) {
-                if (direction == "down") {
-                    $(".keyboard-line").removeClass("active");
-                } else if (direction == "up") {
-                    $(".keyboard-line").addClass("active");
-                }
-            }
-        } else {
-            if ($(window).scrollTop() > $(".keyboard-section").offset().top + 200) {
-                if (direction == "down") {
-                    $(".keyboard-line").removeClass("active");
-                } else if (direction == "up") {
-                    $(".keyboard-line").addClass("active");
-                }
-            }
-        }
-
-        /**
-         * battery背景動畫
-         */
-        if ($(window).scrollTop() > $(".battery").offset().top) {
-            $(".battery").addClass("active");
-        }
-
-        /**
-         * keystone動畫
-         */
-        if ($(window).scrollTop() > $(".keystone-notebook").offset().top - 200) {
-            $(".keystone-in").addClass("active");
-        }
-
-        /**
-         * connectivity動畫
-         */
-
-        if ($(window).scrollTop() > $(".connectivity-section").offset().top + 150) {
-            $(".upper-bar .bar").addClass("active");
-            $(".run-bar-inner .intel-bar .mbps font").animateNumbers(2400, true, 1000);
-            $(".run-bar-inner .ac-bar .mbps font").animateNumbers(867, true, 1000);
-        }
-
-        /**
-         * io動畫
-         */
-
-        if ($(window).scrollTop() > $(".io-section").offset().top + 150) {
-            $(".io .usb").addClass("active");
-        }
+        // if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
+        //     qhd_float = 0;
+        //     $(".inner-sky img").css({
+        //         "left": `${qhd_float}px`,
+        //         "top": `${qhd_float}px`,
+        //     });
+        // }\
     });
 
     /**
@@ -566,7 +687,7 @@ $(function () {
     /**
      * design thumb click
      */
-    $(document).on("click", ".slick-img", function () {
+    $(document).on("click", ".design-section .slick-img", function () {
         bodyScrollHidden();
         $(".design-black-frame").removeClass("hide");
         if ($(this).hasClass("slick-thumb1")) {

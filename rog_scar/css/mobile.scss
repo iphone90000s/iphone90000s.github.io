@@ -20,6 +20,7 @@
 
    .performance .performance-btn {
       width: 100%;
+      bottom: 10px;
    }
 
    .visual-section .imgSize {
@@ -97,7 +98,7 @@
    }
 
    .design-section {
-      margin-top: 0;
+      margin-top: 20px;
    }
 
    .gradient-title {
@@ -165,13 +166,23 @@
    }
 
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .title {
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 18px;
+      margin: 10px 0;
       text-align: center;
+
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-prev-arrow,
+   .nvidia .nvidia-slick-container .nvidia-next-arrow {
+      transform: scale(0.5);
+   }
+
+   .nvidia .nvidia-slick-container .nvidia-slick-content ul {
+      display: none !important;
    }
 
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .text .txt {
-      font-size: 16px;
+      font-size: 12px;
    }
 
    .nvidia .nvidia-slick-container .nvidia-slick-content ul {
@@ -183,14 +194,17 @@
    }
 
    .hl-style {
-      width: calc(379px * 0.6);
+      width: 200px;
       height: auto;
+      margin: 10px auto;
    }
 
    .display .display-qhd,
    .display .display-fullhd {
-      width: calc(953px * 0.3);
-      height: calc(612px * 0.3);
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
+      background-size: 95% auto;
+      background-position: center;
    }
 
    .display .fullhd-bg.blur-bg {
@@ -201,16 +215,16 @@
    }
 
    .inner-video {
-      left: 30px;
-      top: 3px;
-      width: calc(750px * 0.3);
+      left: 205px;
+      top: 116px;
+      width: 310px;
    }
 
    .display .inner-sky {
-      left: 33px;
-      top: 3px;
-      width: calc(750px * 0.3);
-      height: calc(450px * 0.3);
+      left: 205px;
+      top: 116px;
+      width: 310px;
+      height: 200px;
    }
 
    .display-section .blur-bg.qhd-bg {
@@ -227,7 +241,7 @@
    }
 
    .display .display-notebook .inner-sky img {
-      width: calc(1700px * 0.3);
+      width: 600px;
    }
 
    .cooling-section {
@@ -236,6 +250,8 @@
 
    .run-bar-box {
       max-width: 300px;
+      margin: 0px auto 0;
+      transform: scale(0.6);
    }
 
    .cooling-section .cooling-bg .bg-set {
@@ -450,13 +466,17 @@
       margin-top: 0;
    }
 
+   .slider .slider-slick-content .text {
+      width: auto;
+   }
+
    .slider {
       margin: 0;
    }
 
    .armoury .armoury-info {
-      width: calc(1440px * 0.25);
-      height: calc(911px * 0.25);
+      width: calc(1920px * 0.25);
+      height: calc(1400px * 0.25);
    }
 
    .armoury {
@@ -486,7 +506,7 @@
    }
 
    .peripherals {
-      margin-top: 0;
+      margin-top: -150px;
    }
 
    .peripherals .bg-set {
@@ -535,7 +555,7 @@
    }
 
    .menu {
-      top: 0;
+      top: -20px;
       left: 0;
       transform: scale(0.75);
    }
@@ -630,6 +650,9 @@
 
    .nvidia {
       margin: 50px 0;
+      padding: 50px 0;
+      background-size: cover;
+      height: 460px;
    }
 
    .nvidia .nvidia-slick-container {
@@ -665,6 +688,17 @@
       height: calc(1315px * 0.3);
    }
 
+   .connectivity .light {
+      width: calc(1920px * 0.375);
+      height: calc(1200px * 0.375);
+   }
+
+   .run-box {
+      width: 300px;
+      top: 180px;
+      height: 173px;
+   }
+
    .keystone .main-bg {
       width: calc(1920px * 0.375);
       height: calc(1200px * 0.375);
@@ -673,7 +707,13 @@
    .connectivity .main-bg {
       width: calc(1920px * 0.375);
       height: calc(1320px * 0.375);
-      background-size: 80% auto;
+   }
+
+   .connectivity .nb {
+      width: calc(1920px * 0.375);
+      height: calc(1320px * 0.375);
+      background-size: 95% auto;
+      background-position: center;
    }
 
    .run-bar-box .run-bar-inner .ac-bar,
@@ -746,7 +786,12 @@
       position: relative;
       display: table;
       width: 320px;
-      top: -470px;
+      top: -400px;
+   }
+
+   .peripherals .look-btn {
+      width: 20px;
+      height: 20px;
    }
 
    .aura-section .main-bg {
@@ -755,8 +800,8 @@
    }
 
    .peripherals .main-bg {
-      width: calc(1920px * 0.375);
-      height: calc(1400px * 0.375);
+      width: calc(1920px * 0.275);
+      height: calc(1400px * 0.275);
    }
 
    .nvidia .nvidia-slick-container,
@@ -937,93 +982,93 @@
 
 //bg img
 @media only screen and (max-width: 731px) {
-   .audio-section .main-bg {
-      background-image: url(../img/audio-bg_xs.png);
-   }
+   // .audio-section .main-bg {
+   //    background-image: url(../img/audio-bg_xs.png);
+   // }
 
-   .visual-section .main-bg {
-      background-image: url(../img/main-banner_xs.png);
-   }
+   // .visual-section .main-bg {
+   //    background-image: url(../img/main-banner_xs.png);
+   // }
 
-   .visual-section .blur-bg .main-bg {
-      background-image: url(../img/video-bg_xs.png);
-   }
+   // .visual-section .blur-bg .main-bg {
+   //    background-image: url(../img/video-bg_xs.png);
+   // }
 
-   .design-section .main-bg {
-      background-image: url(../img/design-bg-animate-3rd_xs.png);
-   }
+   // .design-section .main-bg {
+   //    background-image: url(../img/design-bg-animate-3rd_xs.png);
+   // }
 
-   .performance-section .main-bg {
-      background-image: url(../img/performance-bg_xs.png);
-   }
+   // .performance-section .main-bg {
+   //    background-image: url(../img/performance-bg_xs.png);
+   // }
 
-   .display-section .blur-bg.fullhd-bg .main-bg {
-      background-image: url(../img/display-bg_xs.png);
-   }
+   // .display-section .blur-bg.fullhd-bg .main-bg {
+   //    background-image: url(../img/display-bg_xs.png);
+   // }
 
-   .display-section .blur-bg.qhd-bg .main-bg {
-      background-image: url(../img/qhd-bg_xs.png);
-   }
+   // .display-section .blur-bg.qhd-bg .main-bg {
+   //    background-image: url(../img/qhd-bg_xs.png);
+   // }
 
-   .cooling-section .cooling-bg .main-bg {
-      background-image: url(../img/cooling-bg_xs.png);
-   }
+   // .cooling-section .cooling-bg .main-bg {
+   //    background-image: url(../img/cooling-bg_xs.png);
+   // }
 
-   .keyboard .main-bg {
-      background-image: url(../img/keyboard-bg_xs.png);
-   }
+   // .keyboard .main-bg {
+   //    background-image: url(../img/keyboard-bg_xs.png);
+   // }
 
-   .keyboard .keyboard-line {
-      background-image: url(../img/keyboard-line_xs.png);
-   }
+   // .keyboard .keyboard-line {
+   //    background-image: url(../img/keyboard-line_xs.png);
+   // }
 
-   .battery .battery-bg .main-bg {
-      background-image: url(../img/battery-bg-step1_xs.png);
-   }
+   // .battery .battery-bg .main-bg {
+   //    background-image: url(../img/battery-bg-step1_xs.png);
+   // }
 
-   .battery .battery-bg .animate-bg-nd {
-      background-image: url(../img/battery-bg-step2_xs.png);
-   }
+   // .battery .battery-bg .animate-bg-nd {
+   //    background-image: url(../img/battery-bg-step2_xs.png);
+   // }
 
-   .battery .battery-bg .animate-bg-rd {
-      background-image: url(../img/battery-bg-step3_xs.png);
-   }
+   // .battery .battery-bg .animate-bg-rd {
+   //    background-image: url(../img/battery-bg-step3_xs.png);
+   // }
 
-   .keystone .main-bg {
-      background-image: url(../img/keystone-bg_xs.png);
-   }
+   // .keystone .main-bg {
+   //    background-image: url(../img/keystone-bg_xs.png);
+   // }
 
-   .connectivity .main-bg {
-      background-image: url(../img/connectivity-bg_xs.png);
-   }
+   // .connectivity .main-bg {
+   //    background-image: url(../img/connectivity-bg_xs.png);
+   // }
 
-   .io-section .main-bg {
-      background-image: url(../img/io-bg_xs.png);
-   }
+   // .io-section .main-bg {
+   //    background-image: url(../img/io-bg_xs.png);
+   // }
 
-   .armoury .main-bg {
-      background-image: url(../img/armorycrate-bg_xs.png);
-   }
+   // .armoury .main-bg {
+   //    background-image: url(../img/armorycrate-bg_xs.png);
+   // }
 
-   .peripherals .main-bg {
-      background-image: url(../img/peripherals-bg_xs.png);
-   }
+   // .peripherals .main-bg {
+   //    background-image: url(../img/peripherals-bg_xs.png);
+   // }
 
-   .aura-section .main-bg {
-      background-image: url(../img/aura-bg_xs.png);
-   }
+   // .aura-section .main-bg {
+   //    background-image: url(../img/aura-bg_xs.png);
+   // }
 
-   .cooling-section .cooling-bg .cooling-animate {
-      animation-name: cooling-bg_xs;
-   }
+   // .cooling-section .cooling-bg .cooling-animate {
+   //    animation-name: cooling-bg_xs;
+   // }
 
-   .design-section .rotate-bg.left {
-      animation-name: rotate-bg1_xs;
-   }
+   // .design-section .rotate-bg.left {
+   //    animation-name: rotate-bg1_xs;
+   // }
 
-   .design-section .rotate-bg.right {
-      animation-name: rotate-bg2_xs;
-   }
+   // .design-section .rotate-bg.right {
+   //    animation-name: rotate-bg2_xs;
+   // }
 
    .slider .slider-slick-content .slider-slick-list {
       height: auto;
@@ -1035,5 +1080,179 @@
 
    .nvidia .nvidia-slick-container .nvidia-slick-content .list .img {
       margin: 0;
+   }
+
+   .influencer-section .main-bg {
+      width: 720px;
+      height: 300px;
+   }
+
+   .influencer-section .int {
+      left: 13.5%;
+      transform: scale(0.5);
+   }
+
+   .design-section .nb-bg {
+      width: calc(1920px * 0.375);
+      height: calc(1470px * 0.375);
+
+   }
+
+   .port-int .line {
+      background-size: 100% 100%;
+   }
+
+   .port-int {
+      font-size: 12px;
+   }
+
+   .port-17 .txt {
+      transform: translate(20px, 0px);
+   }
+
+   .io-section {
+      overflow-y: initial;
+   }
+
+   .port-15 .ports-gen-c .txt,
+   .port-17 .ports-gen-c .txt {
+      transform: translate(20px, -20px);
+      width: 150px;
+   }
+
+   .port-15 .ports-gen-a,
+   .port-17 .ports-gen-a {
+      left: 230px;
+      top: 244px;
+   }
+
+   .port-15 .ports-gen-a .line,
+   .port-17 .ports-gen-a .line {
+      height: 130px;
+   }
+
+   .port-15 .ports-gen-c,
+   .port-17 .ports-gen-c {
+      left: 240px;
+      top: 244px;
+   }
+
+   .port-15 .ports-gen-c .line,
+   .port-17 .ports-gen-c .line {
+      height: 94px;
+   }
+
+   .port-15 .ports-hdmi,
+   .port-17 .ports-hdmi {
+      left: 253px;
+      top: 244px;
+   }
+
+   .port-15 .ports-hdmi .line,
+   .port-17 .ports-hdmi .line {
+      height: 62px;
+
+      .txt {
+         transform: translate(20px, -10px);
+      }
+   }
+
+   .port-15 .ports-rj45,
+   .port-17 .ports-rj45 {
+      left: 270px;
+      top: 244px;
+   }
+
+   .port-15 .ports-rj45 .line,
+   .port-17 .ports-rj45 .line {
+      height: 34px;
+   }
+
+   .port-15 .ports-gen-a2,
+   .port-17 .ports-gen-a2 {
+      left: 460px;
+      top: 194px;
+   }
+
+   .port-15 .ports-gen-a2 .line,
+   .port-17 .ports-gen-a2 .line {
+      height: 107px;
+   }
+
+   .port-15 .ports-gen-a2 .txt,
+   .port-17 .ports-gen-a2 .txt {
+      transform: translate(-68px, -20px);
+      width: 70px;
+   }
+
+   .port-15 .ports-audio-jack,
+   .port-17 .ports-audio-jack {
+      left: 490px;
+      top: 181px;
+   }
+
+   .port-15 .ports-audio-jack .line,
+   .port-17 .ports-audio-jack .line {
+      height: 167px;
+   }
+
+   .port-15 .ports-audio-jack .txt,
+   .port-17 .ports-audio-jack .txt {
+      transform: translate(-60px, -10px);
+   }
+
+   .peripherals .look-btn.look-bag {
+      top: 130px;
+      left: 210px;
+   }
+
+   .peripherals .look-btn.look-nb {
+      top: 160px;
+      left: 260px;
+   }
+
+   .peripherals .look-btn.look-transformer {
+      top: 220px;
+      left: 370px;
+   }
+
+   .peripherals-section .popup .popup-inner .title {
+      font-size: 20px;
+   }
+
+   .peripherals-section .popup .popup-other .popup-option {
+      width: 75px;
+      margin: 0 5px;
+      height: 75px;
+   }
+
+   .peripherals-section .popup .popup-other {
+      margin-top: 40px;
+   }
+
+   .peripherals .look-btn.look-headset {
+      top: 300px;
+      left: 140px;
+   }
+
+   .peripherals .look-btn.look-mouse {
+      top: 310px;
+      left: 340px;
+
+   }
+
+   .peripherals-section .popup .popup-inner {
+      width: 220px;
+      height: 320px;
+      padding: 20px 20px;
+   }
+
+   .peripherals-section .popup .popup-inner .popup-slick-img {
+      height: 100px;
+   }
+
+   .io-section .options {
+      background-repeat: no-repeat;
+      top: -30px;
    }
 }
