@@ -99,8 +99,9 @@
 
       .influencer-section .left-box {
          transform: scale(0.534);
-         left: -60px;
-         top: 0px;
+         left: 170px;
+         top: 60px;
+         z-index: 10;
       }
 
       .influencer-section .right-box {
@@ -410,11 +411,16 @@
       }
 
       .audio-section .bottom-bg .learn-more {
-         top: calc(150px * 0.534);
+         top: -30px;
       }
 
       .audio-section .bottom-bg .text {
          margin-top: -80px;
+         transform: translateY(-60px);
+      }
+
+      .overviewContent .container .battery-section video {
+         width: 100%;
       }
 
       .battery-section .top-bg {
@@ -441,7 +447,7 @@
       .battery-section .scroll-frame {
          width: calc(930px * 0.534);
          height: calc(522px * 0.534);
-         top: calc(270px * 0.534);
+         top: calc(204px * 0.534);
       }
 
       .connectivity-section .bar-frame .ac-bar-box .mbps,
@@ -512,7 +518,6 @@
       }
 
       .connectivity-section .circle-frame {
-         transform: translateX(-50%);
          top: calc(80px * 0.534);
          transform-origin: top;
          width: 650px;
@@ -602,6 +607,183 @@
       .bundle-section .bundle-bg {
          width: 1024px;
          height: 700px;
+      }
+   }
+
+   .overviewContent .container .slick-section .slick-container .slick-box {
+      width: 500px;
+   }
+
+   .overviewContent .container .slick-section .bar {
+      width: 350px;
+   }
+
+   .overviewContent .container .display-section {
+      height: 1415px;
+   }
+
+   .overviewContent .container .display-section .main-bg,
+   .overviewContent .container .display-section .main-bg.hz {
+      background-position: center 150px;
+   }
+
+   .overviewContent .container .display-section .switch-box {
+      margin: 50px auto 0;
+   }
+
+   .overviewContent .container .audio-section .main-bg.audio-nb {
+      width: calc(1920px * 0.534);
+      height: calc(1409px * 0.534);
+   }
+
+   .overviewContent .container .keyboard-section .main-bg {
+      width: 1280px;
+      height: 980px;
+   }
+
+   .overviewContent .container .keyboard-section .keyboard-nb {
+      width: 1280px;
+      height: 980px;
+      background-position: center -200px;
+   }
+
+   .overviewContent .container .keyboard-section .learn-more {
+      position: absolute;
+      bottom: 30px;
+   }
+
+   .aura-section .product-box {
+      transform: scale(0.5);
+      transform-origin: top;
+      width: 720px;
+   }
+
+   .overviewContent .container .aura-section .main-bg {
+      height: 1000px;
+   }
+
+   .aura-section .color-box {
+      transform-origin: top;
+      transform: scale(0.5) translateY(-520px);
+   }
+
+   .overviewContent .container .connectivity-section .bar-frame {
+      transform: translateX(-50%) scale(0.75);
+      width: 650px;
+      top: 60px;
+   }
+
+   .overviewContent .container .bundle-section .switch {
+      width: 650px;
+   }
+
+   .overviewContent .container .bundle-section .switch .switch-box .switch-content {
+      font-size: 16px;
+   }
+
+   .punk-look {
+      .look-btn.look-bag {
+         top: 140px;
+         left: 430px;
+      }
+
+      .look-btn.look-nb {
+         top: 220px;
+         left: 500px;
+      }
+
+      .look-btn.look-transformer {
+         top: 380px;
+         left: 710px;
+      }
+
+      .look-btn.look-headset {
+         top: 500px;
+         left: 280px;
+      }
+
+      .look-btn.look-mouse {
+         top: 530px;
+         left: 690px;
+      }
+   }
+
+
+
+   .popup .popup-other .popup-option {
+
+      width: 130px;
+      height: 130px;
+   }
+
+   .popup .popup-inner {
+      width: 620px;
+      height: 580px;
+   }
+
+   .popup .popup-inner .popup-slick-img {
+      height: 322px;
+   }
+
+   .design-box .design-layers .text-frame,
+   .performance-box .performance-layers .text-frame,
+   .cooling-box .cooling-layers .text-frame,
+   .keyboard-box .keyboard-layers .text-frame,
+   .audio-box .audio-layers .text-frame {
+      top: 270px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .audio-nb,
+   .audio-box .audio-layers,
+   .keyboard-box .keyboard-layers,
+   .cooling-box .cooling-layers,
+   .performance-box .performance-layers,
+   .design-box .design-layers {
+      width: 1600px;
+      height: 896px;
+   }
+
+   .keyboard-box .keyboard-layers .text-frame,
+   .cooling-box .cooling-layers .text-frame,
+   .design-box .design-layers .text-frame {
+      left: 550px;
+   }
+
+   .audio-box .audio-layers .text-frame,
+   .performance-box .performance-layers.active .text-frame {
+      left: 550px;
+   }
+
+   .overviewContent .container .cover-section .learn-more {
+      bottom: 50px;
+   }
+
+   .look-btn {
+      width: 25px;
+      height: 25px;
+   }
+
+   .gray-look {
+      .look-btn.look-bag {
+         top: 140px;
+         left: 630px;
+      }
+
+      .look-btn.look-nb {
+         top: 150px;
+         left: 410px;
+      }
+
+      .look-btn.look-transformer {
+         top: 390px;
+         left: 660px;
+
+      }
+
+
+      .look-btn.look-mouse {
+         top: 460px;
+         left: 580px;
       }
    }
 }

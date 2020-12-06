@@ -91,8 +91,9 @@
 
       .influencer-section .left-box {
          transform: scale(0.67);
-         left: calc(calc(50% - 560px) * 0.67);
-         top: calc(130px * 0.67);
+         left: calc(50% - 150px);
+         top: 130px;
+         z-index: 10;
       }
 
       .influencer-section .right-box {
@@ -332,11 +333,12 @@
       }
 
       .audio-section .bottom-bg .learn-more {
-         top: 115px;
+         top: 0;
       }
 
       .audio-section .bottom-bg .text {
          margin-top: -80px;
+         transform: translateY(-50px);
       }
 
       .battery-section .top-bg {
@@ -353,7 +355,7 @@
       .battery-section .scroll-frame {
          width: calc(930px * 0.67);
          height: calc(522px * 0.67);
-         top: calc(270px * 0.67);
+         top: calc(204px * 0.67);
       }
 
       .connectivity-section .main-bg.wifi-bg {
@@ -366,13 +368,14 @@
       }
 
       .connectivity-section .circle-frame {
-         transform: translateX(-50%) scale(0.67);
+         transform: scale(0.67);
          top: calc(130px * 0.67);
          transform-origin: top;
       }
 
       .connectivity-section .bar-frame {
-         transform: scale(0.67);
+         transform: translateX(-50%) scale(0.67);
+         top: 0;
       }
 
       .io-section .io-port {
@@ -426,6 +429,141 @@
       .bundle-section .bundle-bg {
          width: 1280px;
          height: 800px;
+      }
+   }
+
+   .overviewContent .container .slick-section .slick-container .slick-box {
+      width: 700px;
+   }
+
+   .overviewContent .container .slick-section .bar {
+      width: 550px;
+   }
+
+   .overviewContent .container .keyboard-section .main-bg {
+      width: 1440px;
+      height: 1080px;
+   }
+
+   .overviewContent .container .keyboard-section .keyboard-nb {
+      height: 960px;
+   }
+
+   .overviewContent .container .aura-section .product-box {
+      transform: scale(0.5);
+      transform-origin: center top;
+   }
+
+   .overviewContent .container .aura-section .color-box {
+      transform-origin: top;
+      transform: scale(0.5) translateY(-520px);
+   }
+
+   .overviewContent .container .aura-section .main-bg {
+      width: 1440px;
+      height: 900px;
+   }
+
+   .punk-look {
+      .look-btn.look-bag {
+         top: 140px;
+         left: 510px;
+      }
+
+      .look-btn.look-nb {
+         top: 240px;
+         left: 630px;
+      }
+
+      .look-btn.look-transformer {
+         top: 430px;
+         left: 900px;
+      }
+
+      .look-btn.look-headset {
+         top: 600px;
+         left: 340px;
+      }
+
+      .look-btn.look-mouse {
+         top: 620px;
+         left: 860px;
+      }
+
+   }
+
+   .popup .popup-other .popup-option {
+
+      width: 130px;
+      height: 130px;
+   }
+
+   .popup .popup-inner {
+      width: 620px;
+      height: 580px;
+   }
+
+   .popup .popup-inner .popup-slick-img {
+      height: 322px;
+   }
+
+   .overviewContent .container .keyboard-section .learn-more {
+      bottom: 30px;
+   }
+
+   .design-box .design-layers .text-frame,
+   .performance-box .performance-layers .text-frame,
+   .cooling-box .cooling-layers .text-frame,
+   .keyboard-box .keyboard-layers .text-frame,
+   .audio-box .audio-layers .text-frame {
+      top: 270px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .audio-nb,
+   .audio-box .audio-layers,
+   .keyboard-box .keyboard-layers,
+   .cooling-box .cooling-layers,
+   .performance-box .performance-layers,
+   .design-box .design-layers {
+      width: 1600px;
+      height: 896px;
+   }
+
+   .keyboard-box .keyboard-layers .text-frame,
+   .cooling-box .cooling-layers .text-frame,
+   .design-box .design-layers .text-frame {
+      left: 750px;
+   }
+
+   .audio-box .audio-layers .text-frame,
+   .performance-box .performance-layers.active .text-frame {
+      left: 350px;
+   }
+
+   .overviewContent .container .cover-section .learn-more {
+      bottom: 50px;
+   }
+
+   .gray-look {
+      .look-btn.look-bag {
+         top: 140px;
+         left: 770px;
+      }
+
+      .look-btn.look-nb {
+         top: 150px;
+         left: 510px;
+      }
+
+      .look-btn.look-transformer {
+         top: 450px;
+         left: 840px;
+      }
+
+
+      .look-btn.look-mouse {
+         top: 540px;
+         left: 740px;
       }
    }
 }

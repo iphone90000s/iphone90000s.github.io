@@ -207,8 +207,8 @@
       }
 
       .cover-section .text.light {
-         left: calc(510px * 0.83);
-         top: calc(260px * 0.83);
+         left: calc(510px * 0.75);
+         top: calc(260px * 0.75);
 
          .hide-text {
             left: calc(-240px * 0.83);
@@ -216,8 +216,8 @@
       }
 
       .cover-section .text.durability {
-         left: calc(950px * 0.83);
-         top: calc(1190px * 0.83);
+         left: calc(950px * 0.75);
+         top: calc(1190px * 0.75);
 
          .hide-text {
             left: calc(40px * 0.83);
@@ -226,8 +226,8 @@
       }
 
       .cover-section .text.smaller {
-         left: calc(600px * 0.83);
-         top: calc(2080px * 0.83);
+         left: calc(600px * 0.75);
+         top: calc(2080px * 0.75);
 
          .hide-text {
             left: calc(-220px * 0.83);
@@ -236,8 +236,8 @@
       }
 
       .cover-section .text.bigger {
-         left: calc(920px * 0.83);
-         top: calc(3010px * 0.83);
+         left: calc(920px * 0.75);
+         top: calc(3010px * 0.75);
 
          .hide-text {
             left: calc(-140px * 0.83);
@@ -432,13 +432,13 @@
       .battery-section .main-bg.battery-nb,
       .battery-section .main-bg.battery-bg {
          width: 1440px;
-         height: 960px;
+         height: 900px;
       }
 
       .battery-section .scroll-frame {
          width: 700px;
-         height: 432px;
-         top: 220px;
+         height: 395px;
+         top: 140px;
       }
 
       .connectivity-section .circle-frame .circle-box {
@@ -474,14 +474,14 @@
       }
 
       .connectivity-section .circle-frame {
-         transform: translateX(-50%) scale(0.77);
          top: 40px;
          transform-origin: top;
       }
 
       .connectivity-section .bar-frame {
-         transform: scale(0.77);
-         margin: 40px auto 0;
+         transform: translateX(-50%) scale(0.77);
+         margin: 10px auto 0;
+         transform-origin: center top;
       }
 
       .io-section .io-port {
@@ -539,5 +539,140 @@
          font-size: 14px;
          width: 270px;
       }
+   }
+
+   .overviewContent .container .keyboard-section .keyboard-nb,
+   .overviewContent .container .keyboard-section .main-bg {
+      width: 1440px;
+      height: 1060px;
+   }
+
+   .overviewContent .container .aura-section .main-bg {
+      width: 1440px;
+      height: 900px;
+      height: 1200px;
+      background-size: cover;
+   }
+
+   .overviewContent .container .keyboard-section {
+      overflow-y: initial;
+   }
+
+   .overviewContent .container .slick-section .slick-container .slick-box {
+      width: 800px;
+   }
+
+   .overviewContent .container .slick-section .bar {
+      width: 650px;
+   }
+
+   .overviewContent .container .influencer-section .left-box {
+      left: calc(50% - 60px);
+      top: 210px;
+      z-index: 10;
+   }
+
+   .overviewContent .container .audio-section .main-bg.audio-nb {
+      width: 1440px;
+      height: 1100px;
+   }
+
+   .overviewContent .container .aura-section .product-box {
+      transform: scale(0.75);
+      transform-origin: top;
+      margin: 10px auto 0;
+   }
+
+   .overviewContent .container .aura-section .color-box {
+      margin-top: -50px;
+   }
+
+   .gray-look {
+
+      .look-btn.look-bag {
+         top: 190px;
+         left: 850px;
+      }
+
+      .look-btn.look-nb {
+         top: 200px;
+         left: 580px;
+      }
+
+      .look-btn.look-transformer {
+         top: 540px;
+         left: 960px;
+      }
+
+
+      .look-btn.look-mouse {
+         top: 630px;
+         left: 820px;
+      }
+   }
+
+   .punk-look {
+      .look-btn.look-bag {
+         top: 190px;
+         left: 600px;
+      }
+
+      .look-btn.look-nb {
+         top: 310px;
+         left: 710px;
+      }
+
+      .look-btn.look-transformer {
+         top: 510px;
+         left: 990px;
+      }
+
+      .look-btn.look-headset {
+         top: 690px;
+         left: 410px;
+      }
+
+      .look-btn.look-mouse {
+         top: 720px;
+         left: 990px;
+      }
+   }
+
+
+   .design-box .design-layers .text-frame,
+   .performance-box .performance-layers .text-frame,
+   .cooling-box .cooling-layers .text-frame,
+   .keyboard-box .keyboard-layers .text-frame,
+   .audio-box .audio-layers .text-frame {
+      top: 270px;
+   }
+
+   .audio-box .audio-layers.audio-thumb1 .audio-nb,
+   .audio-box .audio-layers,
+   .keyboard-box .keyboard-layers,
+   .cooling-box .cooling-layers,
+   .performance-box .performance-layers,
+   .design-box .design-layers {
+      width: 1600px;
+      height: 896px;
+   }
+
+   .keyboard-box .keyboard-layers .text-frame,
+   .cooling-box .cooling-layers .text-frame,
+   .design-box .design-layers .text-frame {
+      left: 750px;
+   }
+
+   .audio-box .audio-layers .text-frame,
+   .performance-box .performance-layers.active .text-frame {
+      left: 350px;
+   }
+
+   .overviewContent .container .keyboard-section .keyboard-nb {
+      background-position: center -260px;
+   }
+
+   .overviewContent .container .keyboard-section .learn-more {
+      bottom: 20px;
    }
 }
