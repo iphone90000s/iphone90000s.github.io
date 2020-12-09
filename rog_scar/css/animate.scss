@@ -325,32 +325,45 @@
 
 @keyframes cooling-bg {
     10% {
-        background-image: url("../img/cooling-animate-1st.png");
+        background-image: url("../img/sequece01.png");
     }
 
-    25% {
-        background-image: url("../img/cooling-animate-2nd.png");
+    20% {
+        background-image: url("../img/sequece02.png");
+    }
+
+    30% {
+        background-image: url("../img/sequece03.png");
     }
 
     40% {
-        background-image: url("../img/cooling-animate-3rd.png");
+        background-image: url("../img/sequece04.png");
     }
 
-    55% {
-        background-image: url("../img/cooling-animate-4th.png");
+    50% {
+        background-image: url("../img/sequece05.png");
+    }
+
+    60% {
+        background-image: none;
     }
 
     70% {
-        background-image: url("../img/cooling-animate-5th.png");
+        background-image: url("../img/sequece07.png");
+    }
+
+    80% {
+        background-image: url("../img/sequece08.png");
     }
 
     90% {
-        background-image: url("../img/cooling-animate-6th.png");
+        background-image: url("../img/sequece09.png");
     }
 
     100% {
-        background-image: none;
+        background-image: url("../img/sequece10.png");
     }
+
 }
 
 @keyframes cooling-bg_2x {
@@ -410,6 +423,108 @@
 
     100% {
         background-image: none;
+    }
+}
+
+@keyframes keystone-ani {
+    0% {
+        background-image: url("../img/keystone-in1.png");
+    }
+
+    16% {
+        background-image: url("../img/keystone-in2.png");
+    }
+
+    33% {
+        background-image: url("../img/keystone-in3.png");
+    }
+
+    50% {
+        background-image: url("../img/keystone-in4.png");
+    }
+
+    66% {
+        background-image: url("../img/keystone-in5.png");
+    }
+
+    82% {
+        background-image: url("../img/keystone-in6.png");
+    }
+
+    100% {
+        background-image: url("../img/keystone-in7.png");
+    }
+
+}
+
+
+@keyframes keystone-seq {
+    0% {
+        background-image: url("../img/k-seq01.png");
+    }
+
+    6.6% {
+        background-image: url("../img/k-seq02.png");
+    }
+
+    12% {
+        background-image: url("../img/k-seq03.png");
+    }
+
+    19% {
+        background-image: url("../img/k-seq04.png");
+    }
+
+    26% {
+        background-image: url("../img/k-seq05.png");
+    }
+
+    32% {
+        background-image: url("../img/k-seq05.png");
+    }
+
+    38% {
+        background-image: url("../img/k-seq07.png");
+    }
+
+    43% {
+        background-image: url("../img/k-seq08.png");
+    }
+
+    49% {
+        background-image: url("../img/k-seq09.png");
+    }
+
+    55% {
+        background-image: url("../img/k-seq10.png");
+    }
+
+    61% {
+        background-image: url("../img/k-seq11.png");
+    }
+
+    68% {
+        background-image: url("../img/k-seq12.png");
+    }
+
+    74% {
+        background-image: url("../img/k-seq13.png");
+    }
+
+    80% {
+        background-image: url("../img/k-seq14.png");
+    }
+
+    87% {
+        background-image: url("../img/k-seq14.png");
+    }
+
+    94% {
+        background-image: url("../img/k-seq16.png");
+    }
+
+    100% {
+        background-image: url("../img/k-seq16.png");
     }
 }
 

@@ -1,4 +1,30 @@
 @media only screen and (max-width: 1023px) and (min-width: 732px) {
+   .overviewContent .container .belt-section .belt-bg {
+      font-size: 30px;
+      height: 70px;
+   }
+
+   .punk-look .look-btn.look-pad {
+      top: 520px;
+      left: 612px;
+   }
+
+   .overviewContent .container .belt-section .belt-bg .float1-box {
+      transform: translateY(0px) skew(-8deg, 0deg);
+   }
+
+   .overviewContent .container .belt-section .belt-bg .float2-box {
+      transform: translateY(-5px) skew(-8deg, 0deg);
+   }
+
+   .overviewContent .container .belt-section .belt-bg .float3-box {
+      transform: translateY(-10px) skew(-8deg, 0deg);
+   }
+
+   .overviewContent .scar-container.keyboard-section {
+      padding: 50px 0 0;
+   }
+
    .overviewContent .container {
 
       .product-section .title .rog-strix {

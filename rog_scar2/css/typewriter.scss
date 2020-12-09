@@ -1,0 +1,23 @@
+.typewriter{
+  display: inline-block;
+  font-family: 'Source Code Pro', monospace;
+  position: relative;
+}
+.cursor:before{
+  content:'';
+  display:inline-block;
+  width: .5em;
+  height: .875em;
+  margin-left:3px;
+  background-color:#4ae9d3;
+  animation-name:blink;
+  animation-duration:0.4s;
+  animation-iteration-count: infinite;
+  position: absolute;
+  bottom: 0.125em;
+  left: 100%;
+}
+@keyframes blink {
+  0%, 49% {opacity:1; }
+  50%, 100% {opacity:0; }
+}

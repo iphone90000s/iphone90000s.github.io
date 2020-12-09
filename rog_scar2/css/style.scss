@@ -176,7 +176,8 @@ body {
       .box-bg-revert {
         left: -6%;
         width: 112%;
-        top: -37%;
+        top: -25%;
+        transform: skewX(-25deg);
         mix-blend-mode: exclusion;
       }
 
@@ -792,6 +793,7 @@ body {
     position: relative;
     z-index: 20;
     letter-spacing: 2px;
+    transform: skew(-8deg, 0deg);
 
     &:before {
       content: attr(data-text);
@@ -1117,7 +1119,7 @@ body {
       .name-box {
         display: flex;
         color: #fff;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         font-size: 24px;
         text-align: center;
 
@@ -1189,7 +1191,7 @@ body {
         color: #fff;
         text-align: center;
         font-size: 24px;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
 
         .fhd-txt,
         .qhd-txt {
@@ -1456,7 +1458,7 @@ body {
       z-index: -1;
       width: 1920px;
       height: 1200px;
-      background-image: url(../img/audio-bg.png);
+      background-image: url(../img/audio-bg.jpg);
 
       &.blur-bg {
         &:after {
@@ -1495,7 +1497,7 @@ body {
       z-index: -1;
       width: 1920px;
       height: 1226px;
-      background-image: url(../img/battery-bg.png);
+      background-image: url(../img/battery-bg.jpg);
     }
 
     .main-bg.battery-nb {
@@ -1529,6 +1531,10 @@ body {
       justify-content: space-around;
       transition: 0.3s ease all;
 
+      &.active {
+        transform: translateY(-54%);
+      }
+
       .circle-box {
         width: calc(760px / 3);
 
@@ -1538,6 +1544,7 @@ body {
           align-items: center;
           justify-content: center;
           position: relative;
+          margin: auto;
           width: 206px;
           height: 206px;
           background-size: 100% auto;
@@ -1598,7 +1605,7 @@ body {
   }
 
   .belt-section {
-    transform: translateY(-10px);
+    transform: translateY(-30px);
     overflow: initial;
 
     .belt-bg {
@@ -1618,6 +1625,12 @@ body {
         animation-name: floatLeft;
         animation-play-state: paused;
         position: relative;
+        transform: skew(-8deg, 0deg);
+        transform: translateY(-10px) skew(-8deg, 0deg);
+      }
+
+      .float3-box {
+        transform: translateY(-20px) skew(-8deg, 0deg);
       }
 
       .float2-box {
@@ -1627,6 +1640,8 @@ body {
         animation-name: floatRight;
         animation-play-state: paused;
         position: relative;
+        transform: skew(-8deg, 0deg);
+        transform: translateY(-15px) skew(-8deg, 0deg);
       }
 
       &:hover {
@@ -1688,7 +1703,7 @@ body {
     .main-bg {
       width: 2560px;
       height: 1600px;
-      background-image: url(../img/aura-bg.png);
+      background-image: url(../img/aura-bg.jpg);
     }
 
     .headset-box {
@@ -2358,11 +2373,11 @@ body {
       height: 1341px;
 
       &.gray {
-        background-image: url(../img/gray-bundle.png);
+        background-image: url(../img/gray-bundle.jpg);
       }
 
       &.punk {
-        background-image: url(../img/bundle-bg.png);
+        background-image: url(../img/bundle-bg.jpg);
       }
 
     }
@@ -2610,6 +2625,11 @@ body {
 }
 
 .punk-look {
+  .look-btn.look-pad {
+    top: 1028px;
+    left: 1182px;
+  }
+
   .look-btn.look-mouse {
     top: 998px;
     left: 1312px;
@@ -2680,6 +2700,9 @@ body {
       cursor: pointer;
       z-index: 99;
       left: 0;
+      width: 20px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
     }
 
     .next-arrow {
@@ -2689,6 +2712,9 @@ body {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      width: 20px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
     }
   }
 
@@ -2701,12 +2727,14 @@ body {
     .popup-option {
       width: 200px;
       height: 200px;
+      background-size: 100% auto;
       background-color: #1a1a1a;
       cursor: pointer;
+      background-image: url(../img/bundle-not-active.png);
+
 
       &.active {
-        background-image: url(../img/popup-active.png);
-        background-size: 100% auto;
+        background-image: url(../img/bundle-active.png);
       }
 
       .option-inner {
@@ -2715,19 +2743,9 @@ body {
         background-size: 60% auto;
         background-position: center;
         background-repeat: no-repeat;
+
       }
 
-      .option1 {
-        background-image: url(../img/popup-back-1.png);
-      }
-
-      .option2 {
-        background-image: url(../img/popup-back-1.png);
-      }
-
-      .option3 {
-        background-image: url(../img/popup-back-1.png);
-      }
     }
   }
 
@@ -2747,11 +2765,22 @@ body {
       width: 756px;
       height: 441px;
       background-size: 40% auto;
-      background-image: url(../img/popup-back-1.png);
       background-position: center;
       background-repeat: no-repeat;
       margin: 20px auto;
       padding-bottom: 20px;
+    }
+
+    .gray-popup {
+      &.title {
+        background: #ff1c91;
+        background: -moz-linear-gradient(left, #ff1c91 0%, #5986f2 100%);
+        background: -webkit-linear-gradient(left, #ff1c91 0%, #5986f2 100%);
+        background: linear-gradient(to right, #ff1c91 0%, #5986f2 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1c91', endColorstr='#5986f2', GradientType=1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
 
     .title {
@@ -2759,13 +2788,6 @@ body {
       // color: #ff1c91;
       letter-spacing: 2px;
       color: #4ae9d3;
-      // background: #ff1c91;
-      // background: -moz-linear-gradient(left, #ff1c91 0%, #5986f2 100%);
-      // background: -webkit-linear-gradient(left, #ff1c91 0%, #5986f2 100%);
-      // background: linear-gradient(to right, #ff1c91 0%, #5986f2 100%);
-      // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff1c91', endColorstr='#5986f2', GradientType=1);
-      // -webkit-background-clip: text;
-      // -webkit-text-fill-color: transparent;
       font-family: 'RogFont';
       font-style: italic;
       text-align: center;
@@ -2899,7 +2921,7 @@ body {
     transform: perspective(400px) translateX(-50%);
     visibility: hidden;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s ease all;
 
     &.active {
@@ -2931,18 +2953,18 @@ body {
       top: 350px;
       width: 526px;
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(0px);
       transition: 0.5s ease all;
       transition-delay: 0.5s;
       z-index: 20;
     }
 
     &.audio-thumb1 {
-      background-image: url('../img/audio-thumb1.png');
+      background-image: url('../img/audio-thumb1.jpg');
     }
 
     &.audio-thumb2 {
-      background-image: url('../img/audio-thumb2.png');
+      background-image: url('../img/audio-thumb2.jpg');
     }
   }
 }
@@ -2960,7 +2982,7 @@ body {
     transform: translateX(-50%);
     visibility: hidden;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s ease all;
 
     &.active {
@@ -2992,7 +3014,7 @@ body {
       top: 350px;
       width: 526px;
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(0px);
       transition: 0.5s ease all;
       transition-delay: 0.5s;
     }
@@ -3025,7 +3047,7 @@ body {
     transform: translateX(-50%);
     visibility: hidden;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s ease all;
 
     &.active {
@@ -3057,7 +3079,7 @@ body {
       top: 350px;
       width: 526px;
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(0px);
       transition: 0.5s ease all;
       transition-delay: 0.5s;
     }
@@ -3093,7 +3115,7 @@ body {
     transform: translateX(-50%);
     visibility: hidden;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s ease all;
 
     &.active {
@@ -3125,7 +3147,7 @@ body {
       top: 350px;
       width: 526px;
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(0px);
       transition: 0.5s ease all;
       transition-delay: 0.5s;
     }
@@ -3215,7 +3237,7 @@ body {
       top: 350px;
       width: 526px;
       opacity: 0;
-      transform: translateY(100px);
+      transform: translateY(0px);
       transition: 0.5s ease all;
       transition-delay: 0.5s;
     }
@@ -3251,6 +3273,15 @@ body {
 }
 
 @media only screen and (min-width: 1921px) {
+  .punk-look .look-btn.look-pad {
+    top: 1278px;
+    left: 1552px;
+  }
+
+  .overviewContent .scar-container.keyboard-section {
+    padding: 230px 0 0;
+  }
+
   .overviewContent .container .keyboard-section .main-bg {
     width: 2560px;
     height: 1960px;
@@ -3597,8 +3628,361 @@ body {
 
 }
 
+.overviewContent .scar-container.keyboard-section {
+  padding: 100px 0 0;
+}
+
+.layer-frame .prev-arrow,
+.layer-frame .next-arrow {
+  pointer-events: fill;
+}
+
+.glitch--style {
+  --gap-horizontal: 10px;
+  --gap-vertical: 1px;
+  --time-anim: 1.5s;
+  --blend-mode-1: none;
+  --blend-mode-2: overlay;
+  --blend-mode-3: none;
+  --blend-mode-4: none;
+  --blend-mode-5: none;
+  --blend-color-1: #568df2;
+  --blend-color-2: #f01bcf;
+  --blend-color-3: #f01bcf;
+  --blend-color-4: #ff1d8b;
+  --blend-color-5: #ff1d8b;
+}
+
+
+.glitch__img-1,
+.glitch__img-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.5;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--gap-vertical));
+    left: calc(-1 * var(--gap-horizontal));
+    width: calc(100% + var(--gap-horizontal) * 2);
+    height: calc(100% + var(--gap-vertical) * 2);
+    background-repeat: no-repeat;
+    background-color: var(--blend-color-1);
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: var(--blend-mode-1);
+    left: 0;
+    top: 0;
+  }
+}
+
+.glitch__img-1 {
+  &:before {
+    background-color: var(--blend-color-2);
+    background-blend-mode: var(--blend-mode-2);
+  }
+
+  &:after {
+    background-color: var(--blend-color-3);
+    background-blend-mode: var(--blend-mode-3);
+  }
+}
+
+.glitch__img-2 {
+  &:before {
+    background-color: var(--blend-color-4);
+    background-blend-mode: var(--blend-mode-4);
+  }
+
+  &:after {
+    background-color: var(--blend-color-5);
+    background-blend-mode: var(--blend-mode-5);
+  }
+}
+
+.active {
+  .glitch__img-1:before {
+    -webkit-transform: translate3d(var(--gap-horizontal), 0, 0);
+    transform: translate3d(var(--gap-horizontal), 0, 0);
+    -webkit-animation: glitch-anim-1-horizontal var(--time-anim) infinite linear alternate;
+    animation: glitch-anim-1-horizontal var(--time-anim) infinite linear alternate;
+  }
+
+  .glitch__img-1:after {
+    -webkit-transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
+    transform: translate3d(calc(-1 * var(--gap-horizontal)), 0, 0);
+    -webkit-animation: glitch-anim-2-horizontal var(--time-anim) infinite linear alternate;
+    animation: glitch-anim-2-horizontal var(--time-anim) infinite linear alternate;
+  }
+
+  .glitch__img-2:before {
+    -webkit-transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
+    transform: translate3d(0, calc(-1 * var(--gap-vertical)), 0) scale3d(-1, -1, 1);
+    -webkit-animation: glitch-anim-3-horizontal var(--time-anim) infinite linear alternate;
+    animation: glitch-anim-3-horizontal var(--time-anim) infinite linear alternate;
+  }
+
+  .glitch__img-2:after {
+    -webkit-animation: glitch-anim-flash .5s steps(1, end) infinite;
+    animation: glitch-anim-flash .5s steps(1, end) infinite;
+  }
+}
+
+.popup-slick-img {
+  img {
+    width: 50%;
+  }
+}
+
+.slick-img-in {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+
+  &.pink-back-1 {
+    background-image: url(../img/pink-back-1.png);
+  }
+
+  &.pink-back-2 {
+    background-image: url(../img/pink-back-2.png);
+  }
+
+  &.pink-back-3 {
+    background-image: url(../img/pink-back-3.png);
+  }
+
+  &.pink-mice-1 {
+    background-image: url(../img/pink-mice-1.png);
+  }
+
+  &.pink-mice-2 {
+    background-image: url(../img/pink-mice-2.png);
+  }
+
+  &.pink-mice-3 {
+    background-image: url(../img/pink-mice-3.png);
+  }
+
+  &.pink-webcam-1 {
+    background-image: url(../img/pink-webcam-1.png);
+  }
+
+  &.pink-webcam-2 {
+    background-image: url(../img/pink-webcam-2.png);
+  }
+
+  &.pink-webcam-3 {
+    background-image: url(../img/pink-webcam-3.png);
+  }
+
+  &.pink-charger-1 {
+    background-image: url(../img/pink-charger-1.png);
+  }
+
+  &.pink-charger-2 {
+    background-image: url(../img/pink-charger-2.png);
+  }
+
+  &.pink-charger-3 {
+    background-image: url(../img/pink-charger-3.png);
+  }
+
+  &.pink-headset-1 {
+    background-image: url(../img/pink-headset-1.png);
+  }
+
+  &.pink-headset-2 {
+    background-image: url(../img/pink-headset-2.png);
+  }
+
+  &.pink-headset-3 {
+    background-image: url(../img/pink-headset-3.png);
+  }
+
+  &.pink-pad {
+    background-image: url(../img/pink-pad.png);
+  }
+
+  //gray
+
+  &.gray-back-1 {
+    background-image: url(../img/gray-back-1.png);
+  }
+
+  &.gray-back-2 {
+    background-image: url(../img/gray-back-2.png);
+  }
+
+  &.gray-back-3 {
+    background-image: url(../img/gray-back-3.png);
+  }
+
+  &.gray-mice-1 {
+    background-image: url(../img/gray-mice-1.png);
+  }
+
+  &.gray-mice-2 {
+    background-image: url(../img/gray-mice-2.png);
+  }
+
+  &.gray-mice-3 {
+    background-image: url(../img/gray-mice-3.png);
+  }
+
+  &.gray-webcam-1 {
+    background-image: url(../img/gray-webcam-1.png);
+  }
+
+  &.gray-webcam-2 {
+    background-image: url(../img/gray-webcam-2.png);
+  }
+
+  &.gray-webcam-3 {
+    background-image: url(../img/gray-webcam-3.png);
+  }
+
+  &.gray-charger-1 {
+    background-image: url(../img/gray-charger-1.png);
+  }
+
+  &.gray-charger-2 {
+    background-image: url(../img/gray-charger-2.png);
+  }
+
+  &.gray-charger-3 {
+    background-image: url(../img/gray-charger-3.png);
+  }
+
+}
+
+.option-inner {
+  &.pink-back-1 {
+    background-image: url(../img/pink-back-1.png);
+  }
+
+  &.pink-back-2 {
+    background-image: url(../img/pink-back-2.png);
+  }
+
+  &.pink-back-3 {
+    background-image: url(../img/pink-back-3.png);
+  }
+
+  &.pink-mice-1 {
+    background-image: url(../img/pink-mice-1.png);
+  }
+
+  &.pink-mice-2 {
+    background-image: url(../img/pink-mice-2.png);
+  }
+
+  &.pink-mice-3 {
+    background-image: url(../img/pink-mice-3.png);
+  }
+
+  &.pink-webcam-1 {
+    background-image: url(../img/pink-webcam-1.png);
+  }
+
+  &.pink-webcam-2 {
+    background-image: url(../img/pink-webcam-2.png);
+  }
+
+  &.pink-webcam-3 {
+    background-image: url(../img/pink-webcam-3.png);
+  }
+
+  &.pink-charger-1 {
+    background-image: url(../img/pink-charger-1.png);
+  }
+
+  &.pink-charger-2 {
+    background-image: url(../img/pink-charger-2.png);
+  }
+
+  &.pink-charger-3 {
+    background-image: url(../img/pink-charger-3.png);
+  }
+
+  &.pink-headset-1 {
+    background-image: url(../img/pink-headset-1.png);
+  }
+
+  &.pink-headset-2 {
+    background-image: url(../img/pink-headset-2.png);
+  }
+
+  &.pink-headset-3 {
+    background-image: url(../img/pink-headset-3.png);
+  }
+
+
+  //gray
+
+  &.gray-back-1 {
+    background-image: url(../img/gray-back-1.png);
+  }
+
+  &.gray-back-2 {
+    background-image: url(../img/gray-back-2.png);
+  }
+
+  &.gray-back-3 {
+    background-image: url(../img/gray-back-3.png);
+  }
+
+  &.gray-mice-1 {
+    background-image: url(../img/gray-mice-1.png);
+  }
+
+  &.gray-mice-2 {
+    background-image: url(../img/gray-mice-2.png);
+  }
+
+  &.gray-mice-3 {
+    background-image: url(../img/gray-mice-3.png);
+  }
+
+  &.gray-webcam-1 {
+    background-image: url(../img/gray-webcam-1.png);
+  }
+
+  &.gray-webcam-2 {
+    background-image: url(../img/gray-webcam-2.png);
+  }
+
+  &.gray-webcam-3 {
+    background-image: url(../img/gray-webcam-3.png);
+  }
+
+  &.gray-charger-1 {
+    background-image: url(../img/gray-charger-1.png);
+  }
+
+  &.gray-charger-2 {
+    background-image: url(../img/gray-charger-2.png);
+  }
+
+  &.gray-charger-3 {
+    background-image: url(../img/gray-charger-3.png);
+  }
+
+  &.pink-pad {
+    background-image: url(../img/pink-pad.png);
+  }
+}
+
 @import "animate.scss";
 @import "tablet.scss";
 @import "mintablet.scss";
 @import "bigmobile.scss";
 @import "mobile.scss";
+
+@import "typewriter.scss";
+@import "scroller.scss";

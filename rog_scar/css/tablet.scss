@@ -432,16 +432,6 @@
       margin-top: -120px;
    }
 
-   .keystone .keystone-notebook {
-      width: calc(952px * 0.6);
-      height: calc(661px * 0.6);
-   }
-
-   .keystone .keystone-in {
-      width: calc(50px * 0.6);
-      height: calc(34px * 0.6);
-   }
-
    .keystone {
       margin-top: -50px;
    }
@@ -662,6 +652,9 @@
       height: 881px;
    }
 
+   .keystone .keystone-notebook,
+   .keystone .keystone-seq,
+   .keystone .keystone-in,
    .keystone .main-bg {
       width: 1280px;
       height: 800px;

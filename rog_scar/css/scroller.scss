@@ -1,0 +1,20 @@
+.display-section{
+    .section-inner{transform:none !important; }
+    .panel-container{
+        width: 200%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .display-panel{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .hl-style{margin-top: 0; }
+    .blur-bg{
+        top: -260px;
+        &.qhd-bg{margin-top: 0;}
+    }
+    .fullhd-notebook,
+    .qhd-notebook{top: -200px;}
+}

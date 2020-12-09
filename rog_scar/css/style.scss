@@ -137,11 +137,14 @@ body {
         width: 200px;
         height: 200px;
         background-color: #1a1a1a;
+        background-size: 100% auto;
+        background-color: #1a1a1a;
         cursor: pointer;
+        background-image: url(../img/bundle-not-active.png);
+
 
         &.active {
-          background-image: url(../img/popup-active.png);
-          background-size: 100% auto;
+          background-image: url(../img/bundle-active.png);
         }
 
         .option-inner {
@@ -150,18 +153,6 @@ body {
           background-size: 60% auto;
           background-position: center;
           background-repeat: no-repeat;
-        }
-
-        .option1 {
-          background-image: url(../img/popup-back-1.png);
-        }
-
-        .option2 {
-          background-image: url(../img/popup-back-1.png);
-        }
-
-        .option3 {
-          background-image: url(../img/popup-back-1.png);
         }
       }
     }
@@ -180,7 +171,6 @@ body {
         width: 756px;
         height: 441px;
         background-size: 40% auto;
-        background-image: url(../img/popup-back-1.png);
         background-position: center;
         background-repeat: no-repeat;
         margin: 0px auto;
@@ -657,7 +647,7 @@ body {
     .main-bg {
       width: 1920px;
       height: 1620px;
-      background-image: url("../img/cooling-bg.png");
+      background-image: url("../img/scar-cooling-BG.jpg");
     }
 
     .bg-set {
@@ -689,7 +679,7 @@ body {
       width: 1920px;
       height: 100%;
       background-size: 100% auto;
-      background-image: url(../img/cooling-background.png);
+      background-image: url(../img/scar-cooling-Laptop.png);
       left: 50%;
       transform: translateX(-50%);
     }
@@ -1257,24 +1247,51 @@ body {
     transform: translate(-50%, -50%);
     z-index: 10;
     background-image: url(../img/keystone-notebook.png);
-    width: 952px;
-    height: 661px;
+    width: 1920px;
+    height: 1200px;
     background-size: 100% auto;
+
+
+  }
+
+  .keystone-seq {
+    width: 1920px;
+    height: 1200px;
+    background-size: 100% auto;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    &.active {
+      animation-duration: 1.5s;
+      background-size: 100% auto;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-name: keystone-seq;
+    }
   }
 
   .keystone-in {
-    width: 50px;
-    height: 34px;
+    width: 1920px;
+    height: 1200px;
     background-size: 100% auto;
-    background-image: url(../img/keystone.png);
+    background-image: url(../img/keystone-in1.png);
     position: absolute;
-    left: 75%;
-    top: 85%;
+    left: 0;
+    top: 0;
     transition: 0.3s ease-in all;
-    transform: translate(300%, 300%);
 
     &.active {
-      transform: translate(0, 0);
+      animation-duration: 0.3s;
+      background-size: 100% auto;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-name: keystone-ani;
+      mix-blend-mode: screen;
+      animation-fill-mode: forwards;
     }
   }
 }
@@ -2552,15 +2569,12 @@ body {
   }
 
   .keystone {
-    .keystone-notebook {
-      width: calc(952px * 1.2);
-      height: calc(661px * 1.2);
-    }
 
-    .keystone-in {
-      transform: translate(calc(300% * 1.2), calc(300% * 1.2));
-      width: calc(50px * 1.2);
-      height: calc(34px * 1.2);
+    .keystone-in,
+    .keystone-seq,
+    .keystone-notebook {
+      width: 2560px;
+      height: 1600px;
     }
   }
 
@@ -2851,21 +2865,6 @@ body {
     width: 1920px;
     height: 1470px;
     background-image: url("../img/design-bg-animate-3rd.png");
-  }
-
-  .rotate-bg {
-    opacity: 1;
-    width: 1920px;
-    position: absolute;
-    z-index: 5;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 0;
-    height: 100%;
-    transition: 0.5s ease all;
-    background-image: url("../img/design-bg-animate-3rd.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
 
     &.left {
       animation-duration: 1.5s;
@@ -2885,6 +2884,7 @@ body {
       animation-direction: alternate
     }
   }
+
 
   .design-set {
     width: 100%;
@@ -4451,5 +4451,139 @@ body {
 //   }
 // }
 
+
+.slick-img-in {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+
+  &.back-1 {
+    background-image: url(../img/back-1.png);
+  }
+
+  &.back-2 {
+    background-image: url(../img/back-2.png);
+  }
+
+  &.back-3 {
+    background-image: url(../img/back-3.png);
+  }
+
+  &.nb-1 {
+    background-image: url(../img/webcam-1.png);
+  }
+
+  &.nb-2 {
+    background-image: url(../img/webcam-2.png);
+  }
+
+  &.nb-3 {
+    background-image: url(../img/webcam-3.png);
+  }
+
+  &.transformer-1 {
+    background-image: url(../img/charger-1.png);
+  }
+
+  &.transformer-2 {
+    background-image: url(../img/charger-2.png);
+  }
+
+  &.transformer-3 {
+    background-image: url(../img/charger-3.png);
+  }
+
+  &.headset-1 {
+    background-image: url(../img/headset-1.png);
+  }
+
+  &.headset-2 {
+    background-image: url(../img/headset-2.png);
+  }
+
+  &.headset-3 {
+    background-image: url(../img/headset-3.png);
+  }
+
+  &.mouse-1 {
+    background-image: url(../img/mouse-1.png);
+  }
+
+  &.mouse-2 {
+    background-image: url(../img/mouse-2.png);
+  }
+
+  &.mouse-3 {
+    background-image: url(../img/mouse-3.png);
+  }
+}
+
+.option-inner {
+  &.back-1 {
+    background-image: url(../img/back-1.png);
+  }
+
+  &.back-2 {
+    background-image: url(../img/back-2.png);
+  }
+
+  &.back-3 {
+    background-image: url(../img/back-3.png);
+  }
+
+  &.nb-1 {
+    background-image: url(../img/webcam-1.png);
+  }
+
+  &.nb-2 {
+    background-image: url(../img/webcam-2.png);
+  }
+
+  &.nb-3 {
+    background-image: url(../img/webcam-3.png);
+  }
+
+  &.transformer-1 {
+    background-image: url(../img/charger-1.png);
+  }
+
+  &.transformer-2 {
+    background-image: url(../img/charger-2.png);
+  }
+
+  &.transformer-3 {
+    background-image: url(../img/charger-3.png);
+  }
+
+  &.headset-1 {
+    background-image: url(../img/headset-1.png);
+  }
+
+  &.headset-2 {
+    background-image: url(../img/headset-2.png);
+  }
+
+  &.headset-3 {
+    background-image: url(../img/headset-3.png);
+  }
+
+  &.mouse-1 {
+    background-image: url(../img/mouse-1.png);
+  }
+
+  &.mouse-2 {
+    background-image: url(../img/mouse-2.png);
+  }
+
+  &.mouse-3 {
+    background-image: url(../img/mouse-3.png);
+  }
+}
+
 @import "tablet.scss";
 @import "mobile.scss";
+
+
+@import "scroller.scss";

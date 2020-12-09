@@ -1,4 +1,27 @@
 @media only screen and (max-width: 731px) {
+
+   .overviewContent .container .belt-section .belt-bg {
+      font-size: 30px;
+      height: 70px;
+   }
+
+   .overviewContent .scar-container.keyboard-section {
+      padding: 30px 0 0;
+   }
+
+   .overviewContent .container .belt-section .belt-bg .float1-box {
+      transform: translateY(0px) skew(-8deg, 0deg);
+   }
+
+   .overviewContent .container .belt-section .belt-bg .float2-box {
+      transform: translateY(-5px) skew(-8deg, 0deg);
+   }
+
+   .overviewContent .container .belt-section .belt-bg .float3-box {
+      transform: translateY(-10px) skew(-8deg, 0deg);
+   }
+
+
    .overviewContent .container {
 
       .product-section .title .rog-strix {
@@ -783,6 +806,7 @@
 
    .overviewContent .container .keyboard-section .switch {
       width: 300px;
+      margin: 25px auto;
    }
 
    .overviewContent .container .keyboard-section .switch .switch-box .switch-content {
@@ -802,7 +826,7 @@
    .overviewContent .container .keyboard-section .keyboard-nb {
       width: 732px;
       background-size: 70% auto;
-      height: 890px;
+      height: 960px;
    }
 
    .overviewContent .container .aura-section .product-box {
@@ -1018,5 +1042,46 @@
 
    .overviewContent .container .all-shadow {
       display: none;
+   }
+
+   .overviewContent .container .audio-section .main-bg.audio-nb {
+      background-image: url(../img/audio-bg_xs.jpg);
+   }
+
+   .overviewContent .container .audio-section .main-bg.audio-bg {
+      background-image: url(../img/audio-nb_xs.png);
+   }
+
+   .audio-box .audio-layers.audio-thumb1 {
+      background-image: url('../img/audio-thumb1_xs.jpg');
+   }
+
+   .audio-box .audio-layers.audio-thumb2 {
+      background-image: url('../img/audio-thumb2_xs.jpg');
+   }
+
+   .overviewContent .container .aura-section .main-bg {
+      background-image: url(../img/aura-bg_xs.jpg);
+   }
+
+   .overviewContent .container .battery-section .main-bg {
+      background-image: url(../img/battery-bg_xs.jpg);
+   }
+
+   .overviewContent .container .battery-section .main-bg.battery-nb {
+      background-image: url(../img/battery-nb_xs.png);
+   }
+
+   .overviewContent .container .bundle-section .bundle-bg.punk {
+      background-image: url(../img/bundle-bg_xs.jpg);
+   }
+
+   .overviewContent .container .bundle-section .bundle-bg.gray {
+      background-image: url(../img/gray-bundle_xs.jpg);
+   }
+
+   .punk-look .look-btn.look-pad {
+      top: 260px;
+      left: 402px;
    }
 }

@@ -699,6 +699,14 @@
       height: 173px;
    }
 
+   .keystone .keystone-notebook,
+   .keystone .keystone-seq,
+   .keystone .keystone-in,
+   .keystone .main-bg {
+      width: calc(1920px * 0.3);
+      height: calc(1200px * 0.3);
+   }
+
    .keystone .main-bg {
       width: calc(1920px * 0.375);
       height: calc(1200px * 0.375);

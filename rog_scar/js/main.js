@@ -1,215 +1,236 @@
 let audio_video = false;
 var direction;
-$(function () {       
+$(function () {
     /**
      * 滾動事件
      */
-    gsap.registerPlugin(ScrollTrigger);
 
-    ScrollTrigger.create({
-        trigger: ".design-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".design-section .section-inner").addClass("active");
-        },    
-    });
+    setTimeout(function () {
+        gsap.registerPlugin(ScrollTrigger);
 
-    ScrollTrigger.create({
-        trigger: ".performance",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".performance-section .cpu").addClass("active");
-            $(".performance-section .gpu").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".design-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".design-section .section-inner").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".performance-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".performance-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".performance",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".performance-section .cpu").addClass("active");
+                $(".performance-section .gpu").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".display-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".display-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".performance-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".performance-section .section-inner").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".display-fullhd",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".dispaly-mp4").get(0).play();
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".display-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".display-section .section-inner").addClass("active");
+            },
+        });
+        var displayPanel = gsap.utils.toArray(".display-panel");
+        gsap.to(displayPanel, {
+        xPercent: -100 * (displayPanel.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".panel-container",
+            pin: ".panel-container",
+            scrub: 1,
+            // snap: 1 / (displayPanel.length - 1),
+            end: () => "+=" + document.querySelector(".panel-container").offsetWidth
+        }
+        });
 
-    ScrollTrigger.create({
-        trigger: ".cooling-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".cooling-section .section-inner").addClass("active");
-        },    
-    });
-    
-    
-    ScrollTrigger.create({
-        trigger: ".video-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".video-section .section-inner").addClass("active");
-        },    
-    });
-    
-    ScrollTrigger.create({
-        trigger: ".keyboard-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".keyboard-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".display-fullhd",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".dispaly-mp4").get(0).play();
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".keyboard",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".keyboard-line").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".cooling-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".cooling-section .section-inner").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".audio-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".audio-section .section-inner").addClass("active");
-        },    
-    });
-    
-    ScrollTrigger.create({
-        trigger: ".battery-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".battery-section .section-inner").addClass("active");
-        },    
-    });
 
-    ScrollTrigger.create({
-        trigger: ".battery",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".battery").addClass("active");
-        },    
-    });
-    
-    ScrollTrigger.create({
-        trigger: ".aura-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".aura-section .section-inner").addClass("active");
-        },    
-    });
-    
-    
-    ScrollTrigger.create({
-        trigger: ".keystone-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".keystone-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".video-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".video-section .section-inner").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".keystone",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".keystone-in").addClass("active");
-        },    
-    });
-        
-    ScrollTrigger.create({
-        trigger: ".connectivity-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-             $(".connectivity-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".keyboard-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".keyboard-section .section-inner").addClass("active");
+            },
+        });
 
-    var conLock = true;
-    ScrollTrigger.create({
-        trigger: ".connectivity",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            
-            $(".connectivity .light").addClass("active");
-            $(".run-box .run-box-animate").addClass("active");
-            if (conLock) {
-                conLock = false;
-                setTimeout(function () {
-                    $(".upper-bar .bar").addClass("active");
-                $(".run-bar-inner .intel-bar .mbps font").animateNumbers(2400, true, 1000);
-                 $(".run-bar-inner .ac-bar .mbps font").animateNumbers(867, true, 1000);
-                },1000)
-                
-            }
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".keyboard",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".keyboard-line").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".io-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".io-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".audio-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".audio-section .section-inner").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".exclusive-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".exclusive-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".battery-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".battery-section .section-inner").addClass("active");
+            },
+        });
 
-    ScrollTrigger.create({
-        trigger: ".slider-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-        onToggle: function () {
-            $(".slider-section .section-inner").addClass("active");
-        },    
-    });
-        
-     ScrollTrigger.create({
-        trigger: ".peripherals-section",
-        start: "top 50%+=100px",
-        end: "bottom 50%+=100px",
-         onToggle: function () {
-            $(".peripherals-section .section-inner").addClass("active");
-        },    
-    });
+        ScrollTrigger.create({
+            trigger: ".battery",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".battery").addClass("active");
+            },
+        });
 
+        ScrollTrigger.create({
+            trigger: ".aura-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".aura-section .section-inner").addClass("active");
+            },
+        });
+
+
+        ScrollTrigger.create({
+            trigger: ".keystone-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".keystone-section .section-inner").addClass("active");
+            },
+        });
+
+        ScrollTrigger.create({
+            trigger: ".keystone",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".keystone-in").addClass("active");
+                setTimeout(function(){
+                    $(".keystone-seq").addClass("active");
+                },500);
+            },
+        });
+
+        ScrollTrigger.create({
+            trigger: ".connectivity-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".connectivity-section .section-inner").addClass("active");
+            },
+        });
+
+        var conLock = true;
+        ScrollTrigger.create({
+            trigger: ".connectivity",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+
+                $(".connectivity .light").addClass("active");
+                $(".run-box .run-box-animate").addClass("active");
+                if (conLock) {
+                    conLock = false;
+                    setTimeout(function () {
+                        $(".upper-bar .bar").addClass("active");
+                    $(".run-bar-inner .intel-bar .mbps font").animateNumbers(2400, true, 1000);
+                    $(".run-bar-inner .ac-bar .mbps font").animateNumbers(867, true, 1000);
+                    },1000)
+
+                }
+            },
+        });
+
+        ScrollTrigger.create({
+            trigger: ".io-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".io-section .section-inner").addClass("active");
+            },
+        });
+
+        ScrollTrigger.create({
+            trigger: ".exclusive-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".exclusive-section .section-inner").addClass("active");
+            },
+        });
+
+        ScrollTrigger.create({
+            trigger: ".slider-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".slider-section .section-inner").addClass("active");
+            },
+        });
+
+        ScrollTrigger.create({
+            trigger: ".peripherals-section",
+            start: "top 50%+=100px",
+            end: "bottom 50%+=100px",
+            onToggle: function () {
+                $(".peripherals-section .section-inner").addClass("active");
+            },
+        });
+    }, 2000);
+
+    /**
+     * design 切換主機顏色
+     */
 
     $(".color-box .option-inner").click(function () {
 
@@ -218,7 +239,7 @@ $(function () {
         $(".design-section .nb-bg").removeClass("rubber");
         $(".design-section .nb-bg").removeClass("black");
         $(this).addClass("active");
-        
+
         if ($(this).hasClass("black")) {
            $(".design-section .nb-bg").addClass("black");
         }
@@ -234,6 +255,9 @@ $(function () {
         audio_video = false;
     });
 
+    /**
+     * io 切換15/17inch
+     */
     $(".io-section .options .selects").click(function(){
 
          if ($(this).hasClass("select15")) {
@@ -252,80 +276,68 @@ $(function () {
 
             $(".io-section .main-bg").addClass("options17");
             $(".io-section .main-bg").removeClass("options15");
-             
+
             $(".port-15").removeClass("active");
             $(".port-17").addClass("active");
         }
     })
 
-    $(".popup-inner .close-btn").click(function () {        
+    /**
+     * 商品popup 關閉按鈕
+     */
+    $(".popup-inner .close-btn").click(function () {
         $(".popup").removeClass("active");
+        $(".popup-option").removeClass("active");
     })
+
+    /**
+     * 商品的+號點擊事件
+     * 判斷開啟哪個畫面，並且將該畫面的第一個產品active
+     */
+
     $(".look-btn").click(function () {
         $(".popup").addClass("active");
         $(".popup-product").addClass("hide");
         if ($(this).hasClass("look-bag")) {
             $(".popup-back").removeClass("hide");
+            var option = $(".popup-back .popup-option");
+            $(option[0]).addClass("active");
         }
         if ($(this).hasClass("look-nb")) {
             $(".popup-nb").removeClass("hide");
+            var option = $(".popup-nb .popup-option");
+            $(option[0]).addClass("active");
         }
         if ($(this).hasClass("look-transformer")) {
             $(".popup-transformer").removeClass("hide");
+            var option = $(".popup-transformer .popup-option");
+            $(option[0]).addClass("active");
         }
         if ($(this).hasClass("look-headset")) {
             $(".popup-headset").removeClass("hide");
+            var option = $(".popup-headset .popup-option");
+            $(option[0]).addClass("active");
         }
         if ($(this).hasClass("look-mouse")) {
             $(".popup-mouse").removeClass("hide");
+            var option = $(".popup-mouse .popup-option");
+            $(option[0]).addClass("active");
         }
     });
 
-     $(".popup-back .popup-slick-inner").slick({
+    $(".popup-slick-inner").slick({
         dots: false,
         arrows: false,
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+           variableWidth: true,
      });
-    
-    $(".popup-nb .popup-slick-inner").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-    
-    $(".popup-transformer .popup-slick-inner").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-    
-    $(".popup-headset .popup-slick-inner").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });
-    
-    $(".popup-mouse .popup-slick-inner").slick({
-        dots: false,
-        arrows: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        slidesToScroll: 1
-     });
-    
+
+    /**
+     * 商品popup的 上一張/下一張 事件
+     */
     $(".popup-back .prev-arrow").click(function () {
         $(".popup-back .popup-slick-inner").slick("slickPrev");
     });
@@ -359,12 +371,45 @@ $(function () {
     $(".popup-mouse .next-arrow").click(function () {
         $(".popup-mouse .popup-slick-inner").slick("slickNext");
     });
+
     /**
-     * @summary 當畫面重整時，強制回到網頁最上方
+     * 商品輪播時候，切換下方商品圖的active
      */
-    // $(window).on('beforeunload', function () {
-    //     $(window).scrollTop(0);
-    // });
+    $('.popup-back .popup-slick-inner').on('afterChange', function (event, slick, direction) {
+        var option = $(".popup-back .popup-option");
+        $(option).removeClass("active");
+        $(option[direction]).addClass("active");
+    });
+    
+    $('.popup-nb .popup-slick-inner').on('afterChange', function (event, slick, direction) {
+        var option = $(".popup-nb .popup-option");
+        $(option).removeClass("active");
+        $(option[direction]).addClass("active");
+    });
+    
+    $('.popup-transformer .popup-slick-inner').on('afterChange', function (event, slick, direction) {
+        var option = $(".popup-transformer .popup-option");
+        $(option).removeClass("active");
+        $(option[direction]).addClass("active");
+    });
+    
+    $('.popup-headset .popup-slick-inner').on('afterChange', function (event, slick, direction) {
+        var option = $(".popup-headset .popup-option");
+        $(option).removeClass("active");
+        $(option[direction]).addClass("active");
+    });
+    
+    $('.popup-mouse .popup-slick-inner').on('afterChange', function (event, slick, direction) {
+        var option = $(".popup-mouse .popup-option");
+        $(option).removeClass("active");
+        $(option[direction]).addClass("active");
+    });
+    /**
+     *  當畫面重整時，強制回到網頁最上方
+     */
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
+    });
 
     /**
      * keystone的glitch效果
@@ -381,7 +426,7 @@ $(function () {
         glitch2TimeMax: 400
     });
 
-   
+
     /**
      * @summary design區塊的輪播
      */
@@ -479,9 +524,7 @@ $(function () {
         $(this).fadeOut()
     });
 
-    let performance＿float = 0;
     let qhd_float = 0;
-    let height = document.body.clientHeight - 200;
     var beforeScrollTop = document.body.scrollTop;
     $(window).scroll(function (e) {
         /**
@@ -498,89 +541,89 @@ $(function () {
         /**
          * rog-scar 滾動視差
          */
-        // if (window.innerWidth < 732) {
-        //     if ($(window).scrollTop() > $(".rotate-bg").offset().top - ($(".rotate-bg").offset().top * 0.1)) {
-        //         if (direction == "down") {
-        //             $(".rotate-bg").addClass("left");
-        //             $(".rotate-bg").removeClass("right");
-        //         } else if (direction == "up") {
-        //             $(".rotate-bg").addClass("right");
-        //             $(".rotate-bg").removeClass("left");
-        //         }
-        //     }
-        // } else {
-        //     if ($(window).scrollTop() > $(".rotate-bg").offset().top + ($(".rotate-bg").offset().top * 0.1)) {
-        //         if (direction == "down") {
-        //             $(".rotate-bg").addClass("left");
-        //             $(".rotate-bg").removeClass("right");
-        //         } else if (direction == "up") {
-        //             $(".rotate-bg").addClass("right");
-        //             $(".rotate-bg").removeClass("left");
-        //         }
-        //     }
-        // }
+        if (window.innerWidth < 732) {
+            if ($(window).scrollTop() > $(".rotate-bg").offset().top - ($(".rotate-bg").offset().top * 0.1)) {
+                if (direction == "down") {
+                    $(".rotate-bg").addClass("left");
+                    $(".rotate-bg").removeClass("right");
+                } else if (direction == "up") {
+                    $(".rotate-bg").addClass("right");
+                    $(".rotate-bg").removeClass("left");
+                }
+            }
+        } else {
+            if ($(window).scrollTop() > $(".rotate-bg").offset().top + ($(".rotate-bg").offset().top * 0.1)) {
+                if (direction == "down") {
+                    $(".rotate-bg").addClass("left");
+                    $(".rotate-bg").removeClass("right");
+                } else if (direction == "up") {
+                    $(".rotate-bg").addClass("right");
+                    $(".rotate-bg").removeClass("left");
+                }
+            }
+        }
 
         /**
          * qhd 滾動視差
          */
-        // if (window.innerWidth < 732) {
-        //     if ($(window).scrollTop() > $(".qhd-notebook").offset().top - ($(".qhd-notebook").offset().top * 0.1)) {
-        //         if (direction == "down") {
-        //             qhd_float += 2.5;
-        //         } else if (direction == "up") {
-        //             qhd_float -= 2.5;
-        //         }
-        //         if (qhd_float > 60) {
-        //             qhd_float = 60
-        //         }
-        //         if (qhd_float < -60) {
-        //             qhd_float = -60
-        //         }
-        //         $(".inner-sky img").css({
-        //             "left": `${qhd_float}px`,
-        //             "top": `${qhd_float/2}px`,
-        //         });
-        //     } else {
-        //         float4 = 0;
-        //         $(".inner-sky img").css({
-        //             "left": `${qhd_float}px`,
-        //             "top": `${qhd_float}px`,
-        //         });
-        //     }
-        // } else {
-        //     if ($(window).scrollTop() > $(".qhd-notebook").offset().top - 300) {
-        //         if (direction == "down") {
-        //             qhd_float += 2.5;
-        //         } else if (direction == "up") {
-        //             qhd_float -= 2.5;
-        //         }
-        //         if (qhd_float > 60) {
-        //             qhd_float = 60
-        //         }
-        //         if (qhd_float < -60) {
-        //             qhd_float = -60
-        //         }
-        //         $(".inner-sky img").css({
-        //             "left": `${qhd_float}px`,
-        //             "top": `${qhd_float/2}px`,
-        //         });
-        //     } else {
-        //         float4 = 0;
-        //         $(".inner-sky img").css({
-        //             "left": `${qhd_float}px`,
-        //             "top": `${qhd_float}px`,
-        //         });
-        //     }
-        // }
+        if (window.innerWidth < 732) {
+            if ($(window).scrollTop() > $(".qhd-notebook").offset().top - ($(".qhd-notebook").offset().top * 0.1)) {
+                if (direction == "down") {
+                    qhd_float += 2.5;
+                } else if (direction == "up") {
+                    qhd_float -= 2.5;
+                }
+                if (qhd_float > 60) {
+                    qhd_float = 60
+                }
+                if (qhd_float < -60) {
+                    qhd_float = -60
+                }
+                $(".inner-sky img").css({
+                    "left": `${qhd_float}px`,
+                    "top": `${qhd_float/2}px`,
+                });
+            } else {
+                float4 = 0;
+                $(".inner-sky img").css({
+                    "left": `${qhd_float}px`,
+                    "top": `${qhd_float}px`,
+                });
+            }
+        } else {
+            if ($(window).scrollTop() > $(".qhd-notebook").offset().top - 300) {
+                if (direction == "down") {
+                    qhd_float += 2.5;
+                } else if (direction == "up") {
+                    qhd_float -= 2.5;
+                }
+                if (qhd_float > 60) {
+                    qhd_float = 60
+                }
+                if (qhd_float < -60) {
+                    qhd_float = -60
+                }
+                $(".inner-sky img").css({
+                    "left": `${qhd_float}px`,
+                    "top": `${qhd_float/2}px`,
+                });
+            } else {
+                float4 = 0;
+                $(".inner-sky img").css({
+                    "left": `${qhd_float}px`,
+                    "top": `${qhd_float}px`,
+                });
+            }
+        }
 
 
-        // if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
-        //     qhd_float = 0;
-        //     $(".inner-sky img").css({
-        //         "left": `${qhd_float}px`,
-        //         "top": `${qhd_float}px`,
-        //     });
-        // }\
+        if ($(window).scrollTop() > $(".qhd-notebook").offset().top + $(".qhd-notebook").height()) {
+            qhd_float = 0;
+            $(".inner-sky img").css({
+                "left": `${qhd_float}px`,
+                "top": `${qhd_float}px`,
+            });
+        }
     });
 
     /**
@@ -896,7 +939,7 @@ $(function () {
         $(".setcolor,.headset-left-svg, .headset-right-svg").addClass("animate-colorcycle");
         $(".headset-left-svg, .headset-right-svg").addClass("animate-colorcycleSvg");
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
-        $(".color-rainbow").removeClass("animate-rainbow");        
+        $(".color-rainbow").removeClass("animate-rainbow");
         $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
     });
     $(".rainbow").click(function () {
@@ -932,7 +975,7 @@ $(function () {
         $(".headset-left-svg, .headset-right-svg").removeClass("animate-smartSvg");
         $(".color-rainbow").removeClass("animate-rainbow");
         $(".color-rainbow, .color-rainbow2, .color-rainbow3, .mask-left, .mask-right").removeClass("animate-rainbow");
-        
+
     });
     $(".smart").click(function () {
         $(".status").removeClass("active");
